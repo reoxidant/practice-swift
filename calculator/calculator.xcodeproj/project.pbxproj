@@ -56,14 +56,17 @@
 		44E8A744252FBD250080CACA /* calculator */ = {
 			isa = PBXGroup;
 			children = (
-				44E8A759252FC0B50080CACA /* Support Files */,
+				44E8A75C252FC19A0080CACA /* Controller */,
+				44E8A75B252FC1900080CACA /* Model */,
+				44E8A75A252FC1800080CACA /* View */,
+				44E8A759252FC0B50080CACA /* Supporting Files */,
 				44E8A749252FBD250080CACA /* ViewController.swift */,
 				44E8A74B252FBD250080CACA /* Main.storyboard */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
 		};
-		44E8A759252FC0B50080CACA /* Support Files */ = {
+		44E8A759252FC0B50080CACA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				44E8A745252FBD250080CACA /* AppDelegate.swift */,
@@ -72,7 +75,28 @@
 				44E8A750252FBD270080CACA /* LaunchScreen.storyboard */,
 				44E8A753252FBD270080CACA /* Info.plist */,
 			);
-			path = "Support Files";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44E8A75A252FC1800080CACA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44E8A75B252FC1900080CACA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44E8A75C252FC19A0080CACA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
