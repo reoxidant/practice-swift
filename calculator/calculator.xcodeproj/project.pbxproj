@@ -90,6 +90,7 @@
 				44E8A759252FC0B50080CACA /* Supporting Files */,
 				44E8A749252FBD250080CACA /* CalculatorViewController.swift */,
 				44E8A74B252FBD250080CACA /* Main.storyboard */,
+				44E8A753252FBD270080CACA /* Info.plist */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -101,7 +102,6 @@
 				44E8A747252FBD250080CACA /* SceneDelegate.swift */,
 				44E8A74E252FBD270080CACA /* Assets.xcassets */,
 				44E8A750252FBD270080CACA /* LaunchScreen.storyboard */,
-				44E8A753252FBD270080CACA /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
