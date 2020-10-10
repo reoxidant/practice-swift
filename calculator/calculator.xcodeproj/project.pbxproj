@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		443CDFE22532015D00D21DC3 /* Calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = 443CDFE12532015D00D21DC3 /* Calculator.png */; };
+		443CDFE7253205C100D21DC3 /* quicksand-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443CDFE4253205C100D21DC3 /* quicksand-bold.otf */; };
+		443CDFE8253205C100D21DC3 /* quicksand-book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443CDFE5253205C100D21DC3 /* quicksand-book.otf */; };
+		443CDFE9253205C100D21DC3 /* quicksand-light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443CDFE6253205C100D21DC3 /* quicksand-light.otf */; };
 		44E8A746252FBD250080CACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E8A745252FBD250080CACA /* AppDelegate.swift */; };
 		44E8A748252FBD250080CACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E8A747252FBD250080CACA /* SceneDelegate.swift */; };
-		44E8A74A252FBD250080CACA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E8A749252FBD250080CACA /* ViewController.swift */; };
+		44E8A74A252FBD250080CACA /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E8A749252FBD250080CACA /* CalculatorViewController.swift */; };
 		44E8A74D252FBD250080CACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E8A74B252FBD250080CACA /* Main.storyboard */; };
 		44E8A74F252FBD270080CACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E8A74E252FBD270080CACA /* Assets.xcassets */; };
 		44E8A752252FBD270080CACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E8A750252FBD270080CACA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		443CDFE12532015D00D21DC3 /* Calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calculator.png; sourceTree = "<group>"; };
+		443CDFE4253205C100D21DC3 /* quicksand-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "quicksand-bold.otf"; sourceTree = "<group>"; };
+		443CDFE5253205C100D21DC3 /* quicksand-book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "quicksand-book.otf"; sourceTree = "<group>"; };
+		443CDFE6253205C100D21DC3 /* quicksand-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "quicksand-light.otf"; sourceTree = "<group>"; };
 		44E8A742252FBD250080CACA /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E8A745252FBD250080CACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44E8A747252FBD250080CACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44E8A749252FBD250080CACA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		44E8A749252FBD250080CACA /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		44E8A74C252FBD250080CACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44E8A74E252FBD270080CACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44E8A751252FBD270080CACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		443CDFE02532015D00D21DC3 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				443CDFE12532015D00D21DC3 /* Calculator.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		443CDFE3253205C100D21DC3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				443CDFE4253205C100D21DC3 /* quicksand-bold.otf */,
+				443CDFE5253205C100D21DC3 /* quicksand-book.otf */,
+				443CDFE6253205C100D21DC3 /* quicksand-light.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		44E8A739252FBD250080CACA = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +82,13 @@
 		44E8A744252FBD250080CACA /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				443CDFE3253205C100D21DC3 /* Fonts */,
+				443CDFE02532015D00D21DC3 /* Screenshots */,
 				44E8A75C252FC19A0080CACA /* Controller */,
 				44E8A75B252FC1900080CACA /* Model */,
 				44E8A75A252FC1800080CACA /* View */,
 				44E8A759252FC0B50080CACA /* Supporting Files */,
-				44E8A749252FBD250080CACA /* ViewController.swift */,
+				44E8A749252FBD250080CACA /* CalculatorViewController.swift */,
 				44E8A74B252FBD250080CACA /* Main.storyboard */,
 			);
 			path = calculator;
@@ -157,8 +185,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				443CDFE8253205C100D21DC3 /* quicksand-book.otf in Resources */,
 				44E8A752252FBD270080CACA /* LaunchScreen.storyboard in Resources */,
 				44E8A74F252FBD270080CACA /* Assets.xcassets in Resources */,
+				443CDFE9253205C100D21DC3 /* quicksand-light.otf in Resources */,
+				443CDFE22532015D00D21DC3 /* Calculator.png in Resources */,
+				443CDFE7253205C100D21DC3 /* quicksand-bold.otf in Resources */,
 				44E8A74D252FBD250080CACA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E8A74A252FBD250080CACA /* ViewController.swift in Sources */,
+				44E8A74A252FBD250080CACA /* CalculatorViewController.swift in Sources */,
 				44E8A746252FBD250080CACA /* AppDelegate.swift in Sources */,
 				44E8A748252FBD250080CACA /* SceneDelegate.swift in Sources */,
 			);
