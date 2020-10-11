@@ -158,6 +158,19 @@
                                     <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rdj-w4-qBb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EH-k2-V9A">
+                                <rect key="frame" x="160" y="432" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Light" family="PingFang SC" pointSize="30"/>
+                                <state key="normal" title="⏎">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="thin"/>
+                                </state>
+                                <connections>
+                                    <action selector="enter" destination="BYZ-38-t0r" eventType="touchUpInside" id="zl8-5i-yVF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -180,6 +193,7 @@
                         <outletCollection property="digitButtons" destination="h1V-5T-riO" collectionClass="NSMutableArray" id="D7d-vL-Bgq"/>
                         <outletCollection property="digitButtons" destination="bHA-n2-lek" collectionClass="NSMutableArray" id="bDX-07-Kjc"/>
                         <outletCollection property="digitButtons" destination="bSc-QE-FTg" collectionClass="NSMutableArray" id="H2f-zY-WrM"/>
+                        <outletCollection property="digitButtons" destination="0EH-k2-V9A" collectionClass="NSMutableArray" id="Lqi-cH-xfE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

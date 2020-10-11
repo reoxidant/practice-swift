@@ -16,6 +16,8 @@ class CalculatorViewController: UIViewController
     
     var userIsInTheMiddleOfTypingANumber: Bool = false
     
+    var operandStack = Array<Double>()
+    
     @IBAction func appendDigit(_ sender: UIButton)
     {
         let digit = sender.currentTitle!
@@ -31,6 +33,26 @@ class CalculatorViewController: UIViewController
         }
     }
     
+    var displayValue: Double
+    {
+        get
+        {
+            return NSString(string: display.text!).doubleValue
+        }
+        set
+        {
+            display.text = "\(newValue)"
+            userIsInTheMiddleOfTypingANumber = false
+        }
+    }
+    
+    @IBAction func enter() {
+        userIsInTheMiddleOfTypingANumber = false
+        operandStack.append(displayValue)
+        
+        print("operand stack = \(operandStack)")
+    }
+    
     override func viewDidLoad()
     {
         for digit in digitButtons
@@ -43,4 +65,3 @@ class CalculatorViewController: UIViewController
         }
     }
 }
-
