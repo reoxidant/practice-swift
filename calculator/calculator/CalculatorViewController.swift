@@ -59,6 +59,37 @@ class CalculatorViewController: UIViewController
         print("operand stack = \(operandStack)")
     }
     
+    @IBAction func operate(_ sender: UIButton) {
+        let operation = sender.currentTitle
+        if userIsInTheMiddleOfTypingANumber
+        {
+            enter()
+        }
+        switch operation {
+            case "÷":
+                if operandStack.count >= 2
+                {
+                    displayValue = operandStack.removeLast() / operandStack.removeLast()
+                }
+            case "×":
+                if operandStack.count >= 2
+                {
+                    displayValue = operandStack.removeLast() * operandStack.removeLast()
+                }
+            case "−":
+                if operandStack.count >= 2
+                {
+                    displayValue = operandStack.removeLast() - operandStack.removeLast()
+                }
+            case "+":
+                if operandStack.count >= 2
+                {
+                    displayValue = operandStack.removeLast() + operandStack.removeLast()
+                }
+            default: break
+        }
+    }
+    
     override func viewDidLoad()
     {
         
