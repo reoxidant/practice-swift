@@ -10,9 +10,15 @@ import UIKit
 
 class CalculatorViewController: UIViewController
 {
+    
+    
     @IBOutlet weak var display: UILabel!
-
+    
     @IBOutlet var digitButtons: [UIButton]!
+    
+    @IBOutlet var operationButtons: [UIButton]!
+    
+    @IBOutlet weak var returnButton: UIButton!
     
     var userIsInTheMiddleOfTypingANumber: Bool = false
     
@@ -55,13 +61,26 @@ class CalculatorViewController: UIViewController
     
     override func viewDidLoad()
     {
-        for digit in digitButtons
+        func designButtons(arButtons: Array<UIButton>, returnBtn: UIButton)
         {
-            digit.layer.shadowColor = UIColor.black.cgColor
-            digit.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-            digit.layer.shadowOpacity = 0.3
-            digit.layer.masksToBounds = false
-            digit.layer.cornerRadius = digit.frame.width / 2
+            if arButtons.count > 0
+            {
+                for btnItem in arButtons
+                {
+                    btnItem.layer.shadowColor = UIColor.black.cgColor
+                    btnItem.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+                    btnItem.layer.shadowOpacity = 0.3
+                    btnItem.layer.masksToBounds = false
+                    btnItem.layer.cornerRadius = btnItem.frame.width / 2
+                }
+            }
+            returnBtn.layer.shadowColor = UIColor.black.cgColor
+            returnBtn.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+            returnBtn.layer.cornerRadius = returnBtn.frame.width / 4
+            
         }
+        designButtons(arButtons: digitButtons, returnBtn: returnButton)
+        designButtons(arButtons: operationButtons, returnBtn: returnButton)
+        
     }
 }

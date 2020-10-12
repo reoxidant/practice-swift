@@ -86,7 +86,6 @@
 				443CDFE02532015D00D21DC3 /* Screenshots */,
 				44E8A75C252FC19A0080CACA /* Controller */,
 				44E8A75B252FC1900080CACA /* Model */,
-				44E8A75A252FC1800080CACA /* View */,
 				44E8A759252FC0B50080CACA /* Supporting Files */,
 				44E8A749252FBD250080CACA /* CalculatorViewController.swift */,
 				44E8A74B252FBD250080CACA /* Main.storyboard */,
@@ -104,13 +103,6 @@
 				44E8A750252FBD270080CACA /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		44E8A75A252FC1800080CACA /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		44E8A75B252FC1900080CACA /* Model */ = {
