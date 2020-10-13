@@ -69,21 +69,28 @@ class CalculatorViewController: UIViewController
         }
         switch operation
         {
-            case "÷": performOperatation {$0 / $1}
-            case "×": performOperatation {$0 * $1}
-            case "−": performOperatation {$0 - $1}
-            case "+": performOperatation {$0 + $1}
+            case "÷": performOperation {$0 / $1}
+            case "×": performOperation {$0 * $1}
+            case "−": performOperation {$0 - $1}
+            case "+": performOperation {$0 + $1}
+            case "√": performOperation {sqrt($0)}
             default: break
         }
     }
     
-    func performOperatation(operation: (Double, Double) -> Double)
+    func performOperation(operation: (Double, Double) -> Double)
     {
         if operandStack.count >= 2
         {
             displayValue = operation(operandStack.removeLast(), operandStack.removeLast())
             enter()
         }
+    }
+    
+    func performOperation(operation: (Double) -> Double)
+    {
+        displayValue = operation(operandStack.removeLast())
+        enter()
     }
     
     func multiply(op1: Double, op2: Double) -> Double

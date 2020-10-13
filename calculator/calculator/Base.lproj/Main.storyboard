@@ -226,6 +226,18 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aLi-xp-9eH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNL-vc-pfG">
+                                <rect key="frame" x="304" y="360" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <state key="normal" title="√">
+                                    <color key="titleColor" red="0.056870453059999999" green="0.73821026089999997" blue="0.67843109369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jk0-gV-9KV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -253,6 +265,7 @@
                         <outletCollection property="operationButtons" destination="Qku-vS-I5G" collectionClass="NSMutableArray" id="0wK-5z-RqC"/>
                         <outletCollection property="operationButtons" destination="OmC-1A-Mei" collectionClass="NSMutableArray" id="jxY-S3-bZL"/>
                         <outletCollection property="operationButtons" destination="L1P-dh-Uc6" collectionClass="NSMutableArray" id="kFZ-Sg-3hj"/>
+                        <outletCollection property="operationButtons" destination="DNL-vc-pfG" collectionClass="NSMutableArray" id="PW5-b9-JM6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
