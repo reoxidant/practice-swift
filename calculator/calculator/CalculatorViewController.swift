@@ -52,48 +52,65 @@ class CalculatorViewController: UIViewController
         }
     }
     
-    @IBAction func enter() {
+    @IBAction func enter()
+    {
         userIsInTheMiddleOfTypingANumber = false
         operandStack.append(displayValue)
         
         print("operand stack = \(operandStack)")
     }
     
-    @IBAction func operate(_ sender: UIButton) {
+    @IBAction func operate(_ sender: UIButton)
+    {
         let operation = sender.currentTitle
         if userIsInTheMiddleOfTypingANumber
         {
             enter()
         }
-        switch operation {
-            case "÷":
-                if operandStack.count >= 2
-                {
-                    displayValue = operandStack.removeLast() / operandStack.removeLast()
-                }
-            case "×":
-                if operandStack.count >= 2
-                {
-                    displayValue = operandStack.removeLast() * operandStack.removeLast()
-                }
-            case "−":
-                if operandStack.count >= 2
-                {
-                    displayValue = operandStack.removeLast() - operandStack.removeLast()
-                }
-            case "+":
-                if operandStack.count >= 2
-                {
-                    displayValue = operandStack.removeLast() + operandStack.removeLast()
-                }
+        switch operation
+        {
+            case "÷": performOperatation {$0 / $1}
+            case "×": performOperatation {$0 * $1}
+            case "−": performOperatation {$0 - $1}
+            case "+": performOperatation {$0 + $1}
             default: break
         }
+    }
+    
+    func performOperatation(operation: (Double, Double) -> Double)
+    {
+        if operandStack.count >= 2
+        {
+            displayValue = operation(operandStack.removeLast(), operandStack.removeLast())
+            enter()
+        }
+    }
+    
+    func multiply(op1: Double, op2: Double) -> Double
+    {
+        return op1 * op2
+    }
+    
+    func divide(op1: Double, op2: Double) -> Double
+    {
+        return op1 / op2
+    }
+    
+    func plus(op1: Double, op2: Double) -> Double
+    {
+        return op1 + op2
+    }
+
+    func minus(op1: Double, op2: Double) -> Double
+    {
+        return op1 - op2
     }
     
     override func viewDidLoad()
     {
         
-        func makeDesignForItem(item: UIButton){
+        func makeDesignForItem(item: UIButton)
+        {
             item.layer.shadowColor = UIColor.black.cgColor
             item.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
             item.layer.shadowOpacity = 0.3
