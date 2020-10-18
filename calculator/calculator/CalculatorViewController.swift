@@ -116,28 +116,27 @@ class CalculatorViewController: UIViewController
     override func viewDidLoad()
     {
         
-//        func makeDesignForItem(item: UIButton)
-//        {
-//            item.layer.shadowColor = UIColor.black.cgColor
-//            item.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-//            item.layer.shadowOpacity = 0.3
-//            item.layer.masksToBounds = false
-//            item.layer.cornerRadius = item.isEqual(returnButton) ? item.frame.width / 4 : item.frame.width / 2
-//        }
-//        
-//        func designButtons(arButtons: Array<UIButton>)
-//        {
-//            if arButtons.count > 0
-//            {
-//                for btnItem in arButtons
-//                {
-//                    makeDesignForItem(item:btnItem)
-//                }
-//            }
-//        }
-//        
-//        designButtons(arButtons: digitButtons)
-//        designButtons(arButtons: operationButtons)
-//        makeDesignForItem(item:returnButton)
+        func makeDesignForItem(item: UIButton)
+        {
+            item.layer.shadowColor = UIColor.black.cgColor
+            item.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+            item.layer.shadowOpacity = 0.3
+            item.layer.cornerRadius = item.isEqual(returnButton) ? item.bounds.size.width * 0.23 : item.bounds.size.width * 0.45
+        }
+
+        func designButtons(arButtons: Array<UIButton>)
+        {
+            if arButtons.count > 0
+            {
+                for btnItem in arButtons
+                {
+                    makeDesignForItem(item:btnItem)
+                }
+            }
+        }
+
+        designButtons(arButtons: digitButtons)
+        designButtons(arButtons: operationButtons)
+        makeDesignForItem(item:returnButton)
     }
 }
