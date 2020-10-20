@@ -11,6 +11,10 @@
 		443CDFE7253205C100D21DC3 /* quicksand-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443CDFE4253205C100D21DC3 /* quicksand-bold.otf */; };
 		443CDFE8253205C100D21DC3 /* quicksand-book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443CDFE5253205C100D21DC3 /* quicksand-book.otf */; };
 		443CDFE9253205C100D21DC3 /* quicksand-light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 443CDFE6253205C100D21DC3 /* quicksand-light.otf */; };
+		44834789253D72470067F343 /* RayUdemyCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44834788253D72470067F343 /* RayUdemyCourse.storyboard */; };
+		4483478B253D72CD0067F343 /* ImageCourses.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4483478A253D72CD0067F343 /* ImageCourses.xcassets */; };
+		4483478D253D7F4C0067F343 /* RayUdemyChallenge1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4483478C253D7F4C0067F343 /* RayUdemyChallenge1.storyboard */; };
+		4492A0E1253CCE210017B4FB /* AsianUdemy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4492A0E0253CCE210017B4FB /* AsianUdemy.storyboard */; };
 		44E8A746252FBD250080CACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E8A745252FBD250080CACA /* AppDelegate.swift */; };
 		44E8A748252FBD250080CACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E8A747252FBD250080CACA /* SceneDelegate.swift */; };
 		44E8A74A252FBD250080CACA /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E8A749252FBD250080CACA /* CalculatorViewController.swift */; };
@@ -25,6 +29,10 @@
 		443CDFE4253205C100D21DC3 /* quicksand-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "quicksand-bold.otf"; sourceTree = "<group>"; };
 		443CDFE5253205C100D21DC3 /* quicksand-book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "quicksand-book.otf"; sourceTree = "<group>"; };
 		443CDFE6253205C100D21DC3 /* quicksand-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "quicksand-light.otf"; sourceTree = "<group>"; };
+		44834788253D72470067F343 /* RayUdemyCourse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RayUdemyCourse.storyboard; sourceTree = "<group>"; };
+		4483478A253D72CD0067F343 /* ImageCourses.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageCourses.xcassets; sourceTree = "<group>"; };
+		4483478C253D7F4C0067F343 /* RayUdemyChallenge1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RayUdemyChallenge1.storyboard; sourceTree = "<group>"; };
+		4492A0E0253CCE210017B4FB /* AsianUdemy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AsianUdemy.storyboard; sourceTree = "<group>"; };
 		44E8A742252FBD250080CACA /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E8A745252FBD250080CACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44E8A747252FBD250080CACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +100,11 @@
 				44E8A749252FBD250080CACA /* CalculatorViewController.swift */,
 				44E8A74B252FBD250080CACA /* Main.storyboard */,
 				44F4B3302538CC1200D29B3E /* Test.storyboard */,
+				4492A0E0253CCE210017B4FB /* AsianUdemy.storyboard */,
 				44E8A753252FBD270080CACA /* Info.plist */,
+				44834788253D72470067F343 /* RayUdemyCourse.storyboard */,
+				4483478C253D7F4C0067F343 /* RayUdemyChallenge1.storyboard */,
+				4483478A253D72CD0067F343 /* ImageCourses.xcassets */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -180,10 +192,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4483478D253D7F4C0067F343 /* RayUdemyChallenge1.storyboard in Resources */,
 				443CDFE8253205C100D21DC3 /* quicksand-book.otf in Resources */,
 				44E8A752252FBD270080CACA /* LaunchScreen.storyboard in Resources */,
 				44E8A74F252FBD270080CACA /* Assets.xcassets in Resources */,
+				44834789253D72470067F343 /* RayUdemyCourse.storyboard in Resources */,
 				443CDFE9253205C100D21DC3 /* quicksand-light.otf in Resources */,
+				4483478B253D72CD0067F343 /* ImageCourses.xcassets in Resources */,
+				4492A0E1253CCE210017B4FB /* AsianUdemy.storyboard in Resources */,
 				443CDFE22532015D00D21DC3 /* Calculator.png in Resources */,
 				443CDFE7253205C100D21DC3 /* quicksand-bold.otf in Resources */,
 				44F4B3312538CC1200D29B3E /* Test.storyboard in Resources */,
