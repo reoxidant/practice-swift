@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "104-1042624_unique-wedding-rings-icon-one-ring-icon.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
