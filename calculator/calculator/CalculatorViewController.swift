@@ -121,7 +121,7 @@ class CalculatorViewController: UIViewController
             item.layer.shadowColor = UIColor.black.cgColor
             item.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
             item.layer.shadowOpacity = 0.3
-            item.layer.cornerRadius = item.isEqual(returnButton) ? item.bounds.size.width * 0.23 : item.bounds.size.width * 0.45
+            item.layer.cornerRadius = item.isEqual(returnButton) ? item.bounds.size.width * 0.20 : item.bounds.size.width * 0.5
         }
 
         func designButtons(arButtons: Array<UIButton>)
