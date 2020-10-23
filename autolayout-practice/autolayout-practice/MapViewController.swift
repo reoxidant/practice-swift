@@ -9,8 +9,8 @@
 import UIKit
 
 final class MapViewController: UIViewController {
-    @IBOutlet var desiredXConstraint: NSLayoutConstraint!
-    @IBOutlet var desiredYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var desiredXConstraint: NSLayoutConstraint!
+    @IBOutlet weak var desiredYConstraint: NSLayoutConstraint!
     @IBOutlet var marker: UIView!
     @IBOutlet var markerImageView: UIImageView!
     

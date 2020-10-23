@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44474D4C25431C350040817C /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44474D4B25431C350040817C /* WeatherViewController.swift */; };
 		44DA8DD125417AB5005E9710 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DA8DD025417AB5005E9710 /* MapViewController.swift */; };
 		44DBA26E2541596600BEA197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBA26D2541596600BEA197 /* AppDelegate.swift */; };
 		44DBA2702541596600BEA197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBA26F2541596600BEA197 /* SceneDelegate.swift */; };
-		44DBA2722541596600BEA197 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBA2712541596600BEA197 /* ViewController.swift */; };
+		44DBA2722541596600BEA197 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBA2712541596600BEA197 /* MenuViewController.swift */; };
 		44DBA2752541596600BEA197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA2732541596600BEA197 /* Main.storyboard */; };
 		44DBA2772541596700BEA197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA2762541596700BEA197 /* Assets.xcassets */; };
 		44DBA27A2541596700BEA197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA2782541596700BEA197 /* LaunchScreen.storyboard */; };
@@ -24,11 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44474D4B25431C350040817C /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		44DA8DD025417AB5005E9710 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		44DBA26A2541596600BEA197 /* autolayout-practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "autolayout-practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DBA26D2541596600BEA197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44DBA26F2541596600BEA197 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44DBA2712541596600BEA197 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		44DBA2712541596600BEA197 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		44DBA2742541596600BEA197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44DBA2762541596700BEA197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44DBA2792541596700BEA197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,8 +77,9 @@
 				44DBA281254159DA00BEA197 /* PracticeByLectures */,
 				44DBA26D2541596600BEA197 /* AppDelegate.swift */,
 				44DBA26F2541596600BEA197 /* SceneDelegate.swift */,
+				44474D4B25431C350040817C /* WeatherViewController.swift */,
 				44DA8DD025417AB5005E9710 /* MapViewController.swift */,
-				44DBA2712541596600BEA197 /* ViewController.swift */,
+				44DBA2712541596600BEA197 /* MenuViewController.swift */,
 				44DBA2732541596600BEA197 /* Main.storyboard */,
 				44DBA2762541596700BEA197 /* Assets.xcassets */,
 				44DBA2782541596700BEA197 /* LaunchScreen.storyboard */,
@@ -177,7 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44DBA2722541596600BEA197 /* ViewController.swift in Sources */,
+				44DBA2722541596600BEA197 /* MenuViewController.swift in Sources */,
+				44474D4C25431C350040817C /* WeatherViewController.swift in Sources */,
 				44DBA26E2541596600BEA197 /* AppDelegate.swift in Sources */,
 				44DBA2702541596600BEA197 /* SceneDelegate.swift in Sources */,
 				44DA8DD125417AB5005E9710 /* MapViewController.swift in Sources */,
