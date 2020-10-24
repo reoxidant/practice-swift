@@ -135,72 +135,91 @@
             <objects>
                 <viewController title="Map View Controller" modalPresentationStyle="fullScreen" id="00U-Jp-QyL" customClass="MapViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Uv-ZF-pob">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="2000" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJx-qh-0KN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="88" width="2000" height="1878"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="treasure-map" translatesAutoresizingMaskIntoConstraints="NO" id="o9H-CM-alX">
-                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treasure-map" translatesAutoresizingMaskIntoConstraints="NO" id="6zW-mg-ME6">
+                                        <rect key="frame" x="0.0" y="0.0" width="2000" height="1878"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="2000" id="fY1-mW-urz"/>
+                                            <constraint firstAttribute="height" constant="1878" id="pm3-tz-nTa"/>
+                                        </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OJ-w7-JxE" userLabel="Marker">
-                                        <rect key="frame" x="275" y="610" width="100" height="80"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mem-4B-1Yt" userLabel="Marker Arrow View">
+                                        <rect key="frame" x="1800" y="1778" width="200" height="100"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="999" image="arrow-map" translatesAutoresizingMaskIntoConstraints="NO" id="65d-bY-Eld" userLabel="Marker Image View">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-map" translatesAutoresizingMaskIntoConstraints="NO" id="U2V-pH-dgw" userLabel="Marker Arrow Image View">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="65d-bY-Eld" firstAttribute="top" secondItem="6OJ-w7-JxE" secondAttribute="top" id="QxC-EW-fii"/>
-                                            <constraint firstAttribute="bottom" secondItem="65d-bY-Eld" secondAttribute="bottom" id="a8h-lg-ZbU"/>
-                                            <constraint firstItem="65d-bY-Eld" firstAttribute="leading" secondItem="6OJ-w7-JxE" secondAttribute="leading" id="eGD-g4-NSg"/>
-                                            <constraint firstAttribute="trailing" secondItem="65d-bY-Eld" secondAttribute="trailing" id="gLa-ah-7wy"/>
-                                            <constraint firstAttribute="width" constant="100" id="oS6-iz-ido"/>
-                                            <constraint firstAttribute="height" constant="80" id="yTE-Vh-cfK"/>
+                                            <constraint firstAttribute="trailing" secondItem="U2V-pH-dgw" secondAttribute="trailing" id="8jL-TW-qYZ"/>
+                                            <constraint firstAttribute="width" constant="200" id="Qb0-li-1ok"/>
+                                            <constraint firstAttribute="bottom" secondItem="U2V-pH-dgw" secondAttribute="bottom" id="R7G-aw-NSa"/>
+                                            <constraint firstItem="U2V-pH-dgw" firstAttribute="top" secondItem="Mem-4B-1Yt" secondAttribute="top" id="hZk-nS-cEJ"/>
+                                            <constraint firstItem="U2V-pH-dgw" firstAttribute="leading" secondItem="Mem-4B-1Yt" secondAttribute="leading" id="l83-jH-Amx"/>
+                                            <constraint firstAttribute="height" constant="100" id="usX-30-y4U"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3J-rx-dmz" userLabel="Marker Treasure View">
+                                        <rect key="frame" x="658" y="441" width="120" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marker-map" translatesAutoresizingMaskIntoConstraints="NO" id="H6I-f8-VFe" userLabel="Marker Treasure Image View">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="100"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="H6I-f8-VFe" secondAttribute="bottom" id="3Pj-KB-wsB"/>
+                                            <constraint firstAttribute="width" constant="120" id="Fgh-Yz-ohH"/>
+                                            <constraint firstItem="H6I-f8-VFe" firstAttribute="top" secondItem="O3J-rx-dmz" secondAttribute="top" id="GNc-mj-Lce"/>
+                                            <constraint firstItem="H6I-f8-VFe" firstAttribute="leading" secondItem="O3J-rx-dmz" secondAttribute="leading" id="I0t-Ql-k9J"/>
+                                            <constraint firstAttribute="height" constant="100" id="olF-07-Z7v"/>
+                                            <constraint firstAttribute="trailing" secondItem="H6I-f8-VFe" secondAttribute="trailing" id="sCK-RJ-A51"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="6OJ-w7-JxE" firstAttribute="leading" secondItem="sJx-qh-0KN" secondAttribute="leading" priority="998" constant="1610" id="A5z-Pn-T8y" userLabel="DesiredX Constraint"/>
-                                    <constraint firstItem="o9H-CM-alX" firstAttribute="top" secondItem="sJx-qh-0KN" secondAttribute="top" id="eTB-N8-5kx"/>
-                                    <constraint firstItem="o9H-CM-alX" firstAttribute="leading" secondItem="sJx-qh-0KN" secondAttribute="leading" id="f6u-Dj-ouL"/>
-                                    <constraint firstAttribute="trailing" secondItem="o9H-CM-alX" secondAttribute="trailing" id="lBq-LL-gFd"/>
-                                    <constraint firstItem="6OJ-w7-JxE" firstAttribute="top" secondItem="sJx-qh-0KN" secondAttribute="top" priority="998" constant="1610" id="oc8-BB-mOA" userLabel="DesiredY Constraint"/>
-                                    <constraint firstAttribute="bottom" secondItem="o9H-CM-alX" secondAttribute="bottom" id="yAB-PN-QCU"/>
+                                    <constraint firstItem="6zW-mg-ME6" firstAttribute="top" secondItem="sJx-qh-0KN" secondAttribute="top" id="0Sa-2f-XuV"/>
+                                    <constraint firstItem="Mem-4B-1Yt" firstAttribute="leading" secondItem="sJx-qh-0KN" secondAttribute="leading" priority="998" constant="1878" id="4z2-WI-de6" userLabel="DesiredX Contrains"/>
+                                    <constraint firstAttribute="trailing" secondItem="6zW-mg-ME6" secondAttribute="trailing" id="7tF-VF-dmW"/>
+                                    <constraint firstItem="O3J-rx-dmz" firstAttribute="top" secondItem="sJx-qh-0KN" secondAttribute="top" constant="441" id="Fn0-zJ-iZR"/>
+                                    <constraint firstItem="Mem-4B-1Yt" firstAttribute="top" secondItem="sJx-qh-0KN" secondAttribute="top" priority="998" constant="1878" id="Sa1-hr-pEB" userLabel="DesiredY Contrains"/>
+                                    <constraint firstItem="O3J-rx-dmz" firstAttribute="leading" secondItem="sJx-qh-0KN" secondAttribute="leading" constant="658" id="Vxt-XG-0Wy"/>
+                                    <constraint firstItem="6zW-mg-ME6" firstAttribute="leading" secondItem="sJx-qh-0KN" secondAttribute="leading" id="cWw-dS-5QB"/>
+                                    <constraint firstAttribute="bottom" secondItem="6zW-mg-ME6" secondAttribute="bottom" id="yeW-fs-1cr"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jEL-BD-hh0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6OJ-w7-JxE" secondAttribute="bottom" id="MGk-Aj-a0K"/>
-                            <constraint firstItem="sJx-qh-0KN" firstAttribute="leading" secondItem="jEL-BD-hh0" secondAttribute="leading" id="MKe-m8-o0S"/>
-                            <constraint firstAttribute="bottom" secondItem="sJx-qh-0KN" secondAttribute="bottom" id="Q78-XT-oAa"/>
-                            <constraint firstItem="6OJ-w7-JxE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jEL-BD-hh0" secondAttribute="leading" id="dLX-xx-Or8"/>
-                            <constraint firstItem="6OJ-w7-JxE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jEL-BD-hh0" secondAttribute="top" id="jdN-py-ngX"/>
-                            <constraint firstItem="jEL-BD-hh0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6OJ-w7-JxE" secondAttribute="trailing" id="naZ-Fp-R3V"/>
-                            <constraint firstItem="jEL-BD-hh0" firstAttribute="trailing" secondItem="sJx-qh-0KN" secondAttribute="trailing" id="qXc-aj-QCb"/>
-                            <constraint firstItem="sJx-qh-0KN" firstAttribute="top" secondItem="3Uv-ZF-pob" secondAttribute="top" id="tSe-dS-X5V"/>
+                            <constraint firstItem="Mem-4B-1Yt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jEL-BD-hh0" secondAttribute="leading" id="A8v-w4-km3"/>
+                            <constraint firstItem="sJx-qh-0KN" firstAttribute="leading" secondItem="jEL-BD-hh0" secondAttribute="leading" id="C2p-Mi-lE7"/>
+                            <constraint firstItem="Mem-4B-1Yt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jEL-BD-hh0" secondAttribute="top" id="FHO-bt-WBP"/>
+                            <constraint firstItem="jEL-BD-hh0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Mem-4B-1Yt" secondAttribute="bottom" id="fqR-Ze-f0f"/>
+                            <constraint firstItem="jEL-BD-hh0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mem-4B-1Yt" secondAttribute="trailing" id="l8K-ln-mfq"/>
+                            <constraint firstItem="sJx-qh-0KN" firstAttribute="trailing" secondItem="jEL-BD-hh0" secondAttribute="trailing" id="lmA-hv-HfY"/>
+                            <constraint firstItem="sJx-qh-0KN" firstAttribute="bottom" secondItem="jEL-BD-hh0" secondAttribute="bottom" id="rxC-qU-eQ5"/>
+                            <constraint firstItem="sJx-qh-0KN" firstAttribute="top" secondItem="jEL-BD-hh0" secondAttribute="top" id="usA-co-aXB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jEL-BD-hh0"/>
                     </view>
                     <navigationItem key="navigationItem" id="30Q-rX-0jy"/>
-                    <connections>
-                        <outlet property="desiredXConstraint" destination="A5z-Pn-T8y" id="VOS-Zs-TqM"/>
-                        <outlet property="desiredYConstraint" destination="oc8-BB-mOA" id="GMf-Kc-Z85"/>
-                        <outlet property="marker" destination="6OJ-w7-JxE" id="zx7-gU-ylE"/>
-                        <outlet property="markerImageView" destination="65d-bY-Eld" id="kuw-Kg-7j9"/>
-                    </connections>
+                    <size key="freeformSize" width="2000" height="2000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRN-b2-Cgn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853.60000000000002" y="133.74384236453201"/>
+            <point key="canvasLocation" x="2416" y="387.192118226601"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow-map" width="141" height="93"/>
         <image name="background-island-4" width="1200" height="840"/>
+        <image name="marker-map" width="819" height="620"/>
         <image name="treasure" width="236" height="254"/>
         <image name="treasure-map" width="1000" height="1000"/>
     </resources>
