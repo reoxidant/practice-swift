@@ -149,20 +149,20 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mem-4B-1Yt" userLabel="Marker Arrow View">
-                                        <rect key="frame" x="1800" y="1778" width="200" height="100"/>
+                                        <rect key="frame" x="658" y="441" width="150" height="150"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-map" translatesAutoresizingMaskIntoConstraints="NO" id="U2V-pH-dgw" userLabel="Marker Arrow Image View">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="U2V-pH-dgw" secondAttribute="trailing" id="8jL-TW-qYZ"/>
-                                            <constraint firstAttribute="width" constant="200" id="Qb0-li-1ok"/>
+                                            <constraint firstAttribute="width" constant="150" id="Qb0-li-1ok"/>
                                             <constraint firstAttribute="bottom" secondItem="U2V-pH-dgw" secondAttribute="bottom" id="R7G-aw-NSa"/>
                                             <constraint firstItem="U2V-pH-dgw" firstAttribute="top" secondItem="Mem-4B-1Yt" secondAttribute="top" id="hZk-nS-cEJ"/>
                                             <constraint firstItem="U2V-pH-dgw" firstAttribute="leading" secondItem="Mem-4B-1Yt" secondAttribute="leading" id="l83-jH-Amx"/>
-                                            <constraint firstAttribute="height" constant="100" id="usX-30-y4U"/>
+                                            <constraint firstAttribute="height" constant="150" id="usX-30-y4U"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3J-rx-dmz" userLabel="Marker Treasure View">
@@ -185,10 +185,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6zW-mg-ME6" firstAttribute="top" secondItem="sJx-qh-0KN" secondAttribute="top" id="0Sa-2f-XuV"/>
-                                    <constraint firstItem="Mem-4B-1Yt" firstAttribute="leading" secondItem="sJx-qh-0KN" secondAttribute="leading" priority="998" constant="1878" id="4z2-WI-de6" userLabel="DesiredX Contrains"/>
+                                    <constraint firstItem="Mem-4B-1Yt" firstAttribute="leading" secondItem="sJx-qh-0KN" secondAttribute="leading" priority="998" constant="658" id="4z2-WI-de6" userLabel="DesiredX Constraint"/>
                                     <constraint firstAttribute="trailing" secondItem="6zW-mg-ME6" secondAttribute="trailing" id="7tF-VF-dmW"/>
                                     <constraint firstItem="O3J-rx-dmz" firstAttribute="top" secondItem="sJx-qh-0KN" secondAttribute="top" constant="441" id="Fn0-zJ-iZR"/>
-                                    <constraint firstItem="Mem-4B-1Yt" firstAttribute="top" secondItem="sJx-qh-0KN" secondAttribute="top" priority="998" constant="1878" id="Sa1-hr-pEB" userLabel="DesiredY Contrains"/>
+                                    <constraint firstItem="Mem-4B-1Yt" firstAttribute="top" secondItem="sJx-qh-0KN" secondAttribute="top" priority="998" constant="441" id="Sa1-hr-pEB" userLabel="DesiredY Constraint"/>
                                     <constraint firstItem="O3J-rx-dmz" firstAttribute="leading" secondItem="sJx-qh-0KN" secondAttribute="leading" constant="658" id="Vxt-XG-0Wy"/>
                                     <constraint firstItem="6zW-mg-ME6" firstAttribute="leading" secondItem="sJx-qh-0KN" secondAttribute="leading" id="cWw-dS-5QB"/>
                                     <constraint firstAttribute="bottom" secondItem="6zW-mg-ME6" secondAttribute="bottom" id="yeW-fs-1cr"/>
@@ -210,6 +210,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="30Q-rX-0jy"/>
                     <size key="freeformSize" width="2000" height="2000"/>
+                    <connections>
+                        <outlet property="desiredXConstraint" destination="4z2-WI-de6" id="7Vp-cO-Exm"/>
+                        <outlet property="desiredYConstraint" destination="Sa1-hr-pEB" id="BbK-oD-qwA"/>
+                        <outlet property="marker" destination="Mem-4B-1Yt" id="R2t-32-Tpv"/>
+                        <outlet property="markerImageView" destination="U2V-pH-dgw" id="TYe-5X-JQr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRN-b2-Cgn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

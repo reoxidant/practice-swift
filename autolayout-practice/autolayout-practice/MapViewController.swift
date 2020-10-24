@@ -11,18 +11,17 @@ import UIKit
 final class MapViewController: UIViewController {
     @IBOutlet weak var desiredXConstraint: NSLayoutConstraint!
     @IBOutlet weak var desiredYConstraint: NSLayoutConstraint!
-    @IBOutlet var marker: UIView!
-    @IBOutlet var markerImageView: UIImageView!
+    @IBOutlet weak var marker: UIView!
+    @IBOutlet weak var markerImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setMarkerToArrowOrX()
+        setMarkerToArrowOrX()
     }
     
     func setMarkerToArrowOrX() {
         let currentPoint = marker.frame.origin
         let desiredPoint = CGPoint(x: desiredXConstraint.constant, y:  desiredYConstraint.constant)
-        
         let imageName: String
         let transform: CGAffineTransform
         
@@ -31,10 +30,10 @@ final class MapViewController: UIViewController {
             transform = .identity
         }
         else {
-            imageName = "arrow"
+            imageName = "arrow-map"
             transform = CGAffineTransform(rotationAngle: (desiredPoint - currentPoint).angle)
         }
-        
+
         markerImageView.image = UIImage(named: imageName)
         markerImageView.transform = transform
     }
