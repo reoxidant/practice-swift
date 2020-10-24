@@ -25,8 +25,10 @@ final class MapViewController: UIViewController {
         let imageName: String
         let transform: CGAffineTransform
         
+        print("currentPoint: \(currentPoint)")
+        
         if currentPoint == desiredPoint {
-            imageName = "x"
+            imageName = "marker-map"
             transform = .identity
         }
         else {
