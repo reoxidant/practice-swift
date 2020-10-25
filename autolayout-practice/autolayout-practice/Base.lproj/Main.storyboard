@@ -60,6 +60,9 @@
                                         <state key="normal" title="Weather Forecast">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Yk8-H2-QXo" kind="show" id="dcP-yY-GZE"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BEq-r5-oFb">
                                         <rect key="frame" x="0.0" y="128" width="335" height="44"/>
@@ -202,11 +205,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRN-b2-Cgn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2416" y="387.192118226601"/>
+            <point key="canvasLocation" x="1178" y="-678"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="Kna-1v-8Un">
+            <objects>
+                <viewController id="Yk8-H2-QXo" customClass="WeatherViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f6W-eV-27c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-island-2" translatesAutoresizingMaskIntoConstraints="NO" id="TsW-v2-M4d">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="G9C-eU-Ce2" firstAttribute="bottom" secondItem="TsW-v2-M4d" secondAttribute="bottom" id="8aS-je-4u3"/>
+                            <constraint firstItem="G9C-eU-Ce2" firstAttribute="trailing" secondItem="TsW-v2-M4d" secondAttribute="trailing" id="X1g-pi-Oxe"/>
+                            <constraint firstItem="TsW-v2-M4d" firstAttribute="top" secondItem="G9C-eU-Ce2" secondAttribute="top" id="ZOq-p6-FOo"/>
+                            <constraint firstItem="TsW-v2-M4d" firstAttribute="leading" secondItem="G9C-eU-Ce2" secondAttribute="leading" id="jaI-Vp-IUx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G9C-eU-Ce2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t6A-N7-4VS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELu-xi-6uM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="290"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow-map" width="141" height="93"/>
+        <image name="background-island-2" width="1531" height="823"/>
         <image name="background-island-4" width="1200" height="840"/>
         <image name="treasure" width="236" height="254"/>
         <image name="treasure-map" width="1000" height="1000"/>
