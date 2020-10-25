@@ -66,26 +66,7 @@ class WeatherViewController: UIViewController {
         view.addSubview(redSquare)
         view.addSubview(blueSquare)
         view.addSubview(greenSquare)
-        
-        let viewVFL = ["redSquare": redSquare, "blueSquare": blueSquare]
-        let metrics = ["height": 100, "width": view.bounds.size.width / 3, "top": view.bounds.size.height / 2]
-        
-        view.addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|[redSquare(height)]|",
-                options: [],
-                metrics: metrics,
-                views: viewVFL
-            )
-        )
-        
-        view.addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|[blueSquare(height)]|",
-                options: [],
-                metrics: metrics,
-                views: viewVFL
-            )
-        )
+            
+       
     }
 }
