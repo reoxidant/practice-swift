@@ -218,17 +218,31 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-island-2" translatesAutoresizingMaskIntoConstraints="NO" id="TsW-v2-M4d">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZ7-SZ-sgj">
+                                <rect key="frame" x="0.0" y="378" width="375" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" placeholder="YES" id="axa-Xi-oAv"/>
+                                    <constraint firstAttribute="height" constant="110" placeholder="YES" id="mlD-nD-auw"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="G9C-eU-Ce2" firstAttribute="bottom" secondItem="TsW-v2-M4d" secondAttribute="bottom" id="8aS-je-4u3"/>
+                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G9C-eU-Ce2" secondAttribute="leading" id="Cb0-rW-tOI"/>
+                            <constraint firstItem="G9C-eU-Ce2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LZ7-SZ-sgj" secondAttribute="trailing" id="LWV-a1-lOQ"/>
                             <constraint firstItem="G9C-eU-Ce2" firstAttribute="trailing" secondItem="TsW-v2-M4d" secondAttribute="trailing" id="X1g-pi-Oxe"/>
                             <constraint firstItem="TsW-v2-M4d" firstAttribute="top" secondItem="G9C-eU-Ce2" secondAttribute="top" id="ZOq-p6-FOo"/>
+                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="centerX" secondItem="G9C-eU-Ce2" secondAttribute="centerX" id="cQR-CI-meN"/>
                             <constraint firstItem="TsW-v2-M4d" firstAttribute="leading" secondItem="G9C-eU-Ce2" secondAttribute="leading" id="jaI-Vp-IUx"/>
+                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="centerY" secondItem="G9C-eU-Ce2" secondAttribute="centerY" id="nTi-iU-3Vg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G9C-eU-Ce2"/>
                     </view>
                     <navigationItem key="navigationItem" id="t6A-N7-4VS"/>
+                    <connections>
+                        <outlet property="stackView" destination="LZ7-SZ-sgj" id="Ys7-cx-mXZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELu-xi-6uM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
