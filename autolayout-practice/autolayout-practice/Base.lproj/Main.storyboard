@@ -86,6 +86,9 @@
                                                 <state key="normal" title="FAQs">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="Zro-W4-fd5" kind="show" id="tza-WR-PjG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -207,6 +210,40 @@
             </objects>
             <point key="canvasLocation" x="1178" y="-678"/>
         </scene>
+        <!--Achor Stack View Challenge View Controller-->
+        <scene sceneID="YLL-MA-5It">
+            <objects>
+                <viewController id="Zro-W4-fd5" customClass="AchorStackViewChallengeViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eWh-F6-HG2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FhX-av-uOD">
+                                <rect key="frame" x="0.0" y="378" width="375" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" placeholder="YES" id="JYZ-v4-0Wu"/>
+                                    <constraint firstAttribute="height" constant="110" placeholder="YES" id="XBC-Yp-sKf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FhX-av-uOD" firstAttribute="trailing" secondItem="wUQ-jy-Xhj" secondAttribute="trailing" id="AgM-2j-234"/>
+                            <constraint firstItem="FhX-av-uOD" firstAttribute="centerY" secondItem="wUQ-jy-Xhj" secondAttribute="centerY" id="bpi-Ip-d20"/>
+                            <constraint firstItem="FhX-av-uOD" firstAttribute="centerX" secondItem="wUQ-jy-Xhj" secondAttribute="centerX" id="dgp-q7-FmX"/>
+                            <constraint firstItem="FhX-av-uOD" firstAttribute="leading" secondItem="wUQ-jy-Xhj" secondAttribute="leading" id="erw-0d-y5X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wUQ-jy-Xhj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kc4-2O-lMz"/>
+                    <connections>
+                        <outlet property="stackView" destination="FhX-av-uOD" id="W2t-YO-aK8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ui-d3-sNh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="441" y="1023"/>
+        </scene>
         <!--Weather View Controller-->
         <scene sceneID="Kna-1v-8Un">
             <objects>
@@ -221,21 +258,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZ7-SZ-sgj">
                                 <rect key="frame" x="0.0" y="378" width="375" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" placeholder="YES" id="axa-Xi-oAv"/>
-                                    <constraint firstAttribute="height" constant="110" placeholder="YES" id="mlD-nD-auw"/>
+                                    <constraint firstAttribute="width" constant="375" placeholder="YES" id="QUE-zL-TmD"/>
+                                    <constraint firstAttribute="height" constant="110" placeholder="YES" id="uao-ek-bgY"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="leading" secondItem="G9C-eU-Ce2" secondAttribute="leading" id="5a0-eC-yC6"/>
                             <constraint firstItem="G9C-eU-Ce2" firstAttribute="bottom" secondItem="TsW-v2-M4d" secondAttribute="bottom" id="8aS-je-4u3"/>
-                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G9C-eU-Ce2" secondAttribute="leading" id="Cb0-rW-tOI"/>
-                            <constraint firstItem="G9C-eU-Ce2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LZ7-SZ-sgj" secondAttribute="trailing" id="LWV-a1-lOQ"/>
+                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="centerY" secondItem="G9C-eU-Ce2" secondAttribute="centerY" id="Gac-82-hQd"/>
                             <constraint firstItem="G9C-eU-Ce2" firstAttribute="trailing" secondItem="TsW-v2-M4d" secondAttribute="trailing" id="X1g-pi-Oxe"/>
                             <constraint firstItem="TsW-v2-M4d" firstAttribute="top" secondItem="G9C-eU-Ce2" secondAttribute="top" id="ZOq-p6-FOo"/>
-                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="centerX" secondItem="G9C-eU-Ce2" secondAttribute="centerX" id="cQR-CI-meN"/>
+                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="trailing" secondItem="G9C-eU-Ce2" secondAttribute="trailing" id="i5k-0A-CnK"/>
                             <constraint firstItem="TsW-v2-M4d" firstAttribute="leading" secondItem="G9C-eU-Ce2" secondAttribute="leading" id="jaI-Vp-IUx"/>
-                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="centerY" secondItem="G9C-eU-Ce2" secondAttribute="centerY" id="nTi-iU-3Vg"/>
+                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="centerX" secondItem="G9C-eU-Ce2" secondAttribute="centerX" id="wtM-KB-GBT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G9C-eU-Ce2"/>
                     </view>

@@ -48,5 +48,9 @@ class WeatherViewController: UIViewController {
             }
         )
         //dropFirst get sequence container of elements but you can direct first number from last
+        
+        //Need create with anchor layout
+        //Need create with stackview + anchor layout
+        //Need create with VFL
     }
 }
