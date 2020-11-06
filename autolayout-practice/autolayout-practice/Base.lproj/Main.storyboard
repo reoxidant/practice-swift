@@ -76,6 +76,9 @@
                                                 <state key="normal" title="Privacy Policy">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="T4e-pg-tU9" kind="show" id="gPz-b4-3Rt"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cw-IT-rbb">
                                                 <rect key="frame" x="177.66666666666663" y="0.0" width="157.33333333333337" height="44"/>
@@ -210,6 +213,33 @@
             </objects>
             <point key="canvasLocation" x="1178" y="-678"/>
         </scene>
+        <!--Challenge View Controller-->
+        <scene sceneID="8QN-Gp-gtG">
+            <objects>
+                <viewController id="T4e-pg-tU9" customClass="VFLChallengeViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nom-mg-vt4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-island-3" translatesAutoresizingMaskIntoConstraints="NO" id="AUy-dS-Ta0">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AUy-dS-Ta0" secondAttribute="bottom" id="aYq-t9-bo5"/>
+                            <constraint firstItem="AUy-dS-Ta0" firstAttribute="trailing" secondItem="BhJ-98-w5k" secondAttribute="trailing" id="nsM-g4-MPe"/>
+                            <constraint firstItem="AUy-dS-Ta0" firstAttribute="top" secondItem="BhJ-98-w5k" secondAttribute="top" id="qkg-vY-1fx"/>
+                            <constraint firstItem="AUy-dS-Ta0" firstAttribute="leading" secondItem="BhJ-98-w5k" secondAttribute="leading" id="rxJ-6Q-Lvf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BhJ-98-w5k"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2pu-I7-vAh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GS4-XK-oRE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-546.39999999999998" y="830.54187192118229"/>
+        </scene>
         <!--Achor Stack View Challenge View Controller-->
         <scene sceneID="YLL-MA-5It">
             <objects>
@@ -281,6 +311,7 @@
         <image name="arrow-map" width="141" height="93"/>
         <image name="background-island-1" width="1024" height="768"/>
         <image name="background-island-2" width="1531" height="823"/>
+        <image name="background-island-3" width="6501" height="4733"/>
         <image name="background-island-4" width="1200" height="840"/>
         <image name="treasure" width="236" height="254"/>
         <image name="treasure-map" width="1000" height="1000"/>
