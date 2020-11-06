@@ -218,68 +218,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FhX-av-uOD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-island-1" translatesAutoresizingMaskIntoConstraints="NO" id="XDv-NN-SQg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ePP-oc-Wgd">
                                 <rect key="frame" x="0.0" y="378" width="375" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" placeholder="YES" id="JYZ-v4-0Wu"/>
-                                    <constraint firstAttribute="height" constant="110" placeholder="YES" id="XBC-Yp-sKf"/>
+                                    <constraint firstAttribute="height" constant="110" placeholder="YES" id="p6W-f1-YFx"/>
+                                    <constraint firstAttribute="width" constant="375" placeholder="YES" id="tdK-eX-wHx"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="FhX-av-uOD" firstAttribute="trailing" secondItem="wUQ-jy-Xhj" secondAttribute="trailing" id="AgM-2j-234"/>
-                            <constraint firstItem="FhX-av-uOD" firstAttribute="centerY" secondItem="wUQ-jy-Xhj" secondAttribute="centerY" id="bpi-Ip-d20"/>
-                            <constraint firstItem="FhX-av-uOD" firstAttribute="centerX" secondItem="wUQ-jy-Xhj" secondAttribute="centerX" id="dgp-q7-FmX"/>
-                            <constraint firstItem="FhX-av-uOD" firstAttribute="leading" secondItem="wUQ-jy-Xhj" secondAttribute="leading" id="erw-0d-y5X"/>
+                            <constraint firstAttribute="bottom" secondItem="XDv-NN-SQg" secondAttribute="bottom" id="Fh9-c0-kCn"/>
+                            <constraint firstItem="XDv-NN-SQg" firstAttribute="trailing" secondItem="wUQ-jy-Xhj" secondAttribute="trailing" id="I8a-n1-bO3"/>
+                            <constraint firstItem="ePP-oc-Wgd" firstAttribute="centerX" secondItem="wUQ-jy-Xhj" secondAttribute="centerX" id="VyN-6z-Dyu"/>
+                            <constraint firstItem="ePP-oc-Wgd" firstAttribute="centerY" secondItem="wUQ-jy-Xhj" secondAttribute="centerY" id="Yfx-e1-n9c"/>
+                            <constraint firstItem="XDv-NN-SQg" firstAttribute="leading" secondItem="wUQ-jy-Xhj" secondAttribute="leading" id="k0z-zI-WBV"/>
+                            <constraint firstItem="XDv-NN-SQg" firstAttribute="top" secondItem="eWh-F6-HG2" secondAttribute="top" id="thg-Ls-UWu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wUQ-jy-Xhj"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kc4-2O-lMz"/>
                     <connections>
-                        <outlet property="stackView" destination="FhX-av-uOD" id="W2t-YO-aK8"/>
+                        <outlet property="stackView" destination="ePP-oc-Wgd" id="fFc-vJ-H1H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ui-d3-sNh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="441" y="1023"/>
+            <point key="canvasLocation" x="440.80000000000001" y="1022.6600985221676"/>
         </scene>
-        <!--Weather View Controller-->
+        <!--Anchor Challenge View Controller-->
         <scene sceneID="Kna-1v-8Un">
             <objects>
-                <viewController id="Yk8-H2-QXo" customClass="WeatherViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Yk8-H2-QXo" customClass="AnchorChallengeViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f6W-eV-27c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-island-2" translatesAutoresizingMaskIntoConstraints="NO" id="TsW-v2-M4d">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZ7-SZ-sgj">
-                                <rect key="frame" x="0.0" y="378" width="375" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" placeholder="YES" id="QUE-zL-TmD"/>
-                                    <constraint firstAttribute="height" constant="110" placeholder="YES" id="uao-ek-bgY"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="leading" secondItem="G9C-eU-Ce2" secondAttribute="leading" id="5a0-eC-yC6"/>
-                            <constraint firstItem="G9C-eU-Ce2" firstAttribute="bottom" secondItem="TsW-v2-M4d" secondAttribute="bottom" id="8aS-je-4u3"/>
-                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="centerY" secondItem="G9C-eU-Ce2" secondAttribute="centerY" id="Gac-82-hQd"/>
-                            <constraint firstItem="G9C-eU-Ce2" firstAttribute="trailing" secondItem="TsW-v2-M4d" secondAttribute="trailing" id="X1g-pi-Oxe"/>
-                            <constraint firstItem="TsW-v2-M4d" firstAttribute="top" secondItem="G9C-eU-Ce2" secondAttribute="top" id="ZOq-p6-FOo"/>
-                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="trailing" secondItem="G9C-eU-Ce2" secondAttribute="trailing" id="i5k-0A-CnK"/>
-                            <constraint firstItem="TsW-v2-M4d" firstAttribute="leading" secondItem="G9C-eU-Ce2" secondAttribute="leading" id="jaI-Vp-IUx"/>
-                            <constraint firstItem="LZ7-SZ-sgj" firstAttribute="centerX" secondItem="G9C-eU-Ce2" secondAttribute="centerX" id="wtM-KB-GBT"/>
+                            <constraint firstItem="TsW-v2-M4d" firstAttribute="top" secondItem="f6W-eV-27c" secondAttribute="top" id="AhF-Nm-gsz"/>
+                            <constraint firstAttribute="bottom" secondItem="TsW-v2-M4d" secondAttribute="bottom" id="avU-Sp-LDg"/>
+                            <constraint firstAttribute="trailing" secondItem="TsW-v2-M4d" secondAttribute="trailing" id="ffd-Sw-Rn7"/>
+                            <constraint firstItem="TsW-v2-M4d" firstAttribute="leading" secondItem="G9C-eU-Ce2" secondAttribute="leading" id="kUU-kU-9xX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G9C-eU-Ce2"/>
                     </view>
                     <navigationItem key="navigationItem" id="t6A-N7-4VS"/>
-                    <connections>
-                        <outlet property="stackView" destination="LZ7-SZ-sgj" id="Ys7-cx-mXZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELu-xi-6uM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,6 +279,7 @@
     </scenes>
     <resources>
         <image name="arrow-map" width="141" height="93"/>
+        <image name="background-island-1" width="1024" height="768"/>
         <image name="background-island-2" width="1531" height="823"/>
         <image name="background-island-4" width="1200" height="840"/>
         <image name="treasure" width="236" height="254"/>
