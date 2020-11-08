@@ -77,7 +77,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="T4e-pg-tU9" kind="show" id="gPz-b4-3Rt"/>
+                                                    <segue destination="54a-U0-IWe" kind="show" id="tbB-RE-L82"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cw-IT-rbb">
@@ -89,9 +89,6 @@
                                                 <state key="normal" title="FAQs">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="Zro-W4-fd5" kind="show" id="tza-WR-PjG"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -213,6 +210,33 @@
             </objects>
             <point key="canvasLocation" x="1178" y="-678"/>
         </scene>
+        <!--Practice2 View Controller-->
+        <scene sceneID="yKc-CA-jcH">
+            <objects>
+                <viewController id="54a-U0-IWe" customClass="VFLPractice2ViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BTE-Ok-Vfg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-island-2" translatesAutoresizingMaskIntoConstraints="NO" id="o8K-i1-RCm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="o8K-i1-RCm" secondAttribute="bottom" id="Uas-g0-Iz3"/>
+                            <constraint firstItem="o8K-i1-RCm" firstAttribute="top" secondItem="BTE-Ok-Vfg" secondAttribute="top" id="chV-0r-ZgR"/>
+                            <constraint firstItem="o8K-i1-RCm" firstAttribute="trailing" secondItem="ChH-Gf-ONJ" secondAttribute="trailing" id="hB0-FA-7Qy"/>
+                            <constraint firstItem="o8K-i1-RCm" firstAttribute="leading" secondItem="ChH-Gf-ONJ" secondAttribute="leading" id="tSj-vM-hOb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ChH-Gf-ONJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SNv-EN-unN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kLE-dH-fZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1201" y="825"/>
+        </scene>
         <!--Challenge View Controller-->
         <scene sceneID="8QN-Gp-gtG">
             <objects>
@@ -222,7 +246,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-island-3" translatesAutoresizingMaskIntoConstraints="NO" id="AUy-dS-Ta0">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -238,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GS4-XK-oRE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-546.39999999999998" y="830.54187192118229"/>
+            <point key="canvasLocation" x="-484" y="853"/>
         </scene>
         <!--Achor Stack View Challenge View Controller-->
         <scene sceneID="YLL-MA-5It">
@@ -252,7 +276,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ePP-oc-Wgd">
-                                <rect key="frame" x="0.0" y="378" width="375" height="110"/>
+                                <rect key="frame" x="0.0" y="356" width="375" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" placeholder="YES" id="p6W-f1-YFx"/>
                                     <constraint firstAttribute="width" constant="375" placeholder="YES" id="tdK-eX-wHx"/>
