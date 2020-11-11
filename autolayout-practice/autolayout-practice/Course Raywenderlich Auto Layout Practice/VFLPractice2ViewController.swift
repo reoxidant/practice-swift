@@ -27,15 +27,15 @@ class VFLPractice2ViewController: UIViewController {
             ["H": 8, "V": 20].flatMap({
                 (direction, gap) in
                 NSLayoutConstraint.constraints(
-                    withVisualFormat: "\(direction):[upperLeft(size)]-(gap)-[middle(size)]-(gap)-[bottomRight(size)]",
+                    withVisualFormat: "\(direction):[upperLeft(size)]-(gap)-[middle(size)]-(gap)-[bottomRidht(size)]",
                     metrics: ["gap": gap, "size": 50],
-                    views: Dictionary(uniqueKeysWithValues:
-                        zip(["upperLeft", "middle", "bottomRight"], views)))
-                
+                    views: Dictionary(
+                        uniqueKeysWithValues: zip(["upperLeft", "middle", "bottomRight"], views)
+                ))
             })
             + [
-                views[1].centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                views[1].centerYAnchor.constraint(equalTo: view.centerYAnchor)
+                views[1].centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                views[1].centerXAnchor.constraint(equalTo: view.centerXAnchor)
             ]
         )
     }
