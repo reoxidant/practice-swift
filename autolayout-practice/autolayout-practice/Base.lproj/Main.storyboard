@@ -89,6 +89,9 @@
                                                 <state key="normal" title="FAQs">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="kpB-Wc-GCu" kind="showDetail" id="sUm-ed-8Mk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -96,7 +99,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="8gT-eu-lJf"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Xvr-zc-vGs"/>
-                                    <constraint firstAttribute="width" constant="335" id="tkY-Rc-Wyg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="335" id="tkY-Rc-Wyg"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="@Please do not pirate the Pirate Handbook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jDZ-6j-0Eg">
@@ -235,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLE-dH-fZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1201" y="825"/>
+            <point key="canvasLocation" x="-249" y="969"/>
         </scene>
         <!--Challenge View Controller-->
         <scene sceneID="8QN-Gp-gtG">
@@ -262,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GS4-XK-oRE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-484" y="853"/>
+            <point key="canvasLocation" x="431" y="969"/>
         </scene>
         <!--Achor Stack View Challenge View Controller-->
         <scene sceneID="YLL-MA-5It">
@@ -301,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ui-d3-sNh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440.80000000000001" y="1022.6600985221676"/>
+            <point key="canvasLocation" x="1097" y="969"/>
         </scene>
         <!--Anchor Challenge View Controller-->
         <scene sceneID="Kna-1v-8Un">
@@ -330,6 +333,110 @@
             </objects>
             <point key="canvasLocation" x="1177" y="290"/>
         </scene>
+        <!--ClassS Ize View Controller-->
+        <scene sceneID="TLG-4w-b0x">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="kpB-Wc-GCu" customClass="ClassSIzeViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nsX-HQ-0dD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="treasure-map" translatesAutoresizingMaskIntoConstraints="NO" id="TV3-hf-RGR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="csu-5f-9Lx">
+                                <rect key="frame" x="20" y="320" width="335" height="172"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="dqX-wA-pVG">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="tintColor" red="0.056870453059999999" green="0.73821026089999997" blue="0.67843109369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                        <state key="normal" title="Treasure Map">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Iw-Ul-JHe">
+                                        <rect key="frame" x="0.0" y="64" width="335" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="tintColor" red="0.056870453059999999" green="0.73821026089999997" blue="0.67843109369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Weather Forecast">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="V9J-fN-UEe">
+                                        <rect key="frame" x="0.0" y="128" width="335" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIm-x1-h92">
+                                                <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="44"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" red="0.056870453059999999" green="0.73821026089999997" blue="0.67843109369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                                <state key="normal" title="Privacy Policy">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB0-XL-6um">
+                                                <rect key="frame" x="177.66666666666663" y="0.0" width="157.33333333333337" height="44"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" red="0.056870453059999999" green="0.73821026089999997" blue="0.67843109369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                                <state key="normal" title="FAQs">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="IR0-Aw-HKt"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun-with-face" translatesAutoresizingMaskIntoConstraints="NO" id="3VU-he-SPC">
+                                <rect key="frame" x="455" y="346" width="120" height="120"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0eL-6V-stu" firstAttribute="trailing" secondItem="csu-5f-9Lx" secondAttribute="trailing" priority="999" constant="20" id="616-kP-ugp"/>
+                            <constraint firstItem="3VU-he-SPC" firstAttribute="leading" secondItem="csu-5f-9Lx" secondAttribute="trailing" constant="100" id="Elm-4k-Gow"/>
+                            <constraint firstItem="csu-5f-9Lx" firstAttribute="leading" secondItem="0eL-6V-stu" secondAttribute="leading" constant="20" id="F2c-3c-TbV"/>
+                            <constraint firstItem="0eL-6V-stu" firstAttribute="trailing" secondItem="csu-5f-9Lx" secondAttribute="trailing" priority="999" constant="20" id="GKk-Bp-cCG"/>
+                            <constraint firstItem="3VU-he-SPC" firstAttribute="centerY" secondItem="nsX-HQ-0dD" secondAttribute="centerY" id="n6R-FQ-HwK"/>
+                            <constraint firstItem="csu-5f-9Lx" firstAttribute="centerY" secondItem="nsX-HQ-0dD" secondAttribute="centerY" id="yUr-Pu-Eyo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0eL-6V-stu"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3VU-he-SPC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Elm-4k-Gow"/>
+                                <exclude reference="n6R-FQ-HwK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="3VU-he-SPC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Elm-4k-Gow"/>
+                                <include reference="n6R-FQ-HwK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="k1v-LK-xcS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQa-jO-Zb5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1682" y="969"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow-map" width="141" height="93"/>
@@ -337,6 +444,7 @@
         <image name="background-island-2" width="1531" height="823"/>
         <image name="background-island-3" width="6501" height="4733"/>
         <image name="background-island-4" width="1200" height="840"/>
+        <image name="sun-with-face" width="120" height="120"/>
         <image name="treasure" width="236" height="254"/>
         <image name="treasure-map" width="1000" height="1000"/>
     </resources>
