@@ -11,6 +11,7 @@
 		441D5AF525574A2600F884FB /* VFLPractice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D5AF425574A2600F884FB /* VFLPractice2ViewController.swift */; };
 		44205CAD256065EE001FA6B4 /* ClassSIzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44205CAC256065EE001FA6B4 /* ClassSIzeViewController.swift */; };
 		4434140B25471AD800DF3C6C /* AnchorChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434140A25471AD800DF3C6C /* AnchorChallengeViewController.swift */; };
+		44838033256086A100C1B413 /* ClassSizePracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44838032256086A100C1B413 /* ClassSizePracticeViewController.swift */; };
 		44AC60C82546E38D00B21619 /* VFLChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AC60C72546E38D00B21619 /* VFLChallengeViewController.swift */; };
 		44BA66332545CB0A003A71FB /* TestNSLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA66322545CB0A003A71FB /* TestNSLayoutViewController.swift */; };
 		44BA66352545CBD1003A71FB /* VFLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA66342545CBD1003A71FB /* VFLViewController.swift */; };
@@ -36,6 +37,7 @@
 		441D5AF425574A2600F884FB /* VFLPractice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLPractice2ViewController.swift; sourceTree = "<group>"; };
 		44205CAC256065EE001FA6B4 /* ClassSIzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSIzeViewController.swift; sourceTree = "<group>"; };
 		4434140A25471AD800DF3C6C /* AnchorChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorChallengeViewController.swift; sourceTree = "<group>"; };
+		44838032256086A100C1B413 /* ClassSizePracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSizePracticeViewController.swift; sourceTree = "<group>"; };
 		44AC60C72546E38D00B21619 /* VFLChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLChallengeViewController.swift; sourceTree = "<group>"; };
 		44BA66322545CB0A003A71FB /* TestNSLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNSLayoutViewController.swift; sourceTree = "<group>"; };
 		44BA66342545CBD1003A71FB /* VFLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				440CCECA2549C97A00CCEB87 /* AchorStackViewChallengeViewController.swift */,
 				441D5AF425574A2600F884FB /* VFLPractice2ViewController.swift */,
 				44205CAC256065EE001FA6B4 /* ClassSIzeViewController.swift */,
+				44838032256086A100C1B413 /* ClassSizePracticeViewController.swift */,
 			);
 			path = "Course Raywenderlich Auto Layout Practice";
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				44DBA2722541596600BEA197 /* MenuViewController.swift in Sources */,
 				44BA66332545CB0A003A71FB /* TestNSLayoutViewController.swift in Sources */,
 				44BA66352545CBD1003A71FB /* VFLViewController.swift in Sources */,
+				44838033256086A100C1B413 /* ClassSizePracticeViewController.swift in Sources */,
 				44205CAD256065EE001FA6B4 /* ClassSIzeViewController.swift in Sources */,
 				44DBA26E2541596600BEA197 /* AppDelegate.swift in Sources */,
 				44DBA2702541596600BEA197 /* SceneDelegate.swift in Sources */,
