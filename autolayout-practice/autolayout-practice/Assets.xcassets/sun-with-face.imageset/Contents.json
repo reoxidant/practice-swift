@@ -6,32 +6,12 @@
       "scale" : "1x"
     },
     {
-      "filename" : "sun-with-face_1f31e-3.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "sun-with-face_1f31e-5.png",
       "idiom" : "universal",
       "scale" : "3x"
-    },
-    {
-      "filename" : "sun-with-face_1f31e.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "width-class" : "compact"
-    },
-    {
-      "filename" : "sun-with-face_1f31e-2.png",
-      "idiom" : "universal",
-      "scale" : "2x",
-      "width-class" : "compact"
-    },
-    {
-      "filename" : "sun-with-face_1f31e-4.png",
-      "idiom" : "universal",
-      "scale" : "3x",
-      "width-class" : "compact"
     }
   ],
   "info" : {

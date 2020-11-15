@@ -399,7 +399,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun-with-face" translatesAutoresizingMaskIntoConstraints="NO" id="3VU-he-SPC">
-                                <rect key="frame" x="455" y="303.5" width="60" height="60"/>
+                                <rect key="frame" x="455" y="273.5" width="120" height="120"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -573,7 +573,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun-with-face" translatesAutoresizingMaskIntoConstraints="NO" id="Q1S-rd-pm8">
-                                <rect key="frame" x="455" y="303.5" width="60" height="60"/>
+                                <rect key="frame" x="455" y="273.5" width="120" height="120"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.03020947455" green="0.4771286112" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -650,8 +650,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Gx-9g-ufx">
-                                <rect key="frame" x="20" y="247.5" width="335" height="172"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Gx-9g-ufx">
+                                <rect key="frame" x="20" y="215.5" width="335" height="236"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="fdI-kt-H8W">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
@@ -674,10 +674,10 @@
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pC5-rW-B2g">
-                                        <rect key="frame" x="0.0" y="128" width="335" height="44"/>
+                                        <rect key="frame" x="0.0" y="128" width="335" height="108"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iy6-nM-bdK">
-                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="tintColor" red="0.056870453059999999" green="0.73821026089999997" blue="0.67843109369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -687,7 +687,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axg-3R-1dA">
-                                                <rect key="frame" x="177.5" y="0.0" width="157.5" height="44"/>
+                                                <rect key="frame" x="0.0" y="64" width="335" height="44"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="tintColor" red="0.056870453059999999" green="0.73821026089999997" blue="0.67843109369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -700,11 +700,12 @@
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="2VE-0a-xwl"/>
                                         </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun-with-face" translatesAutoresizingMaskIntoConstraints="NO" id="4vG-im-qrr">
-                                <rect key="frame" x="455" y="303.5" width="60" height="60"/>
+                                <rect key="frame" x="455" y="273.5" width="120" height="120"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -722,8 +723,8 @@
                                 <exclude reference="4vG-im-qrr"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="wof-ve-96X"/>
                                 <exclude reference="V3c-be-hj2"/>
+                                <exclude reference="wof-ve-96X"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -731,8 +732,8 @@
                                 <include reference="4vG-im-qrr"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="wof-ve-96X"/>
                                 <include reference="V3c-be-hj2"/>
+                                <include reference="wof-ve-96X"/>
                             </mask>
                         </variation>
                     </view>
@@ -749,7 +750,7 @@
         <image name="background-island-2" width="1531" height="823"/>
         <image name="background-island-3" width="6501" height="4733"/>
         <image name="background-island-4" width="1200" height="840"/>
-        <image name="sun-with-face" width="60" height="60"/>
+        <image name="sun-with-face" width="120" height="120"/>
         <image name="treasure" width="236" height="254"/>
         <image name="treasure-map" width="1000" height="1000"/>
     </resources>
