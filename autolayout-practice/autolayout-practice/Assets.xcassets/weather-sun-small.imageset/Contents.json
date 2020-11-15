@@ -1,34 +1,34 @@
 {
   "images" : [
     {
-      "filename" : "sun-with-face_1f31e-1.png",
+      "filename" : "weather-sun-small@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "sun-with-face_1f31e-3.png",
+      "filename" : "weather-sun-small@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "sun-with-face_1f31e-5.png",
+      "filename" : "weather-sun-small@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
     {
-      "filename" : "sun-with-face_1f31e.png",
+      "filename" : "weather-sun-small@1x-1.png",
       "idiom" : "universal",
       "scale" : "1x",
       "width-class" : "compact"
     },
     {
-      "filename" : "sun-with-face_1f31e-2.png",
+      "filename" : "weather-sun-small@2x-1.png",
       "idiom" : "universal",
       "scale" : "2x",
       "width-class" : "compact"
     },
     {
-      "filename" : "sun-with-face_1f31e-4.png",
+      "filename" : "weather-sun-small@3x-1.png",
       "idiom" : "universal",
       "scale" : "3x",
       "width-class" : "compact"

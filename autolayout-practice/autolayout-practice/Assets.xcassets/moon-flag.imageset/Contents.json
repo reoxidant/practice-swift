@@ -3,6 +3,20 @@
     {
       "filename" : "moon-flag-icon-vector.png",
       "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 451,
+          "left" : 28,
+          "right" : 25,
+          "top" : 205
+        },
+        "center" : {
+          "height" : 213,
+          "mode" : "stretch",
+          "width" : 1
+        },
+        "mode" : "9-part"
+      },
       "scale" : "1x"
     },
     {

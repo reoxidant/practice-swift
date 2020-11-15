@@ -3,6 +3,17 @@
     {
       "filename" : "Oea64Gtziqw.jpg",
       "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 3,
+          "top" : 80
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "tile"
+        },
+        "mode" : "3-part-vertical"
+      },
       "scale" : "1x"
     },
     {
