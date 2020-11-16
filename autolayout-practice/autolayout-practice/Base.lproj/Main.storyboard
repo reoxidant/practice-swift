@@ -622,7 +622,7 @@
         <!--Weather-->
         <scene sceneID="43d-Lo-mQK">
             <objects>
-                <viewController id="J6W-Gs-9Kg" customClass="AdaptiveEnviromentViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J6W-Gs-9Kg" customClass="AdaptiveLayoutEnviromentViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wQn-Md-RXX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -646,10 +646,10 @@
             </objects>
             <point key="canvasLocation" x="-956" y="1692"/>
         </scene>
-        <!--Adaptive Presentation View Controller-->
+        <!--Adaptive Layout Presentation View Controller-->
         <scene sceneID="GKX-Ge-HMl">
             <objects>
-                <viewController id="gJ4-hH-RVg" customClass="AdaptivePresentationViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gJ4-hH-RVg" customClass="AdaptiveLayoutPresentationViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6VV-7V-Rb8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

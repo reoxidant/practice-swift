@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AdaptiveEnviromentViewController: UIViewController {
+class AdaptiveLayoutEnviromentViewController: UIViewController {
     
     private let imageViews: [UIImageView]
     private let spacerGuides: [UILayoutGuide]
