@@ -90,7 +90,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="ofe-kc-p3h" kind="show" id="IGA-Ul-dqu"/>
+                                                    <segue destination="J6W-Gs-9Kg" kind="show" id="qQR-oR-KRJ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -133,7 +133,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="geG-JB-cO6"/>
+                    <navigationItem key="navigationItem" id="geG-JB-cO6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="IXf-yX-jnI">
+                            <connections>
+                                <segue destination="gJ4-hH-RVg" kind="show" id="cV0-c0-WB7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,7 +207,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jEL-BD-hh0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="30Q-rX-0jy"/>
+                    <navigationItem key="navigationItem" title="Treasure map" id="Nog-pK-477"/>
                     <connections>
                         <outlet property="desiredXConstraint" destination="4z2-WI-de6" id="7Vp-cO-Exm"/>
                         <outlet property="desiredYConstraint" destination="Sa1-hr-pEB" id="BbK-oD-qwA"/>
@@ -611,10 +617,10 @@
             </objects>
             <point key="canvasLocation" x="-1598" y="967"/>
         </scene>
-        <!--Image Class Size View Controller-->
+        <!--Weather-->
         <scene sceneID="43d-Lo-mQK">
             <objects>
-                <viewController id="J6W-Gs-9Kg" customClass="ImageClassSizeViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J6W-Gs-9Kg" customClass="AdaptiveEnviromentViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wQn-Md-RXX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -632,11 +638,39 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iCl-gO-zcT"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zcD-mW-THq"/>
+                    <navigationItem key="navigationItem" title="Weather" id="Czm-I5-BzT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZp-Mh-Tl3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-942" y="967"/>
+            <point key="canvasLocation" x="-956" y="1692"/>
+        </scene>
+        <!--Adaptive Presentation View Controller-->
+        <scene sceneID="GKX-Ge-HMl">
+            <objects>
+                <viewController id="gJ4-hH-RVg" customClass="AdaptivePresentationViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6VV-7V-Rb8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-island-4" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-Na-zU7" customClass="AdaptivePre">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XO8-Na-zU7" firstAttribute="top" secondItem="6VV-7V-Rb8" secondAttribute="topMargin" id="04H-Kq-uob"/>
+                            <constraint firstAttribute="trailing" secondItem="XO8-Na-zU7" secondAttribute="trailing" id="H09-XJ-SiR"/>
+                            <constraint firstItem="XO8-Na-zU7" firstAttribute="leading" secondItem="OQi-eM-Oqh" secondAttribute="leading" id="g32-Vk-vJR"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="XO8-Na-zU7" secondAttribute="bottom" id="qfy-Zk-CZM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OQi-eM-Oqh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ygc-6N-cTv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERB-l8-iYe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-308" y="1694"/>
         </scene>
         <!--Class Size Practice2 View Controller-->
         <scene sceneID="YhU-sa-nO0">
@@ -741,7 +775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VP0-fT-BlT" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-302" y="967"/>
+            <point key="canvasLocation" x="-956" y="967"/>
         </scene>
     </scenes>
     <resources>

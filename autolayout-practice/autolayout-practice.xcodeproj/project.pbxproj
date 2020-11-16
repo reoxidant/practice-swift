@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		440CCECB2549C97A00CCEB87 /* AchorStackViewChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440CCECA2549C97A00CCEB87 /* AchorStackViewChallengeViewController.swift */; };
-		440DD003256165860065DAF6 /* ImageClassSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440DD002256165860065DAF6 /* ImageClassSizeViewController.swift */; };
+		440DD003256165860065DAF6 /* AdaptiveEnviromentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440DD002256165860065DAF6 /* AdaptiveEnviromentViewController.swift */; };
 		440DD005256172B20065DAF6 /* ClassSizePractice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440DD004256172B20065DAF6 /* ClassSizePractice2ViewController.swift */; };
 		441D5AF525574A2600F884FB /* VFLPractice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D5AF425574A2600F884FB /* VFLPractice2ViewController.swift */; };
 		44205CAD256065EE001FA6B4 /* ClassSIzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44205CAC256065EE001FA6B4 /* ClassSIzeViewController.swift */; };
 		4434140B25471AD800DF3C6C /* AnchorChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434140A25471AD800DF3C6C /* AnchorChallengeViewController.swift */; };
 		445B502D25615CDF00E04188 /* FontClassSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445B502C25615CDF00E04188 /* FontClassSizeViewController.swift */; };
 		44838033256086A100C1B413 /* ClassSizePracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44838032256086A100C1B413 /* ClassSizePracticeViewController.swift */; };
+		44A7D7D32561897000E5F118 /* NavigationBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7D7D22561897000E5F118 /* NavigationBarAppearance.swift */; };
+		44A7D7D52562733100E5F118 /* AdaptivePresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7D7D42562733100E5F118 /* AdaptivePresentationViewController.swift */; };
 		44AC60C82546E38D00B21619 /* VFLChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AC60C72546E38D00B21619 /* VFLChallengeViewController.swift */; };
 		44BA66332545CB0A003A71FB /* TestNSLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA66322545CB0A003A71FB /* TestNSLayoutViewController.swift */; };
 		44BA66352545CBD1003A71FB /* VFLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA66342545CBD1003A71FB /* VFLViewController.swift */; };
@@ -37,13 +39,15 @@
 
 /* Begin PBXFileReference section */
 		440CCECA2549C97A00CCEB87 /* AchorStackViewChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchorStackViewChallengeViewController.swift; sourceTree = "<group>"; };
-		440DD002256165860065DAF6 /* ImageClassSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassSizeViewController.swift; sourceTree = "<group>"; };
+		440DD002256165860065DAF6 /* AdaptiveEnviromentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveEnviromentViewController.swift; sourceTree = "<group>"; };
 		440DD004256172B20065DAF6 /* ClassSizePractice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSizePractice2ViewController.swift; sourceTree = "<group>"; };
 		441D5AF425574A2600F884FB /* VFLPractice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLPractice2ViewController.swift; sourceTree = "<group>"; };
 		44205CAC256065EE001FA6B4 /* ClassSIzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSIzeViewController.swift; sourceTree = "<group>"; };
 		4434140A25471AD800DF3C6C /* AnchorChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorChallengeViewController.swift; sourceTree = "<group>"; };
 		445B502C25615CDF00E04188 /* FontClassSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontClassSizeViewController.swift; sourceTree = "<group>"; };
 		44838032256086A100C1B413 /* ClassSizePracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSizePracticeViewController.swift; sourceTree = "<group>"; };
+		44A7D7D22561897000E5F118 /* NavigationBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarAppearance.swift; sourceTree = "<group>"; };
+		44A7D7D42562733100E5F118 /* AdaptivePresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptivePresentationViewController.swift; sourceTree = "<group>"; };
 		44AC60C72546E38D00B21619 /* VFLChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLChallengeViewController.swift; sourceTree = "<group>"; };
 		44BA66322545CB0A003A71FB /* TestNSLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNSLayoutViewController.swift; sourceTree = "<group>"; };
 		44BA66342545CBD1003A71FB /* VFLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +91,9 @@
 				44205CAC256065EE001FA6B4 /* ClassSIzeViewController.swift */,
 				44838032256086A100C1B413 /* ClassSizePracticeViewController.swift */,
 				445B502C25615CDF00E04188 /* FontClassSizeViewController.swift */,
-				440DD002256165860065DAF6 /* ImageClassSizeViewController.swift */,
+				440DD002256165860065DAF6 /* AdaptiveEnviromentViewController.swift */,
 				440DD004256172B20065DAF6 /* ClassSizePractice2ViewController.swift */,
+				44A7D7D42562733100E5F118 /* AdaptivePresentationViewController.swift */,
 			);
 			path = "Course Raywenderlich Auto Layout Practice";
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				44DBA281254159DA00BEA197 /* PracticeByLectures */,
 				44DBA26D2541596600BEA197 /* AppDelegate.swift */,
 				44DBA26F2541596600BEA197 /* SceneDelegate.swift */,
+				44A7D7D22561897000E5F118 /* NavigationBarAppearance.swift */,
 				4434140925471A9800DF3C6C /* Course Raywenderlich Auto Layout Practice */,
 				44AC60C62546E33700B21619 /* Auto Layout Mastering Code */,
 				44DA8DD025417AB5005E9710 /* MapViewController.swift */,
@@ -229,12 +235,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44A7D7D52562733100E5F118 /* AdaptivePresentationViewController.swift in Sources */,
 				441D5AF525574A2600F884FB /* VFLPractice2ViewController.swift in Sources */,
 				445B502D25615CDF00E04188 /* FontClassSizeViewController.swift in Sources */,
 				44DBA2722541596600BEA197 /* MenuViewController.swift in Sources */,
 				44BA66332545CB0A003A71FB /* TestNSLayoutViewController.swift in Sources */,
+				44A7D7D32561897000E5F118 /* NavigationBarAppearance.swift in Sources */,
 				44BA66352545CBD1003A71FB /* VFLViewController.swift in Sources */,
-				440DD003256165860065DAF6 /* ImageClassSizeViewController.swift in Sources */,
+				440DD003256165860065DAF6 /* AdaptiveEnviromentViewController.swift in Sources */,
 				44838033256086A100C1B413 /* ClassSizePracticeViewController.swift in Sources */,
 				44205CAD256065EE001FA6B4 /* ClassSIzeViewController.swift in Sources */,
 				44DBA26E2541596600BEA197 /* AppDelegate.swift in Sources */,
