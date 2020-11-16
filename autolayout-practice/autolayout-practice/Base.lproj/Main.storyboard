@@ -136,7 +136,9 @@
                     <navigationItem key="navigationItem" id="geG-JB-cO6">
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="IXf-yX-jnI">
                             <connections>
-                                <segue destination="gJ4-hH-RVg" kind="show" id="cV0-c0-WB7"/>
+                                <segue destination="gJ4-hH-RVg" kind="popoverPresentation" popoverAnchorBarButtonItem="IXf-yX-jnI" id="dfl-y2-NZH">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -649,11 +651,11 @@
             <objects>
                 <viewController id="gJ4-hH-RVg" customClass="AdaptivePresentationViewController" customModule="autolayout_practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6VV-7V-Rb8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-island-4" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-Na-zU7" customClass="AdaptivePre">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
                         </subviews>

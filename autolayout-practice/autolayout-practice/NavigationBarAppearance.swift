@@ -17,18 +17,17 @@ enum NavigationBarAppearance {
         }
         
         for variation in [
-            FontVariation(horizontalSizeClass: .unspecified, style: "Wide", size:22),
-            FontVariation(horizontalSizeClass: .compact, style: "Thin", size:14)
+            FontVariation(horizontalSizeClass: .unspecified, style: "Wide", size: 22),
+            FontVariation(horizontalSizeClass: .compact, style: "Thin", size: 14)
             ] {
                 UINavigationBar.appearance(
                     for: UITraitCollection(horizontalSizeClass: variation.horizontalSizeClass)
-                ).titleTextAttributes = [
-                    NSAttributedString.Key.font: UIFont(
-                        name: "MarkerFelt-\(variation.style)",
-                        size: variation.size
-                        )!
+                    ).titleTextAttributes = [
+                        NSAttributedString.Key.font: UIFont(
+                            name: "MarkerFelt-\(variation.style)",
+                            size: variation.size
+                            )!
                 ]
         }
     }
 }
-

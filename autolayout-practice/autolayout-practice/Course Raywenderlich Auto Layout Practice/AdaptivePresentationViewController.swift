@@ -8,23 +8,35 @@
 
 import UIKit
 
-class AdaptivePresentationViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class AdaptivePresentationViewController: UIViewController{
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        modalPresentationStyle = .popover
+        popoverPresentationController?.delegate = self
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissModal))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func dismissModal(){
+        dismiss(animated: true)
     }
-    */
+}
 
+extension AdaptivePresentationViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) ->
+        UIModalPresentationStyle {
+            switch (traitCollection.horizontalSizeClass, traitCollection.verticalSizeClass) {
+            case (.compact, .compact):
+                return .fullScreen
+            case (.regular, .regular):
+                return .formSheet
+            default:
+                return .none
+            }
+        }
+    func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        return UINavigationController(rootViewController: controller.presentedViewController)
+    }
 }
