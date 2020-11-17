@@ -62,5 +62,12 @@ if(bool1 != bool2){
     print("bool1 is not equal bool2")
 }
 
-//1...10 //Closure range
-//1..<10 //Open range
+let oneRange = 1...10 //Closure range
+let twoRange = 1..<10 //Open range
+
+var h = 1
+var c = 2
+
+if h + 1 == c{
+    print("gg")
+}
