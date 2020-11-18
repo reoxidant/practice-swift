@@ -1,67 +1,77 @@
 class Player{
-    let name: String
+    var name: String
     var age: Int
-    let game: String
+    var game: String
     
-    var playerInfo: String {
-        let playerInfo = """
-        I am \(name).
-        My favorite game is \(game).
-        I am \(age) years old.
-        """
-        return playerInfo
+    var playerInfo:String{
+        let playerInfo = {
+            return """
+            My name is \(self.name).
+            I am \(self.age) years old.
+            I love playing in \(self.game).
+            """
+        }
+        return playerInfo()
     }
     
-    init(name:String, age:Int, game:String) {
+    init(name:String, game:String, age:Int) {
         self.name = name
-        self.game = game
         self.age = age
+        self.game = game
     }
 }
 
-let player = Player(name: "Masha", age: 27, game: "piska")
-
+let player = Player(name: "Vitaliy", game: "Warcraft 3", age: 25)
 //print(player.playerInfo)
 
 class ProfessionalPlayer: Player{
-    let experience: Int
-    let retirementAge: Int
+    var experience: Int
+    var retirementTime: Int
     
-    init(name: String, age: Int, game: String, experience:Int, retirementAge: Int) {
+    init(name: String, game: String, age: Int, experience:Int, retirementTime: Int) {
         self.experience = experience
-        self.retirementAge = retirementAge
-        super.init(name: name, age: age, game: game)
+        self.retirementTime = retirementTime
+        
+        super.init(name: name, game: game, age: age)
     }
 }
 
-protocol angryPlayer{
-    var enemies: [Player] { get }
-    var haveAEnemies: Bool { get }
+protocol CutePlayer{
+    var friends:[Player] {get}
+    var haveAFriends: Bool {get}
     
-    func angry()
-    func saySomethingTerrible() -> String
+    func smile() -> String
+    
+    func saySomethingCute()
 }
 
-extension ProfessionalPlayer: angryPlayer{
-    var enemies: [Player] {
+extension ProfessionalPlayer:CutePlayer{
+    func smile() -> String {
+        return "I am smiling everythings in the world!"
+    }
+    
+    var friends: [Player] {
         return [
-            Player(name: "Nadya", age: 22, game: "Lineage 2"),
-            Player(name: "Petya", age: 40, game: "Vodka")
+            Player(name: "Maria", game: "Dota 2", age: 28),
+            Player(name: "Andrew", game: "CS GO", age: 23)
         ]
     }
     
-    var haveAEnemies: Bool {
-        return !enemies.isEmpty
+    var haveAFriends: Bool {
+        return !self.friends.isEmpty
     }
     
-    func angry() {
-        print("I am very Angry!")
-    }
-    
-    func saySomethingTerrible() -> String {
-        return "I hate you"
+    func saySomethingCute() {
+        print("I am very glad to see you!")
     }
 }
 
-let proPlayer = ProfessionalPlayer(name: "Vitaliy", age: 25, game:"dota 2", experience: 2, retirementAge: 35)
-print(proPlayer.saySomethingTerrible())
+var proPlayer = ProfessionalPlayer(name: "Nadya", game: "Sims 4", age: 24, experience: 7, retirementTime: 20)
+print(proPlayer.playerInfo)
+proPlayer.saySomethingCute()
+if proPlayer.haveAFriends{
+    print("I have a friends")
+}else{
+    print("I am alone")
+}
+print(proPlayer.smile())
