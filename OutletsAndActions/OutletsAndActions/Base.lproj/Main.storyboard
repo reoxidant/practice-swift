@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OutletsAndActions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9su-Ke-cgt">
+                                <rect key="frame" x="184" y="732" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTj-Rl-fAe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiU-ZP-u6E">
+                                <rect key="frame" x="186" y="365" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chV-D9-B1R">
+                                <rect key="frame" x="186" y="244" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQ3-Rn-wgL">
+                                <rect key="frame" x="184" y="797" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="4PW-4e-x86"/>
+                                    <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="9e7-aT-sKX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tQ3-Rn-wgL" firstAttribute="top" secondItem="9su-Ke-cgt" secondAttribute="bottom" constant="35" id="9j4-iN-JRc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9su-Ke-cgt" secondAttribute="bottom" constant="100" id="Af4-0W-742"/>
+                            <constraint firstItem="chV-D9-B1R" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="INf-Yz-Ibs"/>
+                            <constraint firstItem="tQ3-Rn-wgL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MZJ-gS-n5r"/>
+                            <constraint firstItem="aiU-ZP-u6E" firstAttribute="top" secondItem="chV-D9-B1R" secondAttribute="bottom" constant="100" id="Scm-xw-9d1"/>
+                            <constraint firstItem="chV-D9-B1R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="kZU-AE-Mmn"/>
+                            <constraint firstItem="aiU-ZP-u6E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xz0-vG-aly"/>
+                            <constraint firstItem="9su-Ke-cgt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zMW-Lt-GsU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="chV-D9-B1R" id="Kc2-Qw-HII"/>
+                        <outletCollection property="labelCollection" destination="aiU-ZP-u6E" collectionClass="NSMutableArray" id="p5W-Rj-4OI"/>
+                        <outletCollection property="labelCollection" destination="chV-D9-B1R" collectionClass="NSMutableArray" id="Rb4-NG-knZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
