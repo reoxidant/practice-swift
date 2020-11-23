@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,23 +12,27 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Night" translatesAutoresizingMaskIntoConstraints="NO" id="Ywy-Wm-OHL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qjU-c6-DIL">
-                                <rect key="frame" x="80" y="433" width="254" height="31"/>
+                                <rect key="frame" x="33" y="225" width="254" height="31"/>
+                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Nms-OQ-ZTM"/>
                                 </constraints>
+                                <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VCt-2K-tMo"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TConverter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="teT-bk-mTj">
-                                <rect key="frame" x="95" y="94" width="224" height="44"/>
+                                <rect key="frame" x="48" y="50" width="224" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="eQQ-ja-541">
                                         <variation key="heightClass=compact-widthClass=regular" constant="200"/>
@@ -55,8 +59,8 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz4-wo-5um">
-                                <rect key="frame" x="181" y="493" width="52" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz4-wo-5um">
+                                <rect key="frame" x="124.5" y="305" width="71" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="KJG-OU-HoZ">
                                         <variation key="heightClass=regular-widthClass=compact" constant="50"/>
@@ -67,7 +71,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mg-D9-Pq4">
-                                <rect key="frame" x="178.66666666666666" y="361" width="57" height="42"/>
+                                <rect key="frame" x="131.5" y="133" width="57" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="hGF-r0-r1l">
                                         <variation key="heightClass=regular-widthClass=compact" constant="50"/>
@@ -103,7 +107,7 @@
                                 <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="qjU-c6-DIL" firstAttribute="top" secondItem="0mg-D9-Pq4" secondAttribute="bottom" constant="47.5" id="HnY-Um-MSs">
-                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstItem="teT-bk-mTj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LCy-mk-ITq">
                                 <variation key="heightClass=compact-widthClass=regular" constant="-20"/>
@@ -155,7 +159,7 @@
                             <constraint firstItem="Ywy-Wm-OHL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eGS-pc-cEv"/>
                             <constraint firstItem="qjU-c6-DIL" firstAttribute="centerX" secondItem="Ywy-Wm-OHL" secondAttribute="centerX" id="gdX-84-muX"/>
                             <constraint firstItem="Hz4-wo-5um" firstAttribute="top" secondItem="qjU-c6-DIL" secondAttribute="bottom" constant="54.5" id="hha-xz-hiX">
-                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstItem="0mg-D9-Pq4" firstAttribute="centerX" secondItem="Ywy-Wm-OHL" secondAttribute="centerX" id="juy-1U-zw3"/>
                             <constraint firstItem="teT-bk-mTj" firstAttribute="top" secondItem="Ywy-Wm-OHL" secondAttribute="top" id="k80-uv-18z">
@@ -305,7 +309,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="cenliusLabel" destination="teT-bk-mTj" id="rRu-aF-X5J"/>
+                        <outlet property="celsiusLabel" destination="0mg-D9-Pq4" id="7H6-e4-vgK"/>
                         <outlet property="fahrenheitLabel" destination="Hz4-wo-5um" id="cxf-bM-Jlp"/>
                         <outlet property="slider" destination="qjU-c6-DIL" id="Un1-Fr-LGi"/>
                     </connections>
