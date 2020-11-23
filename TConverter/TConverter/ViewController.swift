@@ -15,12 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var fahrenheitLabel: UILabel!
     @IBOutlet weak var slider: UISlider! {
         didSet {
-            slider.maximumValue = 100
-            slider.minimumValue = 0
             slider.value = 0
-            slider.maximumTrackTintColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
-            slider.minimumTrackTintColor = #colorLiteral(red: 0.2606713474, green: 0.2645770609, blue: 0.5889394879, alpha: 1)
-            slider.thumbTintColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+            slider.minimumValue = 0
+            slider.maximumValue = 100
+            slider.thumbTintColor = #colorLiteral(red: 0.6960377355, green: 0.3864435877, blue: 1, alpha: 1)
+            slider.minimumTrackTintColor = #colorLiteral(red: 0.4025401875, green: 0.05477479846, blue: 1, alpha: 1)
+            slider.maximumTrackTintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
     }
     
