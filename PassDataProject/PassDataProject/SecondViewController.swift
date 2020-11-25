@@ -15,6 +15,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     @IBAction func goBackPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindSegue", sender: nil)
     }
     
     override func viewDidLoad() {
