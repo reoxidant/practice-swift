@@ -44,7 +44,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFF-pL-Lw7">
-                                <rect key="frame" x="296" y="44" width="59" height="34"/>
+                                <rect key="frame" x="335" y="44" width="59" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,6 +61,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3NJ-Ni-hiN"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8gt-bp-X0w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjv-TW-bFN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,6 +98,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NbM-G1-FD0"/>
                     </view>
+                    <navigationItem key="navigationItem" id="X7e-CK-mBN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjM-i3-u9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
