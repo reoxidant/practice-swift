@@ -15,6 +15,7 @@
 		44052374257021400088D27B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44052372257021400088D27B /* LaunchScreen.storyboard */; };
 		4405237C257026080088D27B /* EmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405237B257026080088D27B /* EmojiTableViewController.swift */; };
 		4405237E25704E6B0088D27B /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405237D25704E6B0088D27B /* EmojiTableViewCell.swift */; };
+		4405238025705D6B0088D27B /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405237F25705D6B0088D27B /* EmojiModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		44052375257021400088D27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4405237B257026080088D27B /* EmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewController.swift; sourceTree = "<group>"; };
 		4405237D25704E6B0088D27B /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
+		4405237F25705D6B0088D27B /* EmojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +66,9 @@
 				440523692570213E0088D27B /* SceneDelegate.swift */,
 				4405236B2570213E0088D27B /* ViewController.swift */,
 				4405236D2570213E0088D27B /* Main.storyboard */,
-				4405237D25704E6B0088D27B /* EmojiTableViewCell.swift */,
+				4405237F25705D6B0088D27B /* EmojiModel.swift */,
 				4405237B257026080088D27B /* EmojiTableViewController.swift */,
+				4405237D25704E6B0088D27B /* EmojiTableViewCell.swift */,
 				44052370257021400088D27B /* Assets.xcassets */,
 				44052372257021400088D27B /* LaunchScreen.storyboard */,
 				44052375257021400088D27B /* Info.plist */,
@@ -146,6 +149,7 @@
 			files = (
 				4405237C257026080088D27B /* EmojiTableViewController.swift in Sources */,
 				4405236C2570213E0088D27B /* ViewController.swift in Sources */,
+				4405238025705D6B0088D27B /* EmojiModel.swift in Sources */,
 				4405237E25704E6B0088D27B /* EmojiTableViewCell.swift in Sources */,
 				440523682570213E0088D27B /* AppDelegate.swift in Sources */,
 				4405236A2570213E0088D27B /* SceneDelegate.swift in Sources */,
