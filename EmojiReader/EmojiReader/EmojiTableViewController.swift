@@ -11,9 +11,9 @@ import UIKit
 class EmojiTableViewController: UITableViewController {
     
     var objects = [
-        Emoji(emoji: "😙", title: "Kiss", description: "Kiss my love"),
-        Emoji(emoji: "⚽️", title: "Footbal", description: "We are going to play together"),
-        Emoji(emoji: "💻", title: "Macbook", description: "It's very cool device")
+        Emoji(emoji: "😙", title: "Kiss", description: "Kiss my love", isFavourite: false),
+        Emoji(emoji: "⚽️", title: "Footbal", description: "We are going to play together", isFavourite: false),
+        Emoji(emoji: "💻", title: "Macbook", description: "It's very cool device", isFavourite: false)
     ]
     
     override func viewDidLoad() {
@@ -67,5 +67,33 @@ class EmojiTableViewController: UITableViewController {
         objects.insert(movedElement, at: destinationIndexPath.row)
         tableView.reloadData()
     }
-
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let done = doneAction(at: indexPath)
+        let favourite = favouriteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [done, favourite])
+    }
+    
+    func doneAction(at indexPath: IndexPath)->UIContextualAction{
+        let action =  UIContextualAction(style: .destructive, title: "Done") { (action, view, completion) in
+            self.objects.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            completion(true)
+        }
+        action.backgroundColor = .systemGreen
+        action.image = UIImage(systemName: "checkmark.circle")
+        return action
+    }
+    
+    func favouriteAction(at indexPath: IndexPath)->UIContextualAction{
+        var object = self.objects[indexPath.row]
+        let action = UIContextualAction(style: .destructive, title: "Favourite") { (action, view, completion) in
+            object.isFavourite = !object.isFavourite
+            self.objects[indexPath.row] = object
+            completion(true)
+        }
+        action.backgroundColor = object.isFavourite ? .systemPurple : .systemGray
+        action.image = UIImage(systemName: "heart")
+        return action
+    }
 }
