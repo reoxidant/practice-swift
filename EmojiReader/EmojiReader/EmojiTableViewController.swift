@@ -10,6 +10,16 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
     
+    @IBAction func unwindSegue(for segue:UIStoryboardSegue){
+        guard segue.identifier == "saveSegue" else {return}
+        let sourceVC = segue.source as! NewEmojiTableViewController
+        let emoji = sourceVC.emoji
+        let newIndexPath = IndexPath(row: objects.count, section: 0)
+        
+        objects.append(emoji)
+        tableView.insertRows(at: [newIndexPath], with: .fade)
+    }
+    
     var objects = [
         Emoji(emoji: "😙", title: "Kiss", description: "Kiss my love", isFavourite: false),
         Emoji(emoji: "⚽️", title: "Footbal", description: "We are going to play together", isFavourite: false),

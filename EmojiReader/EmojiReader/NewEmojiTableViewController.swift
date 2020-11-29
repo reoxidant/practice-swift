@@ -15,14 +15,33 @@ class NewEmojiTableViewController: UITableViewController {
     @IBOutlet weak var descriptionTF: UITextField!
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    @IBOutlet weak var cancelButton: UIBarButtonItem!
-    
     
     @IBAction func textChange(_ sender: UITextField) {
-        
+        updateSaveButton()
     }
+    
+    var emoji = Emoji(emoji: "", title: "", description: "", isFavourite: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateSaveButton()
+    }
+    
+    func updateSaveButton(){
+        let emoji = emojiTF.text ?? ""
+        let title = titleTF.text ?? ""
+        let description = descriptionTF.text ?? ""
+        
+        saveButton.isEnabled = !emoji.isEmpty && !title.isEmpty && !description.isEmpty
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "saveSegue" else {return}
+        let emoji = emojiTF.text ?? ""
+        let title = titleTF.text ?? ""
+        let description = descriptionTF.text ?? ""
+        
+        self.emoji = Emoji(emoji: emoji, title: title, description: description, isFavourite: self.emoji.isFavourite)
     }
 }

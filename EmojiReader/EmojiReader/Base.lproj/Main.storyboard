@@ -188,11 +188,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="qH6-Lp-0v0">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="NUP-nO-d9B"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="RGR-Hj-MU1"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="NUP-nO-d9B">
+                            <connections>
+                                <segue destination="xd8-P8-NaJ" kind="unwind" unwindAction="unwindSegueFor:" id="pb5-wI-saY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="RGR-Hj-MU1">
+                            <connections>
+                                <segue destination="xd8-P8-NaJ" kind="unwind" identifier="saveSegue" unwindAction="unwindSegueFor:" id="lld-hG-Mft"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cancelButton" destination="NUP-nO-d9B" id="dtS-iD-jtX"/>
                         <outlet property="descriptionTF" destination="XZY-x4-u0N" id="IRJ-oC-rsD"/>
                         <outlet property="emojiTF" destination="mgO-ic-ncp" id="uWs-Ks-Ct4"/>
                         <outlet property="saveButton" destination="RGR-Hj-MU1" id="DOh-lC-6es"/>
@@ -200,6 +207,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYh-3H-Dzp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xd8-P8-NaJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3497.1014492753625" y="135.9375"/>
         </scene>
