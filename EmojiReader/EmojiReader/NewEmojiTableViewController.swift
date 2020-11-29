@@ -25,6 +25,13 @@ class NewEmojiTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateSaveButton()
+        updateUI()
+    }
+    
+    private func updateUI(){
+        emojiTF.text = emoji.emoji
+        titleTF.text = emoji.title
+        descriptionTF.text = emoji.description
     }
     
     func updateSaveButton(){
