@@ -2,18 +2,19 @@ import UIKit
 
 func removeDuplicates(inputArr:inout [Int]) -> [Int]{
     
-    var lastNum:Int?
-    var index = 0
-    
-    while index != inputArr.count {
-        if lastNum == inputArr[index]{
-            inputArr.remove(at: index)
-        }else{
-            lastNum = inputArr[index]
-            index += 1
+    if !inputArr.isEmpty {
+        var lastNum:Int?
+        var index = 0
+        
+        while index != inputArr.count {
+            if lastNum == inputArr[index]{
+                inputArr.remove(at: index)
+            }else{
+                lastNum = inputArr[index]
+                index += 1
+            }
         }
     }
-    
     return inputArr
 }
 
