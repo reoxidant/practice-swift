@@ -84,3 +84,50 @@ if !array2.isEmpty && !studentNames.isEmpty
 
     print("Names of students containts \(studentNames) and count students is \(studentNames.count) in a class")
 }
+
+// i can to add item as last item of array
+
+var studentNames:[String] = ["Sasha", "Masha", "Peter", "Nadya"]
+studentNames.append("Vitaliy")
+
+print("studentNames constrain: \(studentNames)")
+
+//and u can to change array size and adding 
+
+studentNames[0] = "Ura"
+
+let randNumber = Int.random(in:0..<studentNames.count)
+
+print("random student names from list is \(studentNames[randNumber])")
+
+
+let randNumberOne = Int.random(in:0..<studentNames.count)
+let randNumberTwo = Int.random(in:0..<studentNames.count)
+
+if(randNumberOne < randNumberTwo){
+    print("get 2 students and more with range array is \(studentNames[randNumberOne...randNumberTwo])")
+}
+
+//u can to insert item what u want at any index
+
+var customName:String = "John"
+var customIndex:Int = 4
+studentNames.insert(customName, at: customIndex)
+print("Now \(customName) put in \(studentNames) array by index \(customIndex))
+
+// insert to array by range 
+
+var intRangeOne = 0
+var intRangeTwo = 4
+
+studentNames[intRangeOne...intRangeTwo] = ["Vasya", "Dima"]
+
+print("Now array is \(studentNames)")
+      
+      // remove elements from array for example i wanna delete item from 2 index
+
+let removeItemFromArray = studentNames.remove(at:2)
+print("deleting item from studentNames is \(removeItemFromArray)")
+
+
+
