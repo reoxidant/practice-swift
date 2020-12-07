@@ -34,67 +34,54 @@ arrayOne.reverse()
 
 //Init array empty
 
-var array = Array<Int>()
-var array2 = [Int]()
+var arrIntOne = Array<Int>()
+var arrIntTwo = [Int]()
+
 
 //Creating default array
 
-var array3 = Array(repeating: 0, count: 5)
+var arrayIntThree = Array(repeating: 0, count: 5)
 
 //Adding value into array
 
-array.append(23)
+arrIntOne.append(0)
+
+//and clear that value
+
+arrIntOne = []
 
 //combine two arrays
 
-array2 = array + array3
+arrIntTwo = arrIntOne + arrayIntThree
 
 //show count
 
-print("array2 containts \(array2) values and have a \(array2.count) elements")
-
-//Init array empty
-
-var array = Array<Int>()
-var array2 = [Int]()
-
-
-//Creating default array
-
-let array3 = Array(repeating: 0, count: 5)
+print("array2 containts \(arrIntTwo) values and have a \(arrIntTwo.count) elements")
 
 
 //init array with literal value
 
 var studentNames:[String] = ["Sasha", "Masha", "Peter", "Nadya"]
 
-//Adding value into array
-
-array.append(23)
-
-//combine two arrays
-
-array2 = array + array3
-
 //show count items if arrays is not empty
 
-if !array2.isEmpty && !studentNames.isEmpty
+if !arrIntTwo.isEmpty && !studentNames.isEmpty
 {
-    print("array2 containts \(array2) values and have a \(array2.count) items")
+    print("array2 containts \(arrIntTwo) values and have a \(arrIntTwo.count) items")
 
     print("Names of students containts \(studentNames) and count students is \(studentNames.count) in a class")
 }
 
 // i can to add item as last item of array
 
-var studentNames:[String] = ["Sasha", "Masha", "Peter", "Nadya"]
 studentNames.append("Vitaliy")
 
 print("studentNames constrain: \(studentNames)")
 
-//and u can to change array size and adding 
+//and u can to change array size and adding value by key or array
 
 studentNames[0] = "Ura"
+studentNames += ["Nastya"]
 
 let randNumber = Int.random(in:0..<studentNames.count)
 
@@ -113,7 +100,7 @@ if(randNumberOne < randNumberTwo){
 var customName:String = "John"
 var customIndex:Int = 4
 studentNames.insert(customName, at: customIndex)
-print("Now \(customName) put in \(studentNames) array by index \(customIndex))
+print("Now \(customName) put in \(studentNames) array by index \(customIndex)")
 
 // insert to array by range 
 
@@ -124,10 +111,24 @@ studentNames[intRangeOne...intRangeTwo] = ["Vasya", "Dima"]
 
 print("Now array is \(studentNames)")
       
-      // remove elements from array for example i wanna delete item from 2 index
+// remove elements from array for example i wanna delete item from 2 index
 
 let removeItemFromArray = studentNames.remove(at:2)
 print("deleting item from studentNames is \(removeItemFromArray)")
 
 
+//remove only last item and return it
+let lastItemName = studentNames.removeLast()
+print("remove last name of studentName is \(lastItemName)")
 
+// create iteration for all array studentNames
+
+for name in studentNames{
+    print("student name is \(name)")
+}
+
+//cortage witch out of elements as index and value of array
+
+for (index, name) in studentNames.enumerated(){
+    print("student number is: \(index + 1) has a name \(name)")
+}
