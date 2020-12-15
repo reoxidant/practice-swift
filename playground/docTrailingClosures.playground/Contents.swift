@@ -41,3 +41,13 @@ print(stringNumbers)
 //        failure()
 //    }
 //}
+
+
+//in example from server get picture and install it to a view of app, using closure if u get failure loading
+
+//func loadPictureFromTheServer(from: String)
+//{
+//    picture in view.currentPicture = picture
+//} onFailure: {
+//    print("Couldn't to load picture from the server.")
+//}
