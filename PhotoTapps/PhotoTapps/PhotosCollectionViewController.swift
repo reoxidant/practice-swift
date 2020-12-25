@@ -10,32 +10,45 @@ import UIKit
 
 class PhotosCollectionViewController: UICollectionViewController {
     
+    //MARK: Define UICollectionViewFlowLayout main properties for using while creating collectionView	
+    
+    let itemsAtRow:CGFloat = 2
+    let insertEdges = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        //MARK: Define UICollectionViewFlowLayout as another way that u will be display CollectionView elements
         
-        // Do any additional setup after loading the view.
+        //        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        //        layout.itemSize = CGSize(width: 50, height: 50)
+        //        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        //        layout.minimumLineSpacing = 20
+        //        layout.minimumInteritemSpacing = 20
+        //        layout.scrollDirection = .horizontal
+        
+        //MARK: hide all scrolls indicators
+        //        collectionView.showsVerticalScrollIndicator = false
+        //        collectionView.showsHorizontalScrollIndicator = false
+        
     }
     
-    // MARK: UICollectionViewDataSource
+    // MARK: Default UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 15
+        return 150
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCollectionViewCell
         
-        // Configure the cell
+        //MARK: Configure the cell
         
         cell.backgroundColor = .black
         
@@ -45,22 +58,22 @@ class PhotosCollectionViewController: UICollectionViewController {
 
 extension PhotosCollectionViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemsAtRow:CGFloat = 2
-        let paddingWidthItems = 21 * (itemsAtRow + 1)
+        //MARK: Use insertEdges and itemsAtRow class props for building FlowLayout
+        let paddingWidthItems = insertEdges.left * (itemsAtRow + 1)
         let allowWidthForCellsAtRow = collectionView.frame.width - paddingWidthItems
         let sizeCell = allowWidthForCellsAtRow / itemsAtRow
         return CGSize(width: sizeCell, height: sizeCell)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        return insertEdges
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return insertEdges.left
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return insertEdges.left
     }
 }
