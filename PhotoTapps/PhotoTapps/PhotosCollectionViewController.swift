@@ -14,6 +14,10 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     let itemsAtRow:CGFloat = 2
     let insertEdges = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+
+    let photos = ["cat1", "cat2", "cat3", "cat4", "cat5", "cat6", "cat7", "cat8", "cat9", "cat10", "cat11", "cat12", "cat13", "cat14", "cat15", "cat16", "cat17", "cat18", "cat19", "cat20", "cat21", "cat22", "cat23", "cat24", "cat25", "cat26", "cat27", "cat28", "cat29", "cat30", "cat31", "cat32", "cat33", "cat34", "cat35", "cat36", "cat37", "cat38", "cat39", "cat40", "cat41", "cat42", "cat43", "cat44", "cat45", "cat46", "cat47", "cat48", "cat49", "cat50"]
+    
+    var shuffledPhotos = Array<String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +46,10 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 150
+        
+        shuffledPhotos = photos.shuffled()
+        
+        return photos.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,7 +57,9 @@ class PhotosCollectionViewController: UICollectionViewController {
         
         //MARK: Configure the cell
         
-        cell.backgroundColor = .black
+        let imageName = shuffledPhotos[indexPath.row]
+        
+        cell.catImageView.image = UIImage(named: imageName)
         
         return cell
     }
