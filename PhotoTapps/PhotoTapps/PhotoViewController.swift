@@ -12,11 +12,17 @@ class PhotoViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
     
-    @IBAction func shareAction(_ sender: UIButton) {
-        
-    }
-    
     var image = UIImage()
+    
+    @IBAction func shareAction(_ sender: UIButton) {
+        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        activityVC.completionWithItemsHandler = { _, bool, _, _ in
+            if bool {
+                 print("Success to load the image!")
+            }
+        }
+        self.present(activityVC, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
