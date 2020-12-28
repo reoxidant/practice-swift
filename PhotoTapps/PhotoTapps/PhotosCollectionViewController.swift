@@ -37,6 +37,15 @@ class PhotosCollectionViewController: UICollectionViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "photoSegue"
+        {
+            let photoVC = segue.destination as! PhotoViewController
+            let cell = sender as! PhotoCollectionViewCell
+            photoVC.image = cell.catImageView.image!
+        }
+    }
+    
     // MARK: Default UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
