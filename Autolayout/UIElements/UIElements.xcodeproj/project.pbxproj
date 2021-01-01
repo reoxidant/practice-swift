@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		440CCECB2549C97A00CCEB87 /* AchorStackViewChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440CCECA2549C97A00CCEB87 /* AchorStackViewChallengeViewController.swift */; };
+		440DD003256165860065DAF6 /* AdaptiveLayoutEnviromentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440DD002256165860065DAF6 /* AdaptiveLayoutEnviromentViewController.swift */; };
+		440DD005256172B20065DAF6 /* ClassSizePractice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440DD004256172B20065DAF6 /* ClassSizePractice2ViewController.swift */; };
+		441D5AF525574A2600F884FB /* VFLPractice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D5AF425574A2600F884FB /* VFLPractice2ViewController.swift */; };
+		44205CAD256065EE001FA6B4 /* ClassSIzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44205CAC256065EE001FA6B4 /* ClassSIzeViewController.swift */; };
+		4434140B25471AD800DF3C6C /* AnchorChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434140A25471AD800DF3C6C /* AnchorChallengeViewController.swift */; };
+		445B502D25615CDF00E04188 /* FontClassSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445B502C25615CDF00E04188 /* FontClassSizeViewController.swift */; };
+		44838033256086A100C1B413 /* ClassSizePracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44838032256086A100C1B413 /* ClassSizePracticeViewController.swift */; };
+		44A7D7D32561897000E5F118 /* NavigationBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7D7D22561897000E5F118 /* NavigationBarAppearance.swift */; };
+		44A7D7D52562733100E5F118 /* AdaptiveLayoutPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7D7D42562733100E5F118 /* AdaptiveLayoutPresentationViewController.swift */; };
+		44AC60C82546E38D00B21619 /* VFLChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AC60C72546E38D00B21619 /* VFLChallengeViewController.swift */; };
+		44BA66332545CB0A003A71FB /* TestNSLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA66322545CB0A003A71FB /* TestNSLayoutViewController.swift */; };
+		44BA66352545CBD1003A71FB /* VFLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA66342545CBD1003A71FB /* VFLViewController.swift */; };
+		44BA66372545E7C1003A71FB /* AnchorNSLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA66362545E7C0003A71FB /* AnchorNSLayoutViewController.swift */; };
+		44DA8DD125417AB5005E9710 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DA8DD025417AB5005E9710 /* MapViewController.swift */; };
+		44DBA26E2541596600BEA197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBA26D2541596600BEA197 /* AppDelegate.swift */; };
+		44DBA2702541596600BEA197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBA26F2541596600BEA197 /* SceneDelegate.swift */; };
+		44DBA2722541596600BEA197 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBA2712541596600BEA197 /* MenuViewController.swift */; };
+		44DBA2752541596600BEA197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA2732541596600BEA197 /* Main.storyboard */; };
+		44DBA2772541596700BEA197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA2762541596700BEA197 /* Assets.xcassets */; };
+		44DBA27A2541596700BEA197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA2782541596700BEA197 /* LaunchScreen.storyboard */; };
+		44DBA28925415A0700BEA197 /* RayUdemyChallenge1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA28225415A0700BEA197 /* RayUdemyChallenge1.storyboard */; };
+		44DBA28A25415A0700BEA197 /* RayUdemyCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA28325415A0700BEA197 /* RayUdemyCourse.storyboard */; };
+		44DBA28B25415A0700BEA197 /* AsianUdemy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA28425415A0700BEA197 /* AsianUdemy.storyboard */; };
+		44DBA28C25415A0700BEA197 /* RayUdemyChallenge3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA28525415A0700BEA197 /* RayUdemyChallenge3.storyboard */; };
+		44DBA28D25415A0700BEA197 /* ReyUdemyConstrains.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA28625415A0700BEA197 /* ReyUdemyConstrains.storyboard */; };
+		44DBA28E25415A0700BEA197 /* RayUdemyChallenge2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA28725415A0700BEA197 /* RayUdemyChallenge2.storyboard */; };
+		44DBA28F25415A0700BEA197 /* RayUdemyInequalityConstrains.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DBA28825415A0700BEA197 /* RayUdemyInequalityConstrains.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		440CCECA2549C97A00CCEB87 /* AchorStackViewChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchorStackViewChallengeViewController.swift; sourceTree = "<group>"; };
+		440DD002256165860065DAF6 /* AdaptiveLayoutEnviromentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveLayoutEnviromentViewController.swift; sourceTree = "<group>"; };
+		440DD004256172B20065DAF6 /* ClassSizePractice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSizePractice2ViewController.swift; sourceTree = "<group>"; };
+		441D5AF425574A2600F884FB /* VFLPractice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLPractice2ViewController.swift; sourceTree = "<group>"; };
+		44205CAC256065EE001FA6B4 /* ClassSIzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSIzeViewController.swift; sourceTree = "<group>"; };
+		4434140A25471AD800DF3C6C /* AnchorChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorChallengeViewController.swift; sourceTree = "<group>"; };
+		445B502C25615CDF00E04188 /* FontClassSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontClassSizeViewController.swift; sourceTree = "<group>"; };
+		44838032256086A100C1B413 /* ClassSizePracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSizePracticeViewController.swift; sourceTree = "<group>"; };
+		44A7D7D22561897000E5F118 /* NavigationBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarAppearance.swift; sourceTree = "<group>"; };
+		44A7D7D42562733100E5F118 /* AdaptiveLayoutPresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveLayoutPresentationViewController.swift; sourceTree = "<group>"; };
+		44AC60C72546E38D00B21619 /* VFLChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLChallengeViewController.swift; sourceTree = "<group>"; };
+		44BA66322545CB0A003A71FB /* TestNSLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNSLayoutViewController.swift; sourceTree = "<group>"; };
+		44BA66342545CBD1003A71FB /* VFLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLViewController.swift; sourceTree = "<group>"; };
+		44BA66362545E7C0003A71FB /* AnchorNSLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorNSLayoutViewController.swift; sourceTree = "<group>"; };
+		44DA8DD025417AB5005E9710 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		44DBA26A2541596600BEA197 /* UIElements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIElements.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DBA26D2541596600BEA197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44DBA26F2541596600BEA197 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		44DBA2712541596600BEA197 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		44DBA2742541596600BEA197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		44DBA2762541596700BEA197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44DBA2792541596700BEA197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44DBA27B2541596700BEA197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44DBA28225415A0700BEA197 /* RayUdemyChallenge1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RayUdemyChallenge1.storyboard; sourceTree = "<group>"; };
+		44DBA28325415A0700BEA197 /* RayUdemyCourse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RayUdemyCourse.storyboard; sourceTree = "<group>"; };
+		44DBA28425415A0700BEA197 /* AsianUdemy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AsianUdemy.storyboard; sourceTree = "<group>"; };
+		44DBA28525415A0700BEA197 /* RayUdemyChallenge3.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RayUdemyChallenge3.storyboard; sourceTree = "<group>"; };
+		44DBA28625415A0700BEA197 /* ReyUdemyConstrains.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReyUdemyConstrains.storyboard; sourceTree = "<group>"; };
+		44DBA28725415A0700BEA197 /* RayUdemyChallenge2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RayUdemyChallenge2.storyboard; sourceTree = "<group>"; };
+		44DBA28825415A0700BEA197 /* RayUdemyInequalityConstrains.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RayUdemyInequalityConstrains.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44DBA2672541596600BEA197 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4434140925471A9800DF3C6C /* Course Raywenderlich Auto Layout Practice */ = {
+			isa = PBXGroup;
+			children = (
+				44AC60C72546E38D00B21619 /* VFLChallengeViewController.swift */,
+				4434140A25471AD800DF3C6C /* AnchorChallengeViewController.swift */,
+				440CCECA2549C97A00CCEB87 /* AchorStackViewChallengeViewController.swift */,
+				441D5AF425574A2600F884FB /* VFLPractice2ViewController.swift */,
+				44205CAC256065EE001FA6B4 /* ClassSIzeViewController.swift */,
+				44838032256086A100C1B413 /* ClassSizePracticeViewController.swift */,
+				445B502C25615CDF00E04188 /* FontClassSizeViewController.swift */,
+				440DD002256165860065DAF6 /* AdaptiveLayoutEnviromentViewController.swift */,
+				440DD004256172B20065DAF6 /* ClassSizePractice2ViewController.swift */,
+				44A7D7D42562733100E5F118 /* AdaptiveLayoutPresentationViewController.swift */,
+			);
+			path = "Course Raywenderlich Auto Layout Practice";
+			sourceTree = "<group>";
+		};
+		44AC60C62546E33700B21619 /* Auto Layout Mastering Code */ = {
+			isa = PBXGroup;
+			children = (
+				44BA66362545E7C0003A71FB /* AnchorNSLayoutViewController.swift */,
+				44BA66322545CB0A003A71FB /* TestNSLayoutViewController.swift */,
+				44BA66342545CBD1003A71FB /* VFLViewController.swift */,
+			);
+			path = "Auto Layout Mastering Code";
+			sourceTree = "<group>";
+		};
+		44DBA2612541596600BEA197 = {
+			isa = PBXGroup;
+			children = (
+				44DBA26C2541596600BEA197 /* UIElements */,
+				44DBA26B2541596600BEA197 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44DBA26B2541596600BEA197 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44DBA26A2541596600BEA197 /* UIElements.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44DBA26C2541596600BEA197 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				44DBA281254159DA00BEA197 /* PracticeByLectures */,
+				44DBA26D2541596600BEA197 /* AppDelegate.swift */,
+				44DBA26F2541596600BEA197 /* SceneDelegate.swift */,
+				44A7D7D22561897000E5F118 /* NavigationBarAppearance.swift */,
+				4434140925471A9800DF3C6C /* Course Raywenderlich Auto Layout Practice */,
+				44AC60C62546E33700B21619 /* Auto Layout Mastering Code */,
+				44DA8DD025417AB5005E9710 /* MapViewController.swift */,
+				44DBA2712541596600BEA197 /* MenuViewController.swift */,
+				44DBA2732541596600BEA197 /* Main.storyboard */,
+				44DBA2762541596700BEA197 /* Assets.xcassets */,
+				44DBA2782541596700BEA197 /* LaunchScreen.storyboard */,
+				44DBA27B2541596700BEA197 /* Info.plist */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		44DBA281254159DA00BEA197 /* PracticeByLectures */ = {
+			isa = PBXGroup;
+			children = (
+				44DBA28425415A0700BEA197 /* AsianUdemy.storyboard */,
+				44DBA28225415A0700BEA197 /* RayUdemyChallenge1.storyboard */,
+				44DBA28725415A0700BEA197 /* RayUdemyChallenge2.storyboard */,
+				44DBA28525415A0700BEA197 /* RayUdemyChallenge3.storyboard */,
+				44DBA28325415A0700BEA197 /* RayUdemyCourse.storyboard */,
+				44DBA28825415A0700BEA197 /* RayUdemyInequalityConstrains.storyboard */,
+				44DBA28625415A0700BEA197 /* ReyUdemyConstrains.storyboard */,
+			);
+			path = PracticeByLectures;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44DBA2692541596600BEA197 /* UIElements */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44DBA27E2541596700BEA197 /* Build configuration list for PBXNativeTarget "UIElements" */;
+			buildPhases = (
+				44DBA2662541596600BEA197 /* Sources */,
+				44DBA2672541596600BEA197 /* Frameworks */,
+				44DBA2682541596600BEA197 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIElements;
+			productName = "autolayout-practice";
+			productReference = 44DBA26A2541596600BEA197 /* UIElements.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44DBA2622541596600BEA197 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Виталий Шаповалов";
+				TargetAttributes = {
+					44DBA2692541596600BEA197 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 44DBA2652541596600BEA197 /* Build configuration list for PBXProject "UIElements" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44DBA2612541596600BEA197;
+			productRefGroup = 44DBA26B2541596600BEA197 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44DBA2692541596600BEA197 /* UIElements */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44DBA2682541596600BEA197 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DBA28925415A0700BEA197 /* RayUdemyChallenge1.storyboard in Resources */,
+				44DBA27A2541596700BEA197 /* LaunchScreen.storyboard in Resources */,
+				44DBA2772541596700BEA197 /* Assets.xcassets in Resources */,
+				44DBA28A25415A0700BEA197 /* RayUdemyCourse.storyboard in Resources */,
+				44DBA28D25415A0700BEA197 /* ReyUdemyConstrains.storyboard in Resources */,
+				44DBA28B25415A0700BEA197 /* AsianUdemy.storyboard in Resources */,
+				44DBA28E25415A0700BEA197 /* RayUdemyChallenge2.storyboard in Resources */,
+				44DBA28C25415A0700BEA197 /* RayUdemyChallenge3.storyboard in Resources */,
+				44DBA2752541596600BEA197 /* Main.storyboard in Resources */,
+				44DBA28F25415A0700BEA197 /* RayUdemyInequalityConstrains.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44DBA2662541596600BEA197 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44A7D7D52562733100E5F118 /* AdaptiveLayoutPresentationViewController.swift in Sources */,
+				441D5AF525574A2600F884FB /* VFLPractice2ViewController.swift in Sources */,
+				445B502D25615CDF00E04188 /* FontClassSizeViewController.swift in Sources */,
+				44DBA2722541596600BEA197 /* MenuViewController.swift in Sources */,
+				44BA66332545CB0A003A71FB /* TestNSLayoutViewController.swift in Sources */,
+				44A7D7D32561897000E5F118 /* NavigationBarAppearance.swift in Sources */,
+				44BA66352545CBD1003A71FB /* VFLViewController.swift in Sources */,
+				440DD003256165860065DAF6 /* AdaptiveLayoutEnviromentViewController.swift in Sources */,
+				44838033256086A100C1B413 /* ClassSizePracticeViewController.swift in Sources */,
+				44205CAD256065EE001FA6B4 /* ClassSIzeViewController.swift in Sources */,
+				44DBA26E2541596600BEA197 /* AppDelegate.swift in Sources */,
+				44DBA2702541596600BEA197 /* SceneDelegate.swift in Sources */,
+				4434140B25471AD800DF3C6C /* AnchorChallengeViewController.swift in Sources */,
+				44BA66372545E7C1003A71FB /* AnchorNSLayoutViewController.swift in Sources */,
+				44AC60C82546E38D00B21619 /* VFLChallengeViewController.swift in Sources */,
+				44DA8DD125417AB5005E9710 /* MapViewController.swift in Sources */,
+				440DD005256172B20065DAF6 /* ClassSizePractice2ViewController.swift in Sources */,
+				440CCECB2549C97A00CCEB87 /* AchorStackViewChallengeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		44DBA2732541596600BEA197 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44DBA2742541596600BEA197 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		44DBA2782541596700BEA197 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44DBA2792541596700BEA197 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44DBA27C2541596700BEA197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		44DBA27D2541596700BEA197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44DBA27F2541596700BEA197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R358T89G6H;
+				INFOPLIST_FILE = "autolayout-practice/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blacksymphony.autolayout-practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44DBA2802541596700BEA197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R358T89G6H;
+				INFOPLIST_FILE = "autolayout-practice/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blacksymphony.autolayout-practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44DBA2652541596600BEA197 /* Build configuration list for PBXProject "UIElements" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44DBA27C2541596700BEA197 /* Debug */,
+				44DBA27D2541596700BEA197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44DBA27E2541596700BEA197 /* Build configuration list for PBXNativeTarget "UIElements" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44DBA27F2541596700BEA197 /* Debug */,
+				44DBA2802541596700BEA197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44DBA2622541596600BEA197 /* Project object */;
+}
