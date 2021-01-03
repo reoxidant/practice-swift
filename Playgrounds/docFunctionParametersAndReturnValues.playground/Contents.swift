@@ -1,6 +1,6 @@
 import UIKit
 
-//my subtop "Function Parameters and Return Values" was spent 15 min
+//Topic - "Function Parameters and Return Values" was spent 15 min
 
 //func wiout parametes in example
 
