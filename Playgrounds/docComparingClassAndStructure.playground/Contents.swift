@@ -1,5 +1,7 @@
 import UIKit
 
+//Topic - Comparing Classes and Structures
+
 //Syntax declaration
 
 class SomeClass{}

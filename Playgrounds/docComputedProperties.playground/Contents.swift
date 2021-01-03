@@ -1,6 +1,6 @@
 import UIKit
 
-//Work on topic - "Computed Properties"
+//Topic - "Computed Properties"
 
 //stop reading on move square, 10 min was spent
 

@@ -1,6 +1,8 @@
 import UIKit
 
-// Topic - Method sorted
+//Topic - Closure Expressions
+
+// Sub topic - Method sorted
 
 let names = ["Misha", "Masha", "Dima", "Sanya", "Nastya", "Vitaliy", "Gena", "Maks", "Timur", "Polina"]
 
