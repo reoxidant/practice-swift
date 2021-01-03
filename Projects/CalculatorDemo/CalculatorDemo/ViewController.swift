@@ -10,15 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var userInTheMiddleOfTypingANumber: Bool = false
+    var userInTheMiddleOfTypingANumber = false
     
     @IBOutlet weak var display: UILabel!
     
-    @IBAction func enter() {
-        userInTheMiddleOfTypingANumber = false
+    var operandStack = Array<Double>()
+    
+    var displayValue: Double{
+        get{
+            return (display.text! as NSString).doubleValue
+        }
+        set{
+            display.text! = "\(newValue)"
+            userInTheMiddleOfTypingANumber = false
+        }
     }
     
-    var operandStack = Array<Double>()
+    @IBAction func enter() {
+        userInTheMiddleOfTypingANumber = false
+        operandStack.append(displayValue)
+        //        print("operandStack - \(operandStack)")
+    }
     
     @IBAction func appendDigitToStack(_ sender: UIButton) {
         let digit = sender.currentTitle!
@@ -30,5 +42,33 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func operate(_ sender: UIButton) {
+        let operation = sender.currentTitle!
+        if userInTheMiddleOfTypingANumber{enter()}
+        switch operation {
+        case "×": performOperation {$0 * $1}
+        case "÷": performOperation {$1 / $0}
+        case "+": performOperation {$0 + $1}
+        case "−": performOperation {$1 * $0}
+        case "√": performOperation {sqrt($0)}
+        default:
+            break
+        }
+    }
+    
+    func performOperation(operation:(Double, Double) -> Double){
+        if operandStack.count >= 2 {
+            displayValue = operation(operandStack.removeLast(), operandStack.removeLast())
+            enter()
+        }
+    }
+    	
+    func performOperation(operation: (Double) -> Double){
+        if operandStack.count >= 1 {
+            displayValue = operation(operandStack.removeLast())
+            enter()
+        }
+    }
 }
 
