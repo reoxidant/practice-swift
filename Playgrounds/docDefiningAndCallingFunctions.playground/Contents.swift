@@ -1,6 +1,6 @@
 import UIKit
 
-//my subtop "Defining and Calling Functions" was spent 15min
+//Topic - "Defining and Calling Functions" was spent 15min
 
 //func and call func with return value in example
 
