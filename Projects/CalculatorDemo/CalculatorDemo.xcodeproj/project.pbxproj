@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440AE5DF25A1D5B700292702 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440AE5DE25A1D5B700292702 /* CalculatorViewController.swift */; };
 		4484B57525A0F03700C985BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484B57425A0F03700C985BA /* AppDelegate.swift */; };
 		4484B57725A0F03700C985BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484B57625A0F03700C985BA /* SceneDelegate.swift */; };
 		4484B57925A0F03700C985BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484B57825A0F03700C985BA /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440AE5DE25A1D5B700292702 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		4484B57125A0F03700C985BA /* CalculatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4484B57425A0F03700C985BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4484B57625A0F03700C985BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				4484B57425A0F03700C985BA /* AppDelegate.swift */,
 				4484B57625A0F03700C985BA /* SceneDelegate.swift */,
 				4484B57825A0F03700C985BA /* ViewController.swift */,
+				440AE5DE25A1D5B700292702 /* CalculatorViewController.swift */,
 				4484B57A25A0F03700C985BA /* Main.storyboard */,
 				4484B57D25A0F03B00C985BA /* Assets.xcassets */,
 				4484B57F25A0F03B00C985BA /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				4484B57925A0F03700C985BA /* ViewController.swift in Sources */,
 				4484B57525A0F03700C985BA /* AppDelegate.swift in Sources */,
+				440AE5DF25A1D5B700292702 /* CalculatorViewController.swift in Sources */,
 				4484B57725A0F03700C985BA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
