@@ -1,6 +1,6 @@
 import UIKit
 
-//Study sub topic "Function Types"
+//Topic - "Function Types"
 
 //functional type in example
 
@@ -52,3 +52,11 @@ func performAnyMathOperation(_ mathOperation: (Int, Int) -> Int, _ a: Int, _ b: 
 
 print(performAnyMathOperation(addingTwoNumbers, 20, 5))
 print(performAnyMathOperation(multiplyTwoNumbers, 7543, 255))
+
+//use functional types as return types for functions
+
+
+func multiplyValues(value:Int) -> Int
+{
+    return value * value
+}
