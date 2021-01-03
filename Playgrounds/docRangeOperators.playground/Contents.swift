@@ -1,5 +1,7 @@
 import UIKit
 
+//Topic - Range Operators
+
 //Swift has 2 type range in close a...b include both and
 
 //Subtopic - "Closed Range Operator"
@@ -58,7 +60,3 @@ let range = ..<namesOfFamily.count
 range.contains(1) //check include range it's true
 
 range.contains(6) //check include range it's false
-
-
-
-
