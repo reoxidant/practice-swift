@@ -1,5 +1,7 @@
 import UIKit
 
+//Topic - Counting Characters
+
 let stringMeasure = "Hello my name is vitaliy i am from Omsk, i am 25 year old"
 
 print("stringMeasure содержит \(stringMeasure.count) символов")
