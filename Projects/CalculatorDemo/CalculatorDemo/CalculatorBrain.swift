@@ -54,4 +54,21 @@ class CalculatorBrain{
         
         return (nil, ops)
     }
+    
+    func evaluate() -> Double?{
+        let (result, _) = evaluate(ops: opStack)
+        return result
+    }
+    
+    func pushOperand(operand:Double) -> Double?{
+        opStack.append(Op.Operand(operand))
+        return evaluate()
+    }
+    
+    func performOperation(symbol: String) -> Double?{
+        if let operation = knowsOps[symbol]{
+            opStack.append(operation)
+        }
+        return evaluate()
+    }
 }

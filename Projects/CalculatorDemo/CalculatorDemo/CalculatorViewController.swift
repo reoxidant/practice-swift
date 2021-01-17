@@ -14,7 +14,9 @@ class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
     
-    var operateStack = Array<Double>()
+//    var operateStack = Array<Double>()
+    
+    var brain = CalculatorBrain()
     
     var displayValue:Double{
         get{
@@ -38,11 +40,19 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func enter() {
         userInTheMiddleOfNumber = false
-        operateStack.append(displayValue)
-        print("operateStack - \(operateStack)")
+//        operateStack.append(displayValue)
+//        print("operateStack - \(operateStack)")
+        if let result = brain.pushOperand(operand:displayValue) {
+            displayValue = result
+        }
     }
     
-    
+    @IBAction func operate(_ sender: UIButton) {
+        if userInTheMiddleOfNumber {enter()}
+        if let operation = sender.currentTitle{
+            
+        }
+    }
     
     //@IBAction func operate(_ sender: UIButton) {
     //    let operation = sender.currentTitle!
