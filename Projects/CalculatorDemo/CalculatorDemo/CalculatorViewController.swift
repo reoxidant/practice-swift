@@ -44,13 +44,19 @@ class CalculatorViewController: UIViewController {
 //        print("operateStack - \(operateStack)")
         if let result = brain.pushOperand(operand:displayValue) {
             displayValue = result
+        } else {
+            displayValue = 0
         }
     }
     
     @IBAction func operate(_ sender: UIButton) {
         if userInTheMiddleOfNumber {enter()}
         if let operation = sender.currentTitle{
-            
+            if let result = brain.performOperation(symbol: operation){
+                displayValue = result
+            } else {
+                displayValue = 0
+            }
         }
     }
     
