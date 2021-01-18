@@ -13,6 +13,19 @@ class CalculatorBrain{
         case Operand(Double)
         case UnaryOperation(String, (Double) -> Double)
         case BinaryOperation(String, (Double, Double) -> Double)
+        
+        var description: String{
+            get {
+                switch self {
+                    case .Operand(let operand):
+                        return "\(operand)"
+                    case .UnaryOperation(let symbol, _):
+                        return symbol
+                    case .BinaryOperation(let symbol, _):
+                        return symbol
+                }
+            }
+        }
     }
     
     private var opStack = [Op]()
@@ -20,7 +33,10 @@ class CalculatorBrain{
     private var knowsOps = [String:Op]()
     
     init(){
-        knowsOps["×"] = Op.BinaryOperation("×", *)
+        func learnOp(op:Op){
+            knowsOps[op.description] = op
+        }
+        learnOp(op: .BinaryOperation("×", *))
         knowsOps["÷"] = Op.BinaryOperation("÷"){$1 / $0}
         knowsOps["+"] = Op.BinaryOperation("+", +)
         knowsOps["−"] = Op.BinaryOperation("−"){$1 - $0}
@@ -56,11 +72,12 @@ class CalculatorBrain{
     }
     
     func evaluate() -> Double?{
-        let (result, _) = evaluate(ops: opStack)
+        let (result, remainder) = evaluate(ops: opStack)
+        print("\(opStack) = \(result ?? 0) with \(remainder) left over")
         return result
     }
     
-    func pushOperand(operand:Double) -> Double?{
+    func pushOperand(operand:Double) -> Double?{	
         opStack.append(Op.Operand(operand))
         return evaluate()
     }
