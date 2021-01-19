@@ -11,11 +11,19 @@ import Foundation
 class CalculatorBrain{
     
     init(){
-        knowOps["×"] = Op.BinaryOperation("×", *)
-        knowOps["÷"] = Op.BinaryOperation("÷") {$1 / $0}
-        knowOps["+"] = Op.BinaryOperation("+", +)
-        knowOps["−"] = Op.BinaryOperation("−") {$1 / $0}
-        knowOps["√"] = Op.UnaryOperation("√", sqrt)
+        func learnOp(op:Op){
+            knowOps[op.description] = op
+        }
+        learnOp(op: Op.BinaryOperation("×", *))
+        learnOp(op: Op.BinaryOperation("÷"){$1 / $0})
+        learnOp(op: Op.BinaryOperation("+", +))
+        learnOp(op: Op.BinaryOperation("−") {$1 / $0})
+        learnOp(op: Op.UnaryOperation("√", sqrt))
+//        knowOps["×"] = Op.BinaryOperation("×", *)
+//        knowOps["÷"] = Op.BinaryOperation("÷") {$1 / $0}
+//        knowOps["+"] = Op.BinaryOperation("+", +)
+//        knowOps["−"] = Op.BinaryOperation("−") {$1 / $0}
+//        knowOps["√"] = Op.UnaryOperation("√", sqrt)
     }
     
     private enum Op{
@@ -60,7 +68,7 @@ class CalculatorBrain{
     }
     
     private func evaluate(ops: [Op]) -> (result:Double?, remainingOps:[Op]){
-        //ops: 5, 5 x
+        
         if !ops.isEmpty{
             var remainingOps = ops
             let op = remainingOps.removeLast()
@@ -83,6 +91,7 @@ class CalculatorBrain{
                 }
             }
         }
+        
         return (nil, ops)
     }
 }
