@@ -9,97 +9,92 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    struct CategoryList {
-        let title:String
-    }
-    
-    let data = [
-        CategoryList(title: "Попробуй!"),
-        CategoryList(title: "Наборы и комбо"),
-        CategoryList(title: "Роллы"),
-        CategoryList(title: "Запеченые роллы"),
-        CategoryList(title: "Wok"),
-        CategoryList(title: "Вегатарианские блюда"),
-        CategoryList(title: "Суши"),
-        CategoryList(title: "Пицца"),
-        CategoryList(title: "Салаты и закуски"),
-        CategoryList(title: "Супы"),
-        CategoryList(title: "Горячее"),
-        CategoryList(title: "Десерты и напитки"),
-        CategoryList(title: "Дополнительно")
-    ]
-    
-    private let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        return cv
-    }()
+    @IBOutlet weak var labelView: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        view.addSubview(collectionView)
-        collectionView.backgroundColor = .white
-        collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
-        collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, multiplier: 1).isActive = true
-        
-        	
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        registerNib()
+        collectionView.allowsMultipleSelection = false
+        collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: UICollectionView.ScrollPosition.centeredHorizontally)
     }
-        
+    
+    var reuseIdentifier:String = "CollectionViewCellReuseIdentifier"
+    
+    var nameForNib: String = "CollectionViewCell"
+    
+    var names = ["Попробуй!", "Наборы и комбо", "Роллы", "Запеченные роллы", "Wok", "Вегетаринские блюда", "Суши", "Пицца", "Салаты и закуски", "Супы", "Горячее", "Десерты и напитки", "Дополнительно"]
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    func registerNib(){
+        let nib = UINib(nibName: nameForNib, bundle: nil)
+        collectionView?.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
+        if let flowLayout = self.collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
+        {
+            flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
+        }
+        collectionView.showsHorizontalScrollIndicator = false
+    }
 }
 
-extension ViewController:UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCell
-        cell.data = self.data[indexPath.row]
-        return cell
-    }
-    
+extension ViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        names.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CollectionViewCell{
+            let name = names[indexPath.row]
+            cell.configureCell(name:name)
+            cell.layer.cornerRadius = 10
+            cell.layer.borderColor = UIColor.black.cgColor
+            cell.layer.borderWidth = 1
+            if cell.isSelected {
+                cell.layer.borderColor = UIColor.clear.cgColor
+                labelView.text = name
+            }
+            
+            return cell
+        }
+    
+        return UICollectionViewCell()
+    }
+}
+
+extension ViewController:UICollectionViewDelegateFlowLayout{
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 1, height: 1)
+        
+        
+        guard let cell: CollectionViewCell =
+            Bundle.main.loadNibNamed(nameForNib, owner: self, options: nil)?.first as? CollectionViewCell else {
+                return CGSize.zero
+        }
+        
+        cell.configureCell(name: names[indexPath.row])
+        cell.setNeedsLayout()
+        cell.layoutIfNeeded()
+       
+        let size: CGSize = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        return CGSize(width: size.width, height: 30)
     }
-}
-
-class CustomCell: UICollectionViewCell{
     
-    var data: CategoryList? {
-        didSet{
-            guard let data = data else { return }
-            label.text = data.title
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell{
+            cell.isSelected = true
+            self.labelView.text = cell.nameLabel.text
         }
     }
     
-    var label:UILabel{
-        let label = UILabel()
-        
-        return label
-    }()
-    
-    override init(frame: CGRect){
-        super.init(frame: frame)
-        
-        contentView.addSubview(label)
-        label.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell {
+             cell.isSelected = false
+        }
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init has not been implemented")
-    }
-    
 }
-

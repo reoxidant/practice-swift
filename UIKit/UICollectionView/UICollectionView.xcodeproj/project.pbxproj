@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4477626225C6DAD700B7BA32 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4477626025C6DAD700B7BA32 /* CollectionViewCell.swift */; };
+		4477626325C6DAD700B7BA32 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4477626125C6DAD700B7BA32 /* CollectionViewCell.xib */; };
 		449BC5DF25C5EDB3009E151B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BC5DE25C5EDB3009E151B /* AppDelegate.swift */; };
 		449BC5E125C5EDB3009E151B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BC5E025C5EDB3009E151B /* SceneDelegate.swift */; };
 		449BC5E325C5EDB3009E151B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BC5E225C5EDB3009E151B /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4477626025C6DAD700B7BA32 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4477626125C6DAD700B7BA32 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		449BC5DB25C5EDB3009E151B /* UICollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449BC5DE25C5EDB3009E151B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		449BC5E025C5EDB3009E151B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				449BC5E025C5EDB3009E151B /* SceneDelegate.swift */,
 				449BC5E225C5EDB3009E151B /* ViewController.swift */,
 				449BC5E425C5EDB3009E151B /* Main.storyboard */,
+				4477626025C6DAD700B7BA32 /* CollectionViewCell.swift */,
+				4477626125C6DAD700B7BA32 /* CollectionViewCell.xib */,
 				449BC5E725C5EDB6009E151B /* Assets.xcassets */,
 				449BC5E925C5EDB6009E151B /* LaunchScreen.storyboard */,
 				449BC5EC25C5EDB6009E151B /* Info.plist */,
@@ -127,6 +133,7 @@
 			files = (
 				449BC5EB25C5EDB6009E151B /* LaunchScreen.storyboard in Resources */,
 				449BC5E825C5EDB6009E151B /* Assets.xcassets in Resources */,
+				4477626325C6DAD700B7BA32 /* CollectionViewCell.xib in Resources */,
 				449BC5E625C5EDB3009E151B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			files = (
 				449BC5E325C5EDB3009E151B /* ViewController.swift in Sources */,
 				449BC5DF25C5EDB3009E151B /* AppDelegate.swift in Sources */,
+				4477626225C6DAD700B7BA32 /* CollectionViewCell.swift in Sources */,
 				449BC5E125C5EDB3009E151B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
