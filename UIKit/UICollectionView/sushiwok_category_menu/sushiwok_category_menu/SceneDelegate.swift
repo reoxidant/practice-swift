@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  UICollectionView
+//  sushiwok_category_menu
 //
 //  Created by Виталий Шаповалов on 30.01.2021.
 //  Copyright © 2021 Виталий Шаповалов. All rights reserved.
