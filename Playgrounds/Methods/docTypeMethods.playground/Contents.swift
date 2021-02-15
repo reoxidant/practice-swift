@@ -13,7 +13,7 @@ class someClass{
 
 someClass.someTypeMethod()
 
-//in example
+//in example define class LevelTracker where we can to manage the player leve l of game
 
 struct LevelTracker {
     static var highestUnlockedLevel = 1
@@ -41,6 +41,7 @@ struct LevelTracker {
     }
 }
 
+//init Player class
 class Player {
     var tracker = LevelTracker()
     let playerName:String
@@ -66,3 +67,54 @@ if player.tracker.advance(to: 2)
 } else {
     print("The player has not access on this level")
 }
+
+//also for now understood how it's work and practice below
+
+struct TrackerPrice{
+    var currentPrice = 1
+    static var maxPrice = 1000
+    
+    static func setNewMaxValue(_ inputVal:Int)
+    {
+        if inputVal <= maxPrice {
+            maxPrice = inputVal
+        }
+    }
+    
+    static func canToHighPrice(_ inputVal:Int) -> Bool
+    { return inputVal <= maxPrice }
+    
+    
+    @discardableResult mutating func evaluate(to price:Int) -> Bool
+    {
+        print("canToHighPrice = \(TrackerPrice.canToHighPrice(price))")
+        if TrackerPrice.canToHighPrice(price) {
+            currentPrice = price
+             print("currentPrice now is \(price)")
+            return true
+        }
+        
+        return false
+    }
+}
+
+class Customer{
+    var tracker = TrackerPrice()
+    let name:String = ""
+    func buy(price:Int){
+        TrackerPrice.setNewMaxValue(price + 1)
+        print("maxPrice is \(TrackerPrice.maxPrice)")
+        tracker.evaluate(to: price + 1)
+    }
+}
+
+let customer = Customer()
+if customer.tracker.evaluate(to: 923) {
+    print("customer evaluate price is 923")
+} else {
+    print("customer evaluate price has blocked")
+}
+
+print("-----new buying-----")
+
+customer.buy(price:1)

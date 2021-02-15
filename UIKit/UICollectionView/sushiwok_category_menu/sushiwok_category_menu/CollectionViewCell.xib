@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -9,14 +9,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCellReuseIdentifier" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="UICollectionView" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCellReuseIdentifier" id="6Tn-jm-dN7" customClass="CollectionViewCell" customModule="sushiwok_category_menu" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-O9-UOK">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ta9-9D-OU9">
                         <rect key="frame" x="16" y="14.5" width="188" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -25,14 +25,14 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="gdg-O9-UOK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="16f-t5-7K9"/>
-                <constraint firstAttribute="trailing" secondItem="gdg-O9-UOK" secondAttribute="trailing" constant="16" id="Ur2-XE-TXg"/>
-                <constraint firstItem="gdg-O9-UOK" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="k1i-ec-xOq"/>
+                <constraint firstItem="Ta9-9D-OU9" firstAttribute="leading" secondItem="6Tn-jm-dN7" secondAttribute="leading" constant="16" id="XzO-wm-qCi"/>
+                <constraint firstAttribute="trailing" secondItem="Ta9-9D-OU9" secondAttribute="trailing" constant="16" id="dBv-oJ-6OX"/>
+                <constraint firstItem="Ta9-9D-OU9" firstAttribute="centerY" secondItem="6Tn-jm-dN7" secondAttribute="centerY" id="wEc-gF-yBs"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <viewLayoutGuide key="safeArea" id="1ST-a3-jP5"/>
             <size key="customSize" width="220" height="50"/>
             <connections>
-                <outlet property="nameLabel" destination="gdg-O9-UOK" id="lWn-Xg-8vJ"/>
+                <outlet property="nameLabel" destination="Ta9-9D-OU9" id="ABy-65-FmV"/>
             </connections>
             <point key="canvasLocation" x="255.07246376811597" y="153.34821428571428"/>
         </collectionViewCell>
