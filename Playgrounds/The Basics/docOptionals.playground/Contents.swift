@@ -68,5 +68,3 @@ if let definiteString = assumedString{
 }
 
 //don't use implicit optional if u will be know that it value has be nil value, just check value it's a main rule
-
-
