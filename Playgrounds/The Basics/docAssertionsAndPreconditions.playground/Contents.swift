@@ -41,6 +41,5 @@ precondition(maxAgeHumanLife == 100, "The human life max 100 age")
 maxAgeHumanLife = 102
 
 if maxAgeHumanLife != 100{
-    fatalError("The human life max 100 age")
-    print("Don't reach here after error")
+    fatalError("The human life max 100 age") //"Don't reach here after error"
 }
