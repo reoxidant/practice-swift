@@ -9,13 +9,13 @@ let b = "b value"
 
 let c = a ?? b
 
-print("c value now equal: (c)")
+print("c value now equal: \(c)")
 
 //it's code have a meaning in less record
 
 let d = a != nil ? a! : b
 
-print("d value now equal: (d)")
+print("d value now equal: \(d)")
 
 //in next example u may to choose between two variables
 
@@ -29,10 +29,8 @@ print("Child has a name: \(childName)")
 
 //in otherwise u can install a new variable
 
-let nameForMySecondChild:String? = "Vanya"
+let nameForMySecondChild:String? = nil
 
-let defaultNameForSecondChild = "Inokentiy"
-
-let childSecondName = nameForMyChild ?? defaultNameForSecondChild
+let childSecondName = nameForMySecondChild ?? defaultNameForChild
 
 print("Child has a name: \(childSecondName)")
