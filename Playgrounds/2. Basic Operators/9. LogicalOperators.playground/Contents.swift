@@ -2,6 +2,8 @@ import UIKit
 
 //Topic - Logical Operators
 
+//Subtopic - Logical NOT Operator
+
 //in example how to use operator !bool change state from false to true
 
 let allowEntryToTheHome = false
@@ -10,15 +12,13 @@ if !allowEntryToTheHome {
     print("ACCESS DENIED")
 }
 
-//Sub topic - Logical NOT Operator
-
 //logic operator (> and <) can't comparison to eath other
 
 //if true > true {
 //    print(123)
 //}
 
-//Sub topic - Logical AND Operator
+//Subtopic - Logical AND Operator
 
 //in example use operator && as true and true = true
 
@@ -31,7 +31,7 @@ if hasAKeyFromDoor && hasACodeFromDoor{
     print("ACCESS DENIED")
 }
 
-//Sub topic - Logical OR Operator
+//Subtopic - Logical OR Operator
 
 //in example use operator || as true or false = true
 
@@ -44,7 +44,7 @@ if hasAKeyFromDoor || hasACodeFromDoor{
     print("ACCESS DENIED")
 }
 
-//Sub topic - Combining Logical Operators
+//Subtopic - Combining Logical Operators
 
 //in example use combinator operator || and && compilator going from left to right operator and compare them
 

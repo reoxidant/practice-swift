@@ -32,4 +32,4 @@ if veryBigWeight {
 
 //use ternary operator
 
-truckWheels = veryBigWeight ? 6 : 4
+truckWheels = veryBigWeight ? 6 : 4 
