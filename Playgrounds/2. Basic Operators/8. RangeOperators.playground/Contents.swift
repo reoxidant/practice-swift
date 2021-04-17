@@ -18,7 +18,7 @@ for i in 1...9{
 
 //often u will be use Closed Range Operator in for-in cycles
 
-//Sub topic - "Half-Open Range Operator" or a..<b
+//Subtopic - "Half-Open Range Operator" or a..<b
 
 //value a always smaller that b
 
@@ -30,7 +30,7 @@ for i in 0..<namesOfFamily.count
     print("Member of family \(i+1) has name \(name) ")
 }
 
-//Sub topic - "One-Sided Ranges" have values only in one side
+//Subtopic - "One-Sided Ranges" have values only in one side
 
 for name in namesOfFamily[1...]
 {
@@ -58,5 +58,4 @@ for name in namesOfFamily[..<5]
 let range = ..<namesOfFamily.count
 
 range.contains(1) //check include range it's true
-
 range.contains(6) //check include range it's false
