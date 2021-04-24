@@ -53,7 +53,7 @@ for name in namesOfFamily[..<5]
 
 //u may check if isset index of range in the context as array
 
-//for exmaple
+//for example
 
 let range = ..<namesOfFamily.count
 

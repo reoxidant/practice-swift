@@ -6,7 +6,7 @@ import UIKit
 
 let newString = "here is a new string in literals"
 
-//Sub topic - Multiline String Literals
+//Subtopic - "Multiline String Literals"
 
 //in example init Multiline String Literals
 
@@ -46,7 +46,7 @@ The string without spaces
 The string withot spaces
 """
 
-//Sub topic - Special Characters in String Literals
+//Subtopic - "Special Characters in String Literals"
 
 //The string literals can include special symbols as:
 
@@ -66,7 +66,7 @@ let someMuitilineString = """
     Three marks with escaping at least one \"""
 """
 
-//Sub topic - Extended String Delimiters
+//Subtopic - "Extended String Delimiters"
 
 //in example u can to use ## symbols for include special charts
 
