@@ -1,6 +1,6 @@
 import UIKit
 
-//Topic - String Mutability\
+//Topic - String Mutability
 
 //in example the variable can be modified in OBJ-C it's have type NSMutableString
 
