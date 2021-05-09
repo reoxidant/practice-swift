@@ -26,3 +26,5 @@ let strArray:[Character] = ["I", " ", "a", "m", " ", "i","n", " ", "l", "o", "v"
 let resToConvertCharToString = String(strArray)
 
 print("I say to you that, \"\(resToConvertCharToString)\"")
+
+// Prints "I say to you that, I am in love Mary"
