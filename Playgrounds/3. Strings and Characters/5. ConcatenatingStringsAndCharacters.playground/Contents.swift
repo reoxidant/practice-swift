@@ -41,4 +41,14 @@ badMultilineString += addingString
 goodMultilineString += addingString
 
 print("badMultilineString - \n\(badMultilineString)")
+// Prints three lines:
+// first
+// second
+// third
+
 print("goodMultilineString - \n\(goodMultilineString)")
+// Prints three lines with empty line:
+// first
+// second
+//
+// third
