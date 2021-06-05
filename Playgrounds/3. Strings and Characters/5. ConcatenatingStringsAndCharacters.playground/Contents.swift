@@ -14,7 +14,7 @@ let welcome = string1 + " " + string2
 var newStr = "Hello "
 newStr += "Masha"
 
-//in example using method append u can to adding the character to the string value
+//in example using the method append u can to adding the character to the string value
 
 //but u can't to adding char or string to char variable
 
@@ -22,7 +22,7 @@ var addingChar: Character = "!"
 
 newStr.append(addingChar)
 
-//in example adding to multilines string end line break with string
+//in example concatenering the string variable with a multiline string
 
 var addingString = "third"
 

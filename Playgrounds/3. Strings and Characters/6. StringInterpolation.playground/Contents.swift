@@ -1,6 +1,8 @@
 import UIKit
 
-//Topic - String Interpolation
+// Topic - String Interpolation
+
+// in example insert into the string the variable value
 
 var countNumber: Float = 9
 
