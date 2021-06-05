@@ -11,17 +11,17 @@ let combinedEAcute: Character = "\u{65}\u{301}"
  
 print("Unicode skalar value \u{E9} enter \(eAcute) and here is combined two unicode skalar values \u{65}\u{301} and so that enter \(combinedEAcute)")
 
-//in example korean symbol can be init as precomposed character or as decomposed character use one symbol \u{D55C} or multy symbols \u{1112}\u{1161}\u{11AB}
+//in example the korean symbol can be init as precomposed character or as decomposed character use one of symbol \u{D55C} or many of symbols \u{1112}\u{1161}\u{11AB}
 
-let precomposed:Character = "\u{D55C}"
-let decomposed:Character = "\u{1112}\u{1161}\u{11AB}"
+let precomposed: Character = "\u{D55C}"
+let decomposed: Character = "\u{1112}\u{1161}\u{11AB}"
 
 print("Korean skalar symbol created with precomposed(one) unicode value \(precomposed)")
 print("Korean skalar symbol created with decomposed(multy) unicode value \(precomposed)")
 
-//in example more combined unicode skalar value
+//in example more combined unicode skalar values
 
-let enclosedEAcute:Character = "\u{E9}\u{20DD}"
+let enclosedEAcute: Character = "\u{E9}\u{20DD}"
 
 print("The skalar symbols enclosedEAcute equal: \(enclosedEAcute)")
 
