@@ -2,13 +2,13 @@ import UIKit
 
 // Topic - Counting Characters
 
-// U can to get a count of characters use count for the Strings
+// U can to get a count of characters use the count property for the String types
 
 let stringMeasure = "Hello my name is Vitaliy i am from Omsk, i am 25 year old"
 
-print("stringMeasure содержит \(stringMeasure.count) символов")
+print("stringMeasure contains \(stringMeasure.count) symbols")
 
-// check couting with special chars
+// counting characters with special chars
 
 var word = "cafe"
 
@@ -18,8 +18,8 @@ print("count of chars into word of \(word) is \(word.count)")
 
 word += "\u{301}" // COMBINING ACUTE ACCENT, U+0301
 
-// the count is not of changes
+// the count has not of changes
 
 print("count of characters into word of \(word) is \(word.count)")
 
-// message is "count characters in word café equal 4"
+// Prints "count characters in word café equal 4"
