@@ -46,7 +46,7 @@ if latinCapitalLetterA != englishCapitalLetterA
     print("Both string is not equal to each other")
 }
 
-//equaly prefix and sufix and check constraint value
+// prefix and suffix equality and check a constants value
 
 let pieceRomeoAndJuliet = [
     "Act 1 Scene 1: Verona, A public place",
@@ -93,4 +93,3 @@ for scene in pieceRomeoAndJuliet
 }
 
 print("\(mansionCount) scene into the mansion; \(cellCount) Friar Lawrence's cells")
-print("\(mansionCount) сцен в особняке; \(cellCount) тюремные сцены")
