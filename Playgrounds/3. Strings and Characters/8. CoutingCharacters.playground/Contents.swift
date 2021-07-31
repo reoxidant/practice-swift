@@ -4,7 +4,7 @@ import UIKit
 
 // U can to get a count of characters use count for the Strings
 
-let stringMeasure = "Hello my name is vitaliy i am from Omsk, i am 25 year old"
+let stringMeasure = "Hello my name is Vitaliy i am from Omsk, i am 25 year old"
 
 print("stringMeasure содержит \(stringMeasure.count) символов")
 
