@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum LightView {
+    case red
+    case yellow
+    case green
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var redView: UIView!
@@ -15,6 +21,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenView: UIView!
     
     @IBOutlet weak var startButton: UIButton!
+    
+    var currentLightView: LightView = .red
+    
+    let lightViewIsOff: CGFloat = 0.3
+    let lightViewIsOn: CGFloat = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,23 +41,28 @@ class ViewController: UIViewController {
     }
     
     private func setupDefaultAlpha() {
-        redView.alpha = 0.3
-        yellowView.alpha = 0.3
-        greenView.alpha = 0.3
+        redView.alpha = lightViewIsOff
+        yellowView.alpha = lightViewIsOff
+        greenView.alpha = lightViewIsOff
     }
 
     @IBAction func toggleTrafficLights() {
         
-        if redView.alpha != 1 {
-            redView.alpha = 1
-            startButton.setTitle("NEXT", for: .normal)
-        } else if yellowView.alpha != 1 {
-            yellowView.alpha = 1
-        } else if greenView.alpha != 1 {
-            greenView.alpha = 1
-        } else {
-            startButton.setTitle("START", for: .normal)
-            setupDefaultAlpha()
+        startButton.setTitle("NEXT", for: .normal)
+        
+        switch currentLightView {
+            case .red:
+                greenView.alpha = lightViewIsOff
+                redView.alpha = lightViewIsOn
+                currentLightView = .yellow
+            case .yellow:
+                redView.alpha = lightViewIsOff
+                yellowView.alpha = lightViewIsOn
+                currentLightView = .green
+            case .green:
+                yellowView.alpha = lightViewIsOff
+                greenView.alpha = lightViewIsOn
+                currentLightView = .red
         }
     }
     
