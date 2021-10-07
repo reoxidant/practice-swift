@@ -31,13 +31,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        startButton.layer.cornerRadius = 10
+        
+        setupDefaultAlpha()
+        
+        print("Размер стороны доступный из viewDidLoad: ", redView.frame.height)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
         redView.layer.cornerRadius = redView.frame.width / 2
         yellowView.layer.cornerRadius = yellowView.frame.width / 2
         greenView.layer.cornerRadius = greenView.frame.width / 2
         
-        startButton.layer.cornerRadius = 10
-        
-        setupDefaultAlpha()
+        print("Размер стороны доступный из viewWillLayoutSubviews: ", redView.frame.height)
     }
     
     private func setupDefaultAlpha() {
@@ -65,6 +73,5 @@ class ViewController: UIViewController {
                 currentLightView = .red
         }
     }
-    
 }
 
