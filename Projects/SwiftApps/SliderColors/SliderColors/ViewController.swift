@@ -22,32 +22,38 @@ class ViewController: UIViewController {
     
     var currentColorValue: UIColor {
         get {
-            let redColor: CGFloat = CGFloat(redSlider.value)
-            let greenColor: CGFloat = CGFloat(greenSlider.value)
-            let blueColor: CGFloat = CGFloat(blueSlider.value)
+            let redColor = CGFloat(redSlider.value)
+            let greenColor = CGFloat(greenSlider.value)
+            let blueColor = CGFloat(blueSlider.value)
             
-            return UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1)
+            return UIColor(red: redColor/255, green: greenColor/255, blue: blueColor/255, alpha: 1)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        colorView.layer.cornerRadius = 10
+        colorView.backgroundColor = currentColorValue
     }
 
-    @IBAction func redSliderChanged() {
-        redLabel.text = String(format: "%.2f", redSlider.value)
+    @IBAction func sliderChanged(sender: UISlider) {
+        setValue(by:sender.tag, value: String(Int(sender.value)))
         colorView.backgroundColor = currentColorValue
     }
     
-    @IBAction func greenSliderChanged() {
-        greenLabel.text = String(format: "%.2f", greenSlider.value)
-        colorView.backgroundColor = currentColorValue
-    }
-    
-    @IBAction func blueSliderChanged() {
-        blueLabel.text = String(format: "%.2f", blueSlider.value)
-        colorView.backgroundColor = currentColorValue
+    private func setValue(by senderTag: Int, value: String){
+        switch senderTag {
+            case 0:
+                redLabel.text = value
+            case 1:
+                greenLabel.text = value
+            case 2:
+                blueLabel.text = value
+                
+            default: break
+        }
     }
 }
 
