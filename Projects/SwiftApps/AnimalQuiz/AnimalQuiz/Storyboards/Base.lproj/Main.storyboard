@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -96,21 +97,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="58" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="lJC-Y1-gjc" eventType="touchUpInside" id="jTJ-MJ-2sy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiP-C3-SyM">
                                         <rect key="frame" x="0.0" y="66" width="58" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="lJC-Y1-gjc" eventType="touchUpInside" id="H9M-dQ-5AY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0G-oN-82A">
                                         <rect key="frame" x="0.0" y="132" width="58" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="lJC-Y1-gjc" eventType="touchUpInside" id="o65-2a-hgq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbs-OP-6ih">
                                         <rect key="frame" x="0.0" y="198" width="58" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="lJC-Y1-gjc" eventType="touchUpInside" id="7W1-0k-JMB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -177,16 +190,19 @@
                                         <rect key="frame" x="0.0" y="244" width="343" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Отправить"/>
+                                        <connections>
+                                            <action selector="multipleButtonAnswerPressed" destination="lJC-Y1-gjc" eventType="touchUpInside" id="ckM-sZ-Os5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ROv-Nz-UsV">
                                 <rect key="frame" x="16" y="258.5" width="343" height="150"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PH0-dv-kjG">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="PH0-dv-kjG">
                                         <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-cU-nB7">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-cU-nB7">
                                         <rect key="frame" x="0.0" y="60" width="343" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ненавижу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLP-1P-JDs">
@@ -196,7 +212,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Обожаю" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zm-EX-nDZ">
-                                                <rect key="frame" x="182" y="0.0" width="161" height="24"/>
+                                                <rect key="frame" x="265.5" y="0.0" width="77.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -207,14 +223,17 @@
                                         <rect key="frame" x="0.0" y="114" width="343" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Ответить"/>
+                                        <connections>
+                                            <action selector="rangedButtonAnswerPressed" destination="lJC-Y1-gjc" eventType="touchUpInside" id="1kM-7a-kgJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bsv-br-4d9">
                                 <rect key="frame" x="0.0" y="96" width="375" height="2"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какую пищу вы предпочитаете?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAi-Tf-aM7">
-                                <rect key="frame" x="16" y="114" width="343" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какую пищу вы предпочитаете?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAi-Tf-aM7">
+                                <rect key="frame" x="20" y="114" width="335" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -232,16 +251,14 @@
                             <constraint firstItem="Bsv-br-4d9" firstAttribute="top" secondItem="rxq-3s-3AH" secondAttribute="top" id="Yhb-r0-C6Q"/>
                             <constraint firstItem="rxq-3s-3AH" firstAttribute="trailing" secondItem="Bsv-br-4d9" secondAttribute="trailing" id="aoS-RQ-zVx"/>
                             <constraint firstItem="Bsv-br-4d9" firstAttribute="leading" secondItem="rxq-3s-3AH" secondAttribute="leading" id="ewv-eJ-mdi"/>
-                            <constraint firstItem="aAi-Tf-aM7" firstAttribute="leading" secondItem="rxq-3s-3AH" secondAttribute="leading" constant="16" id="mYR-Wi-NV9"/>
-                            <constraint firstItem="rxq-3s-3AH" firstAttribute="trailing" secondItem="aAi-Tf-aM7" secondAttribute="trailing" constant="16" id="yEt-of-uZ1"/>
+                            <constraint firstItem="aAi-Tf-aM7" firstAttribute="leading" secondItem="rxq-3s-3AH" secondAttribute="leading" constant="20" id="mYR-Wi-NV9"/>
+                            <constraint firstItem="rxq-3s-3AH" firstAttribute="trailing" secondItem="aAi-Tf-aM7" secondAttribute="trailing" constant="20" id="yEt-of-uZ1"/>
                             <constraint firstItem="ROv-Nz-UsV" firstAttribute="centerY" secondItem="nva-OB-QKY" secondAttribute="centerY" id="z3h-6u-YxK"/>
                             <constraint firstItem="iHU-uR-FQ9" firstAttribute="centerY" secondItem="nva-OB-QKY" secondAttribute="centerY" id="zij-c4-qOj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rxq-3s-3AH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="spR-Bl-ZPU">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="hz7-o5-tD1"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="spR-Bl-ZPU"/>
                     <connections>
                         <outlet property="multipleStackView" destination="fA0-IL-7WA" id="goj-tU-uzB"/>
                         <outlet property="progressView" destination="Bsv-br-4d9" id="dyI-88-D5s"/>
@@ -250,7 +267,6 @@
                         <outlet property="rangedSlider" destination="PH0-dv-kjG" id="qIL-Hi-Ynw"/>
                         <outlet property="singleStackView" destination="iHU-uR-FQ9" id="SL8-an-Nqz"/>
                         <outletCollection property="singleButtons" destination="jeb-K4-35c" collectionClass="NSMutableArray" id="VFH-cz-hdX"/>
-                        <outletCollection property="singleButtons" destination="jeb-K4-35c" collectionClass="NSMutableArray" id="yWZ-Kl-ou6"/>
                         <outletCollection property="singleButtons" destination="SiP-C3-SyM" collectionClass="NSMutableArray" id="Jfi-Ai-A2e"/>
                         <outletCollection property="singleButtons" destination="g0G-oN-82A" collectionClass="NSMutableArray" id="6hZ-fn-FVI"/>
                         <outletCollection property="singleButtons" destination="bbs-OP-6ih" collectionClass="NSMutableArray" id="lDT-KB-a0E"/>
@@ -260,6 +276,10 @@
                         <outletCollection property="multipleLabels" destination="pgt-FA-soE" collectionClass="NSMutableArray" id="H6m-0m-K4n"/>
                         <outletCollection property="rangedLabels" destination="8Zm-EX-nDZ" collectionClass="NSMutableArray" id="8Mj-9t-Vxf"/>
                         <outletCollection property="rangedLabels" destination="eLP-1P-JDs" collectionClass="NSMutableArray" id="lRY-ck-kbp"/>
+                        <outletCollection property="multipleSwitches" destination="Iao-jm-xMs" collectionClass="NSMutableArray" id="PyY-yF-Qcx"/>
+                        <outletCollection property="multipleSwitches" destination="0Om-QC-xpe" collectionClass="NSMutableArray" id="zi1-gG-Jw5"/>
+                        <outletCollection property="multipleSwitches" destination="o9l-Lx-ltP" collectionClass="NSMutableArray" id="gdz-Iw-XJT"/>
+                        <outletCollection property="multipleSwitches" destination="G0r-CA-gZ4" collectionClass="NSMutableArray" id="psr-Lw-X8u"/>
                         <segue destination="eYv-dO-7Nc" kind="show" identifier="showResultSegue" id="YYx-dP-46E"/>
                     </connections>
                 </viewController>
@@ -302,10 +322,19 @@
                         <viewLayoutGuide key="safeArea" id="qaG-0e-Mti"/>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="nnH-9b-dmM">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ijU-7w-KM5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ijU-7w-KM5">
+                            <connections>
+                                <segue destination="8Rm-vH-1Zj" kind="unwind" unwindAction="unwindFor:" id="XSw-Il-E40"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textLabel" destination="Gtb-nQ-ULU" id="fnd-Qh-1Pf"/>
+                        <outlet property="titleLabel" destination="pdC-0D-9iz" id="Vun-Y4-HPJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5R-Hu-Nge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="8Rm-vH-1Zj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2548" y="63"/>
         </scene>
