@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4423B78F272020650013E981 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4423B78E272020650013E981 /* MainViewController.swift */; };
 		44A8EAE7271422C7004DCCBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A8EAE6271422C7004DCCBC /* AppDelegate.swift */; };
 		44A8EAE9271422C7004DCCBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A8EAE8271422C7004DCCBC /* SceneDelegate.swift */; };
-		44A8EAEB271422C7004DCCBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A8EAEA271422C7004DCCBC /* ViewController.swift */; };
+		44A8EAEB271422C7004DCCBC /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A8EAEA271422C7004DCCBC /* ColorViewController.swift */; };
 		44A8EAEE271422C7004DCCBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A8EAEC271422C7004DCCBC /* Main.storyboard */; };
 		44A8EAF0271422CA004DCCBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A8EAEF271422CA004DCCBC /* Assets.xcassets */; };
 		44A8EAF3271422CA004DCCBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A8EAF1271422CA004DCCBC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4423B78E272020650013E981 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		44A8EAE3271422C7004DCCBC /* SliderColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SliderColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A8EAE6271422C7004DCCBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44A8EAE8271422C7004DCCBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44A8EAEA271422C7004DCCBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		44A8EAEA271422C7004DCCBC /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		44A8EAED271422C7004DCCBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44A8EAEF271422CA004DCCBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44A8EAF2271422CA004DCCBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,11 +60,12 @@
 			children = (
 				44A8EAE6271422C7004DCCBC /* AppDelegate.swift */,
 				44A8EAE8271422C7004DCCBC /* SceneDelegate.swift */,
-				44A8EAEA271422C7004DCCBC /* ViewController.swift */,
+				44A8EAEA271422C7004DCCBC /* ColorViewController.swift */,
 				44A8EAEC271422C7004DCCBC /* Main.storyboard */,
 				44A8EAEF271422CA004DCCBC /* Assets.xcassets */,
 				44A8EAF1271422CA004DCCBC /* LaunchScreen.storyboard */,
 				44A8EAF4271422CA004DCCBC /* Info.plist */,
+				4423B78E272020650013E981 /* MainViewController.swift */,
 			);
 			path = SliderColors;
 			sourceTree = "<group>";
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44A8EAEB271422C7004DCCBC /* ViewController.swift in Sources */,
+				44A8EAEB271422C7004DCCBC /* ColorViewController.swift in Sources */,
 				44A8EAE7271422C7004DCCBC /* AppDelegate.swift in Sources */,
 				44A8EAE9271422C7004DCCBC /* SceneDelegate.swift in Sources */,
+				4423B78F272020650013E981 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
