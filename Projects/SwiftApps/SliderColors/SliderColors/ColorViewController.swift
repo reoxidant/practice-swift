@@ -68,7 +68,7 @@ class ColorViewController: UIViewController {
     }
     
     @IBAction func sliderChanged(sender: UISlider) {
-        setTextValue(by:sender.tag, textValue: String(Int(sender.value)))
+        setFieldTextValue(by:sender.tag, textValue: String(Int(sender.value)))
         colorView.backgroundColor = currentColorValue
     }
     
@@ -82,16 +82,35 @@ class ColorViewController: UIViewController {
         colorView.backgroundColor = color
         
         let ciColor = CIColor(color: color)
-        redSlider.value = 255 * Float(ciColor.red)
-        greenSlider.value = 255 * Float(ciColor.green)
-        blueSlider.value = 255 * Float(ciColor.blue)
+        let redValue = 255 * Float(ciColor.red)
+        let greenValue = 255 * Float(ciColor.green)
+        let blueValue = 255 * Float(ciColor.blue)
         
-        setTextValue(by: redSlider.tag, textValue: String(Int(redSlider.value)))
-        setTextValue(by: greenSlider.tag, textValue: String(Int(greenSlider.value)))
-        setTextValue(by: blueSlider.tag, textValue: String(Int(blueSlider.value)))
+        setSliderValue(by: redSlider.tag, value: redValue)
+        setSliderValue(by: greenSlider.tag, value: greenValue)
+        setSliderValue(by: blueSlider.tag, value: blueValue)
+        
+        setFieldTextValue(by: redSlider.tag, textValue: String(Int(redValue)))
+        setFieldTextValue(by: greenSlider.tag, textValue: String(Int(greenValue)))
+        setFieldTextValue(by: blueSlider.tag, textValue: String(Int(blueValue)))
     }
     
-    private func setTextValue(by senderTag: Int, textValue: String){
+    private func setSliderValue(by senderTag: Int, value: Float){
+        switch senderTag {
+        case 0:
+            redLabel.text = String(Int(value))
+            redSlider.value = value
+        case 1:
+            greenLabel.text = String(Int(value))
+            greenSlider.value = value
+        case 2:
+            blueLabel.text = String(Int(value))
+            blueSlider.value = value
+        default: break
+        }
+    }
+    
+    private func setFieldTextValue(by senderTag: Int, textValue: String){
         switch senderTag {
         case 0:
             redLabel.text = textValue
@@ -114,11 +133,21 @@ extension ColorViewController: UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.becomeFirstResponder()
-    }
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
         
+        let value = Float(textField.text ?? "0") ?? 0
+        
+        setSliderValue(by: textField.tag, value: value)
+        
+        colorView.backgroundColor = UIColor.init(red: CGFloat(redSlider.value / 255),
+                                                 green: CGFloat(greenSlider.value / 255),
+                                                 blue: CGFloat(blueSlider.value / 255),
+                                                 alpha: 1)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return false
     }
 }
