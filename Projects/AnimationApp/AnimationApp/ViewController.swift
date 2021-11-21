@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Spring
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var coreAnimationView: UIView!
+    @IBOutlet weak var springAnimationView: SpringView!
     
     var coreAnimationXPosition: CGFloat?
     
@@ -34,5 +36,17 @@ class ViewController: UIViewController {
             }
         })
     }
+    
+    @IBAction func springAnimationButtonPressed(_ sender: SpringButton) {
+        
+        springAnimationView.animation = Spring.AnimationPreset.slideLeft.rawValue
+        springAnimationView.curve = Spring.AnimationCurve.easeIn.rawValue
+        springAnimationView.duration = 1
+        springAnimationView.animate()
+        
+        sender.animation = Spring.AnimationPreset.shake.rawValue
+        sender.animate()
+    }
+    
 }
 
