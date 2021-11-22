@@ -1,7 +1,10 @@
 import UIKit
 import Darwin
 
-// O (N2)
+// N - lenght of string
+
+// Time: O(N^2)
+// Memory: O(N)
 
 var name = "hello world"
 var result: Character = "."
@@ -23,7 +26,11 @@ for letter in name {
 
 print(result)
 
-// O(NK)
+// N - lenght of string
+// K - count of symbols
+
+// Time: O(N * K)
+// Memory: O(N + K) = O(N)
 
 name = "ababagegere"
 result = "."
@@ -47,6 +54,11 @@ for letter in setNames {
 
 print(result)
 
+// N - lenght of string
+// K - count of symbols
+
+// Time: O(N + K) = K < N = O(N)
+// Memory: O(K)
 
 var dictionary = [Character: Int]()
 name = "vitaliypupsmalishlubitsex"
