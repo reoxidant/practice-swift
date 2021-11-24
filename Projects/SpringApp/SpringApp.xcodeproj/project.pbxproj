@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44273E0E274B81F50012BC44 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44273E0D274B81F50012BC44 /* Animation.swift */; };
 		44BE62CC274AB6E40028CADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE62CB274AB6E40028CADC /* AppDelegate.swift */; };
 		44BE62CE274AB6E40028CADC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE62CD274AB6E40028CADC /* SceneDelegate.swift */; };
 		44BE62D0274AB6E40028CADC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE62CF274AB6E40028CADC /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		00E1730F587CA841D5B8DFA8 /* Pods-SpringApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringApp.release.xcconfig"; path = "Target Support Files/Pods-SpringApp/Pods-SpringApp.release.xcconfig"; sourceTree = "<group>"; };
 		295455DEB596BEA01511EDDB /* Pods_SpringApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpringApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A99736B81201B66F341C869 /* Pods-SpringApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringApp.debug.xcconfig"; path = "Target Support Files/Pods-SpringApp/Pods-SpringApp.debug.xcconfig"; sourceTree = "<group>"; };
+		44273E0D274B81F50012BC44 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		44BE62C8274AB6E40028CADC /* SpringApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BE62CB274AB6E40028CADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44BE62CD274AB6E40028CADC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				44BE62D4274AB6E50028CADC /* Assets.xcassets */,
 				44BE62D6274AB6E50028CADC /* LaunchScreen.storyboard */,
 				44BE62D9274AB6E50028CADC /* Info.plist */,
+				44273E0D274B81F50012BC44 /* Animation.swift */,
 			);
 			path = SpringApp;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				44BE62D0274AB6E40028CADC /* ViewController.swift in Sources */,
 				44BE62CC274AB6E40028CADC /* AppDelegate.swift in Sources */,
 				44BE62CE274AB6E40028CADC /* SceneDelegate.swift in Sources */,
+				44273E0E274B81F50012BC44 /* Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
