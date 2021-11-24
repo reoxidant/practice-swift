@@ -13,40 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var springAnimationLabel: SpringLabel!
     @IBOutlet weak var springButton: SpringButton!
     
-    var randomAnimation: Spring.AnimationPreset.RawValue? {
-        Spring.AnimationPreset.allCases.randomElement()?.rawValue
-    }
-    
-    var randomCurve: Spring.AnimationCurve.RawValue? {
-        Spring.AnimationCurve.allCases.randomElement()?.rawValue
-    }
-    
-    var randomForceValue: CGFloat {
-        CGFloat.random(in: 0...1)
-    }
-    
-    var randomDurationValue: CGFloat {
-        CGFloat.random(in: 0.7...3)
-    }
-    
-    var randomDelayValue: CGFloat {
-        CGFloat.random(in: 0...1)
-    }
-    
-    var currentAnimationPresent: Spring.AnimationPreset.RawValue?
-    var currentAnimationCurve: Spring.AnimationCurve.RawValue?
-    var currentForceValue: CGFloat = 0
-    var currentDurationValue: CGFloat = 0
-    var currentDelayValue: CGFloat = 0
+    private var currentAnimation = Animation.getRandomAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        currentAnimationPresent = randomAnimation
-        currentAnimationCurve = randomCurve
-        currentForceValue = randomForceValue
-        currentDurationValue = randomDurationValue
-        currentDelayValue = randomDelayValue
     }
     
     
@@ -77,35 +47,20 @@ class ViewController: UIViewController {
     }
     
     private func animateView(view: SpringView) {
-        guard let animation = currentAnimationPresent, let curve = currentAnimationCurve else { return }
+        springAnimationLabel.text = currentAnimation.description
         
-        springAnimationLabel.text = """
-                        present: \(animation)
-                        curve: \(curve)
-                        force: \(String(format: "%.1f", currentForceValue))
-                        duration: \(String(format: "%.1f", currentDurationValue))
-                        delay: \(String(format: "%.1f", currentDelayValue))
-                        """
-        
-        view.animation = animation
-        view.curve = curve
-        view.force = currentForceValue
-        view.duration = currentDurationValue
-        view.delay = currentDelayValue
+        view.animation = currentAnimation.animation
+        view.curve = currentAnimation.curve
+        view.force = currentAnimation.force
+        view.duration = currentAnimation.duration
+        view.delay = currentAnimation.delay
         view.animate()
     }
     
     
     private func setupNextAnimation() {
-        currentAnimationPresent = randomAnimation
-        currentAnimationCurve = randomCurve
-        currentForceValue = randomForceValue
-        currentDurationValue = randomDurationValue
-        currentDelayValue = randomDelayValue
-        
-        let nextAnimationText = currentAnimationPresent ?? ""
-        
-        springButton.setTitle("Run \(nextAnimationText)", for: .normal)
+        currentAnimation = Animation.getRandomAnimation()
+        springButton.setTitle("Run \(currentAnimation.animation)", for: .normal)
     }
 }
 
