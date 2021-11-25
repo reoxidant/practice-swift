@@ -1,14 +1,14 @@
 //
-//  CourseTableViewCell.swift
+//  MyCourseTableViewCell.swift
 //  NetworkingApp
 //
-//  Created by Виталий Шаповалов on 22.11.2021.
+//  Created by Виталий Шаповалов on 25.11.2021.
 //
 
 import UIKit
 
-class CourseTableViewCell: UITableViewCell {
-    
+class MyCourseTableViewCell: UITableViewCell {
+
     @IBOutlet weak var courseImage: UIImageView!
     @IBOutlet weak var courseName: UILabel!
     @IBOutlet weak var courseLessons: UILabel!
@@ -16,11 +16,11 @@ class CourseTableViewCell: UITableViewCell {
     
     static let identifier = "cell"
     
-    func configure(with course: Course) {
+    func configure(with course: MyCourse) {
         
         courseName.text = course.name
-        courseLessons.text = "Number of lessons: \(course.numberOfLessons ?? "0")"
-        courseTests.text = "Number of tests: \(course.numberOfTests ?? "0")"
+        courseLessons.text = "Number of lessons: \(course.numberOfLessons ?? 0)"
+        courseTests.text = "Number of tests: \(course.numberOfTests ?? 0)"
         
         DispatchQueue.global().async {
             
