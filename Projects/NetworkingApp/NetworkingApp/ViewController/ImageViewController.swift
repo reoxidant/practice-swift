@@ -24,7 +24,7 @@ class ImageViewController: UIViewController {
     
     private func fetchImage() {
         
-        guard let url = URL(string: URLExample.imageURL.rawValue) else { return }
+        guard let url = URL(string: URLExamples.imageURL.rawValue) else { return }
 
         URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             

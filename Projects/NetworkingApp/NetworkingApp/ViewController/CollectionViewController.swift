@@ -7,12 +7,15 @@
 
 import UIKit
 
-enum URLExample: String {
-    case imageURL = "https://i.pinimg.com/474x/08/61/11/0861113734b40fc238dafd168ec2349b.jpg"
+enum URLExamples: String {
+    case imageURL = "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
     case exampleOne = "https://swiftbook.ru//wp-content/uploads/api/api_course"
     case exampleTwo = "https://swiftbook.ru//wp-content/uploads/api/api_website_description"
     case exampleThree = "https://swiftbook.ru//wp-content/uploads/api/api_missing_or_wrong_fields"
     case exampleFour = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
+    case exampleFive = "https://swiftbook.ru//wp-content/uploads/api/api_courses_capital"
+    case postRequest = "https://jsonplaceholder.typicode.com/posts"
+    case imageUrl = "https://swiftbook.ru/wp-content/uploads/sites/2/2018/08/notifications-course-with-background.png"
 }
 
 enum UserActions: String, CaseIterable {
@@ -22,6 +25,11 @@ enum UserActions: String, CaseIterable {
     case exampleThree = "Example Three"
     case exampleFour = "Example Four"
     case ourCourses = "Our Courses"
+    case ourCourses2 = "Our Courses 2"
+    case postRequestWithDictionary = "POST Request with Dictionary"
+    case postRequestWithModel = "POST Request with Model"
+    case alamofireGetRequest = "Alamofire GET"
+    case alamofirePostRequest = "Alamofire POST"
 }
 
 class CollectionViewController: UICollectionViewController {
@@ -63,14 +71,44 @@ class CollectionViewController: UICollectionViewController {
             exampleFourCellPressed()
         case .ourCourses:
             performSegue(withIdentifier: "showCourses", sender: nil)
+        case .ourCourses2:
+            performSegue(withIdentifier: "showCourses2", sender: nil)
+        case .postRequestWithDictionary:
+            postRequestWithDictionary()
+        case .postRequestWithModel:
+            postRequestWithModel()
+        case .alamofireGetRequest:
+            performSegue(withIdentifier: "alamofireGetRequest", sender: nil)
+        case .alamofirePostRequest:
+            performSegue(withIdentifier: "alamofirePostRequest", sender: nil)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "showCourses" else { return }
+        
+        guard segue.identifier != "showImage" else { return }
         
         if let coursesVC = segue.destination as? CoursesTableViewController {
-            coursesVC.fetchCourses()
+            switch segue.identifier {
+            case "alamofireGetRequest":
+                coursesVC.alamofireGetRequestPressed()
+            case "alamofirePostRequest":
+                coursesVC.alamofirePostRequestPressed()
+            default:
+                break
+            }
+            
+        }
+        
+        if let myCourseVC = segue.destination as? MyCourseTableViewController {
+            switch segue.identifier {
+            case "showCourses":
+                myCourseVC.fetchCourses()
+            case "showCourses2":
+                myCourseVC.fetchCourses()
+            default:
+                break
+            }
         }
     }
     
@@ -85,13 +123,13 @@ class CollectionViewController: UICollectionViewController {
 extension CollectionViewController {
     func exampleOneCellPressed() {
         
-        guard let url = URL(string: URLExample.exampleOne.rawValue) else { return }
+        guard let url = URL(string: URLExamples.exampleOne.rawValue) else { return }
         
         URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
             guard let data = data else { return }
             
             do {
-                let course = try JSONDecoder().decode(Course.self, from: data)
+                let course = try JSONDecoder().decode(MyCourse.self, from: data)
                 DispatchQueue.main.async {
                     self?.showAlert(with: "Success", message: "You can see the results in the Debug area")
                     print(course)
@@ -105,7 +143,7 @@ extension CollectionViewController {
     }
     
     func exampleTwoCellPressed() {
-        guard let url = URL(string: URLExample.exampleTwo.rawValue) else { return }
+        guard let url = URL(string: URLExamples.exampleTwo.rawValue) else { return }
         
         URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
             guard let data = data else { return }
@@ -125,7 +163,7 @@ extension CollectionViewController {
     }
     
     func exampleThreeCellPressed() {
-        guard let url = URL(string: URLExample.exampleThree.rawValue) else { return }
+        guard let url = URL(string: URLExamples.exampleThree.rawValue) else { return }
         
         URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
             guard let data = data else { return }
@@ -145,13 +183,13 @@ extension CollectionViewController {
     }
     
     func exampleFourCellPressed() {
-        guard let url = URL(string: URLExample.exampleFour.rawValue) else { return }
+        guard let url = URL(string: URLExamples.exampleFour.rawValue) else { return }
         
         URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
             guard let data = data else { return }
             
             do {
-                let course = try JSONDecoder().decode([Course].self, from: data)
+                let course = try JSONDecoder().decode([MyCourse].self, from: data)
                 DispatchQueue.main.async {
                     self?.showAlert(with: "Success", message: "You can see the results in the Debug area")
                     print(course)
@@ -159,6 +197,92 @@ extension CollectionViewController {
             } catch let error {
                 DispatchQueue.main.async {
                     self?.showAlert(with: "Failed", message: "\(error.localizedDescription)")
+                }
+            }
+        }.resume()
+    }
+    
+    func postRequestWithDictionary() {
+        guard let url = URL(string: URLExamples.postRequest.rawValue) else { return }
+        
+        // MARK: Dictionary
+        
+        let course = [
+            "name": "Test",
+            "imageUrl": URLExamples.imageUrl.rawValue,
+            "numberOfLessons": "10",
+            "numberOfTests": "2"
+        ]
+        
+        guard let data = try? JSONSerialization.data(withJSONObject: course, options: []) else { return }
+        
+        var request = URLRequest(url: url)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        request.httpBody = data
+        
+        URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+            
+            if let error = error {
+                DispatchQueue.main.async {
+                    self?.showAlert(with: "Error:", message: "\(error.localizedDescription)")
+                }
+                return
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+                let courseData = try JSONSerialization.jsonObject(with: data, options: [])
+                DispatchQueue.main.async {
+                    self?.showAlert(with: "Success", message: "You can see the result in the Debug Area")
+                    print(courseData)
+                }
+            } catch let error {
+                DispatchQueue.main.async {
+                    self?.showAlert(with: "Error: ", message: "\(error.localizedDescription)")
+                }
+            }
+            
+        }.resume()
+        
+    }
+    
+    func postRequestWithModel() {
+        
+        // MARK: Model
+        
+        guard let url = URL(string: URLExamples.postRequest.rawValue) else { return }
+        
+        let course = Course(name: "Test", imageUrl: URLExamples.imageURL.rawValue, numberOfLessons: "20", numberOfTests: "5")
+        
+        guard let data = try? JSONEncoder().encode(course) else { return }
+        
+        var request = URLRequest(url: url)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        request.httpBody = data
+        
+        URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+            
+            if let error = error {
+                DispatchQueue.main.async {
+                    self?.showAlert(with: "Error:", message: "\(error.localizedDescription)")
+                }
+                return
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+                let postCourseData = try JSONDecoder().decode(Course.self, from: data)
+                DispatchQueue.main.async {
+                    self?.showAlert(with: "Success:", message: "You can see the result in the Debug Area")
+                    print(postCourseData)
+                }
+            } catch let error {
+                DispatchQueue.main.async {
+                    self?.showAlert(with: "Error:", message: "\(error.localizedDescription)")
                 }
             }
         }.resume()

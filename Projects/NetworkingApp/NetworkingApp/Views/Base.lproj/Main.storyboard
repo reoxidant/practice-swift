@@ -59,12 +59,15 @@
                     <navigationItem key="navigationItem" id="GFH-1R-cBd"/>
                     <connections>
                         <segue destination="vqP-Kh-5cm" kind="show" identifier="showImage" id="V2g-gN-uLw"/>
-                        <segue destination="o1Q-XA-APC" kind="show" identifier="showCourses" id="puf-Oa-4DL"/>
+                        <segue destination="o1Q-XA-APC" kind="show" identifier="alamofireGetRequest" id="Q8y-PN-Djl"/>
+                        <segue destination="o1Q-XA-APC" kind="show" identifier="alamofirePostRequest" id="FqP-Am-KAE"/>
+                        <segue destination="c4M-qS-2Oq" kind="show" identifier="showCourses2" id="aIg-bc-ECR"/>
+                        <segue destination="c4M-qS-2Oq" kind="show" identifier="showCourses" id="36m-2j-oSa"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7a-Ys-jec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708.6956521739132" y="81.696428571428569"/>
+            <point key="canvasLocation" x="1706" y="82"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="thq-wT-VYl">
@@ -196,7 +199,87 @@
             </objects>
             <point key="canvasLocation" x="798.55072463768124" y="81.696428571428569"/>
         </scene>
+        <!--My Course Table View Controller-->
+        <scene sceneID="ANH-jN-H3R">
+            <objects>
+                <tableViewController id="c4M-qS-2Oq" customClass="MyCourseTableViewController" customModule="NetworkingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="psY-PQ-zkD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="V3U-DP-pc8" customClass="MyCourseTableViewCell" customModule="NetworkingApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="50.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V3U-DP-pc8" id="NA3-QB-APn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdv-9i-OCd">
+                                            <rect key="frame" x="216" y="11" width="178" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lessons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q3-EX-Zsv">
+                                            <rect key="frame" x="216" y="41.5" width="178" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUU-gw-sf7">
+                                            <rect key="frame" x="216" y="68.5" width="178" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fGR-dV-oW3">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="50.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="fTU-Gu-Qzr"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="gR9-2e-zjq"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Hdv-9i-OCd" firstAttribute="leading" secondItem="fGR-dV-oW3" secondAttribute="trailing" constant="16" id="1eG-d6-kgR"/>
+                                        <constraint firstItem="fGR-dV-oW3" firstAttribute="leading" secondItem="NA3-QB-APn" secondAttribute="leading" id="Gce-VM-fwE"/>
+                                        <constraint firstItem="fGR-dV-oW3" firstAttribute="top" secondItem="NA3-QB-APn" secondAttribute="top" id="Km1-XO-9E1"/>
+                                        <constraint firstItem="1q3-EX-Zsv" firstAttribute="leading" secondItem="fGR-dV-oW3" secondAttribute="trailing" constant="16" id="M6X-KB-hMg"/>
+                                        <constraint firstItem="fGR-dV-oW3" firstAttribute="centerY" secondItem="NA3-QB-APn" secondAttribute="centerY" id="RBs-gz-Dmg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Hdv-9i-OCd" secondAttribute="trailing" id="Z7C-zO-Kbg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1q3-EX-Zsv" secondAttribute="trailing" id="e7c-si-BaW"/>
+                                        <constraint firstItem="VUU-gw-sf7" firstAttribute="leading" secondItem="fGR-dV-oW3" secondAttribute="trailing" constant="16" id="kYe-hR-HWN"/>
+                                        <constraint firstItem="Hdv-9i-OCd" firstAttribute="top" secondItem="NA3-QB-APn" secondAttribute="topMargin" id="m7M-SI-vmX"/>
+                                        <constraint firstItem="1q3-EX-Zsv" firstAttribute="top" secondItem="Hdv-9i-OCd" secondAttribute="bottom" constant="10" id="r9X-7d-MW4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="VUU-gw-sf7" secondAttribute="trailing" id="uua-Ji-z9r"/>
+                                        <constraint firstItem="VUU-gw-sf7" firstAttribute="top" secondItem="1q3-EX-Zsv" secondAttribute="bottom" constant="10" id="ywo-bw-VjY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="courseImage" destination="fGR-dV-oW3" id="37o-st-hrP"/>
+                                    <outlet property="courseLessons" destination="1q3-EX-Zsv" id="PZp-16-GQk"/>
+                                    <outlet property="courseName" destination="Hdv-9i-OCd" id="TPe-pm-xQB"/>
+                                    <outlet property="courseTests" destination="VUU-gw-sf7" id="06h-38-DRE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c4M-qS-2Oq" id="GiU-QE-Nnt"/>
+                            <outlet property="delegate" destination="c4M-qS-2Oq" id="xSq-gK-Cc0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Avj-vY-WgK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vu4-ek-7Z3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="1027"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="36m-2j-oSa"/>
+        <segue reference="Q8y-PN-Djl"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
