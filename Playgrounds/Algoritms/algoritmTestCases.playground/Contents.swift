@@ -177,3 +177,21 @@ func kidsWithCandies(_ candies: [Int], _ extraCandies: Int) -> [Bool] {
 //[true,false,true]
 
 kidsWithCandies([4,2,1,1,2], 1)
+
+//Given an array of integers nums, return the number of good pairs.
+//A pair (i, j) is called good if nums[i] == nums[j] and i < j.
+
+
+func numIdenticalPairs(_ nums: [Int]) -> Int {
+    var dictionary = [Int:Int]()
+    var count = 0
+    
+    for num in nums {
+        if let value = dictionary[num] { count += value }
+        dictionary[num, default: 0] += 1
+    }
+    
+    return count
+}
+
+numIdenticalPairs([1,2,3,1,1,3])
