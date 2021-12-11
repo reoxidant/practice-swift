@@ -195,3 +195,47 @@ func numIdenticalPairs(_ nums: [Int]) -> Int {
 }
 
 numIdenticalPairs([1,2,3,1,1,3])
+
+//You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels.
+
+//Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
+func numJewelsInStones(_ jewels: String, _ stones: String) -> Int {
+    let jewelsSet = Set(jewels)
+    var count = 0
+    
+    for stone in stones {
+        if jewelsSet.contains(stone) {
+            count += 1
+        }
+    }
+    
+    return count
+}
+
+numJewelsInStones("aA", "aAAbbbb")
+
+func sum(numbers: [Int]) -> Int{
+    var count = numbers.first ?? 0
+    
+    for number in numbers.dropFirst() {
+        count += number
+    }
+    return count
+}
+
+sum(numbers: [])
+
+func sum2(numbers: [Int]) -> Int{
+    var count = 0
+    
+    if let first = numbers.first {
+        let elements = Array(numbers[1..<numbers.endIndex])
+        count = first + sum2(numbers: elements)
+    }
+
+    
+    return count
+}
+
+sum2(numbers: [])
