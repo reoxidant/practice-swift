@@ -239,3 +239,93 @@ func sum2(numbers: [Int]) -> Int{
 }
 
 sum2(numbers: [])
+
+//Design a parking system for a parking lot. The parking lot has three kinds of parking spaces: big, medium, and small, with a fixed number of slots for each size.
+//Implement the ParkingSystem class:
+
+// - ParkingSystem(int big, int medium, int small) Initializes object of the ParkingSystem class. The number of slots for each parking space are given as part of the constructor.
+// - bool addCar(int carType) Checks whether there is a parking space of carType for the car that wants to get into the parking lot. carType can be of three kinds: big, medium, or small, which are represented by 1, 2, and 3 respectively. A car can only park in a parking space of its carType. If there is no space available, return false, else park the car in that size space and return true.
+
+//["ParkingSystem", "addCar", "addCar", "addCar", "addCar"]
+//[[1, 1, 0], [1], [2], [3], [1]]
+
+class ParkingSystem {
+    
+    var big: Int, medium: Int, small: Int
+
+    init(_ big: Int, _ medium: Int, _ small: Int) {
+        self.big = big
+        self.medium = medium
+        self.small = small
+    }
+    
+    func addCar(_ carType: Int) -> Bool {
+        
+        switch carType {
+            case 1:
+                big -= 1
+                return big >= 0
+            case 2:
+                medium -= 1
+                return medium >= 0
+            case 3:
+                small -= 1
+                return small >= 0
+            default:
+                return false
+        }
+    }
+}
+
+
+let parkingSystem = ParkingSystem(1, 1, 0)
+
+parkingSystem.addCar(1)
+parkingSystem.addCar(2)
+parkingSystem.addCar(3)
+parkingSystem.addCar(1)
+
+let parkingSystem2 = ParkingSystem(0, 0, 2)
+
+parkingSystem2.addCar(1)
+parkingSystem2.addCar(2)
+parkingSystem2.addCar(3)
+
+func findMaxValue(numbers: [Int]) -> Int{
+    var max = numbers[0]
+    
+    for number in numbers.dropFirst() {
+        if max < number {
+            max = number
+        }
+    }
+    
+    return max
+}
+
+findMaxValue(numbers: [324324,11234,223,2343,433244,512312,43243,12,323423,322,0])
+
+func findValue(value: Int, in values: [Int]) -> Int? {
+    var sortedValues = values.sorted(by: <)
+    
+    var lowerIndex = 0
+    var upperIndex = values.count - 1
+    
+    while true {
+        let currentIndex = (lowerIndex + upperIndex) / 2
+        
+        if sortedValues[currentIndex] == value {
+            return value
+        } else if lowerIndex > upperIndex {
+            return nil
+        } else {
+            if sortedValues[currentIndex] > value {
+                upperIndex = currentIndex - 1
+            } else {
+                lowerIndex = currentIndex + 1
+            }
+        }
+        
+    }
+}
+findValue(value: 999, in: [324324,11234,223,2343,433244,512312,43243,12,323423,322,0])
