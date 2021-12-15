@@ -329,3 +329,25 @@ func findValue(value: Int, in values: [Int]) -> Int? {
     }
 }
 findValue(value: 999, in: [324324,11234,223,2343,433244,512312,43243,12,323423,322,0])
+
+
+//Given the array nums, for each nums[i] find out how many numbers in the array are smaller than it. That is, for each nums[i] you have to count the number of valid j's such that j != i and nums[j] < nums[i].
+//Return the answer in an array.
+
+//Учитывая количество чисел в массиве, для каждого числа [i] выясните, сколько чисел в массиве меньше его. То есть для каждого числа [i] вы должны посчитать количество допустимых j, таких что j!= i и числа[j] < числа[i].
+//Верните ответ в виде массива.
+
+func smallerNumbersThanCurrent(_ nums: [Int]) -> [Int] {
+    
+    let sortedNums = nums.sorted()
+    var results = [Int]()
+    
+    for i in 0..<sortedNums.count {
+        results.append(sortedNums.firstIndex(of: nums[i]) ?? -1)
+    }
+    
+    return results
+}
+
+smallerNumbersThanCurrent([6,5,4,8])
+
