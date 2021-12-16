@@ -2,6 +2,8 @@
   
 import UIKit
 import PlaygroundSupport
+import CoreFoundation
+import Darwin
 
 //: Определяем бесконечное выполнение, чтобы предотвратить "выбрасывание" background tasks, когда работа на Playground будет закончена.
 
@@ -193,4 +195,38 @@ print(" Выполнение заданий на параллелльной оч
 print(" с отложенным выполнением")
 print("-------------------------------------------")
 workerDelayQueue.activate()
+sleep(1)
+
+// highPriorityItem = DispatchWorkItem
+
+print("-------------------------------------------")
+print(" .concurrent Q1 - userInitiated")
+print("             Q2 - background")
+print("-------------------------------------------")
+
+let hightPriorityItem = DispatchWorkItem(qos: .userInteractive, flags: [.enforceQoS]) {
+    taskHIGH("💋")
+}
+
+let hightPriorityItem2 = DispatchWorkItem(qos: .userInteractive) {
+    taskHIGH("👄")
+}
+
+let workerQueue3 = DispatchQueue(label: "com.vshapovalov.concurrent2", qos: .userInitiated, attributes: .concurrent)
+let workerQueue4 = DispatchQueue(label: "com.vshapovalov.concurrent2", qos: .background, attributes: .concurrent)
+
+func duration(_ block: () -> ()) -> TimeInterval {
+    let startTime = Date()
+    block()
+    return Date().timeIntervalSince(startTime)
+}
+
+let duration7 = duration {
+    workerQueue3.async { task("😀") }
+    workerQueue4.async { task("😈") }
+    workerQueue4.async(execute: hightPriorityItem)
+    workerQueue3.async(execute: hightPriorityItem)
+    workerQueue4.async(execute: hightPriorityItem2)
+    workerQueue3.async(execute: hightPriorityItem2)
+}
 sleep(1)
