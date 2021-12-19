@@ -37,12 +37,12 @@ public class ThreadSafeString {
 
 public class QueuesView: UIView {
     
-    public var labels: [UILabel] = [UILabel] ()
-    public var labels_: [UILabel] = [UILabel] ()
-    public var numberLines = 0 {didSet{updateUI()}}
+    public var labels: [UILabel] = [UILabel]()
+    public var labels_: [UILabel] = [UILabel]()
+    public var numberLines = 0 { didSet{ updateUI() } }
     public var step = 30
     
-    func updateUI(){
+    func updateUI() {
         print (numberLines)
         for i in 0 ..< numberLines {
             let label = UILabel(frame: CGRect(x: 10, y: 20 + 50 * i, width: Int(self.bounds.size.width), height: 20))
@@ -53,13 +53,13 @@ public class QueuesView: UIView {
             let label_ = UILabel(frame: CGRect(x: 0, y: 50 * i, width: Int(self.bounds.size.width), height: 20))
             label_.text = ""
             label_.textColor = UIColor.blue
-            labels_.append (label_)
+            labels_.append(label_)
             self.addSubview(label_)
         }
     }
     
     public override init (frame: CGRect) {
-        super.init (frame: frame)
+        super.init(frame: frame)
         updateUI()
     }
     
@@ -114,33 +114,82 @@ func taskHIGH(_ symbol: String) {
     usualString = usualString + symbol
 }
 
+let highPriorityItem = DispatchWorkItem (qos: .userInteractive, flags: [.enforceQoS]){
+    taskHIGH("🌺")
+}
+
 // Синхронность и асинхронность
 
 print("---------------------------------------------------")
-print("   СИНХРОННОСТЬ  sync ")
+print("   СИНХРОННОСТЬ sync и АСИНХРОННОСТЬ async")
 print("         Q1 - Global .concurrent qos = .userInitiated")
+print("         Q2 - Global .concurrent qos = .background")
 print("---------------------------------------------------")
 
 safeString.setString(string: "")
 usualString = ""
 
 let mySerialQueue = DispatchQueue(label: "com.vshapovalov.mySerial")
-let duration0 = duration {
+let mySerialPriorityQueue = DispatchQueue(label: "com.vshapovalov.serialPriority", qos: .userInitiated)
+
+let myGoodQueue = DispatchQueue(label: "com.vshapovalov.good", qos: .userInitiated)
+let myBadQueue = DispatchQueue(label: "com.vshapovalov.bad", qos: .background)
+
+let workerQueue = DispatchQueue(label: "com.vshapovalov.worker_concurrent", qos: .userInitiated, attributes: .concurrent)
+
+let workerQueue1 = DispatchQueue(label: "com.vshapovalov.worker_concurrent1", qos: .userInitiated, attributes: .concurrent)
+let workerQueue2 = DispatchQueue(label: "com.vshapovalov.worker_concurrent2", qos: .background, attributes: .concurrent)
+
+let result = duration {
     
     // Совпадают
     //userQueue.sync { task("😀") }
+    // task("👿")
     
     // Не совпадают
     //userQueue.async { task("😀") }
+    // task("👿")
     
     // Совпадают
-    mySerialQueue.async { task("😀") }
+    // mySerialQueue.sync { task("😀") }
+    // task("👿")
     
-    task("👿")
+    // Не совпадают
+    // mySerialQueue.async { task("😀") }
+    // task("👿")
+    
+    // Результаты совпадают
+    // mySerialPriorityQueue.async { task("😀") }
+    // mySerialPriorityQueue.async { task("👿") }
+    
+    // Результаты не совпадают
+    // myGoodQueue.async { task("😀") }
+    // myBadQueue.async { task("👿") }
+    
+    // Результаты не совпадают
+    // workerQueue.async { task("😀") }
+    // workerQueue.async { task("👿") }
+    
+    // Результаты не совпадают
+    // workerQueue1.async { task("😀") }
+    // workerQueue2.async { task("👿") }
+    // workerQueue1.async(execute: highPriorityItem)
+    // workerQueue2.async(execute: highPriorityItem)
+    
+    // Результаты не совпадают
+    // workerQueue2.asyncAfter(deadline: .now() + 0.0, qos: .userInteractive) { task("👿") }
+    // workerQueue1.async { task("😀") }
+    // workerQueue2.async(execute: highPriorityItem)
+    // workerQueue1.async(execute: highPriorityItem)
+    
+    // Результаты не совпадают тк задания разнесены во времени.
+    workerQueue2.asyncAfter(deadline: .now() + 0.1, qos: .userInteractive) { task("👿") }
+    workerQueue1.async { task("😀") }
+    workerQueue2.async(execute: highPriorityItem)
+    workerQueue1.async(execute: highPriorityItem)
 }
 
 sleep(1)
 
-view.labels[0].text = safeString.text + String(Float(duration0))
 print("    threadSafe \(safeString.text)")
 print("not threadSafe \(usualString)")
