@@ -306,7 +306,7 @@ func findMaxValue(numbers: [Int]) -> Int{
 findMaxValue(numbers: [324324,11234,223,2343,433244,512312,43243,12,323423,322,0])
 
 func findValue(value: Int, in values: [Int]) -> Int? {
-    var sortedValues = values.sorted(by: <)
+    let sortedValues = values.sorted(by: <)
     
     var lowerIndex = 0
     var upperIndex = values.count - 1
@@ -351,3 +351,41 @@ func smallerNumbersThanCurrent(_ nums: [Int]) -> [Int] {
 
 smallerNumbersThanCurrent([6,5,4,8])
 
+//You are given a string s and an integer array indices of the same length. The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
+//Return the shuffled string.
+
+func restoreString(_ s: String, _ indices: [Int]) -> String {
+    var str = Array<Character>(repeating: Character("0"), count: s.count)
+    
+    for (i, char) in s.enumerated() {
+        str[indices[i]] = char
+    }
+    
+    return String(str)
+}
+
+//restoreString("omm", [1,0,2])
+restoreString("codeleet", [4,5,6,7,0,2,1,3])
+
+//s = "codeleet", indices = [4,5,6,7,0,2,1,3]
+//Output: "leetcode"
+
+//There is a hidden integer array arr that consists of n non-negative integers.
+
+//It was encoded into another integer array encoded of length n - 1, such that encoded[i] = arr[i] XOR arr[i + 1]. For example, if arr = [1,0,2,1], then encoded = [1,2,3].
+
+//You are given the encoded array. You are also given an integer first, that is the first element of arr, i.e. arr[0].
+
+//Return the original array arr. It can be proved that the answer exists and is unique.
+
+//Существует скрытый целочисленный массив arr, состоящий из n неотрицательных целых чисел.
+
+//Он был закодирован в другой целочисленный массив, закодированный длиной n - 1, так что закодированный[i] = arr[i] XOR arr[i + 1]. Например, если arr = [1,0,2,1], то encoded = [1,2,3].
+
+//Вам предоставляется закодированный массив. Вам также сначала дается целое число, которое является первым элементом arr, т.е. arr[0].
+
+//Возвращает исходный массив обр. Можно доказать, что ответ существует и является уникальным.
+
+func decode(_ encoded: [Int], _ first: Int) -> [Int] {
+    return [0]
+}
