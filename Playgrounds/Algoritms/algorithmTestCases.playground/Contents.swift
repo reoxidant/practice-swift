@@ -378,14 +378,26 @@ restoreString("codeleet", [4,5,6,7,0,2,1,3])
 
 //Return the original array arr. It can be proved that the answer exists and is unique.
 
-//Существует скрытый целочисленный массив arr, состоящий из n неотрицательных целых чисел.
-
-//Он был закодирован в другой целочисленный массив, закодированный длиной n - 1, так что закодированный[i] = arr[i] XOR arr[i + 1]. Например, если arr = [1,0,2,1], то encoded = [1,2,3].
-
-//Вам предоставляется закодированный массив. Вам также сначала дается целое число, которое является первым элементом arr, т.е. arr[0].
-
-//Возвращает исходный массив обр. Можно доказать, что ответ существует и является уникальным.
-
 func decode(_ encoded: [Int], _ first: Int) -> [Int] {
     return [0]
 }
+
+//Given an integer x, return true if x is palindrome integer.
+
+//An integer is a palindrome when it reads the same backward as forward.
+
+//For example, 121 is a palindrome while 123 is not.
+
+func isPalindrome(_ x: Int) -> Bool {
+    guard x >= 0 else { return false }
+    var xCopy = x, reverse = 0
+    while xCopy != 0 {
+        let remainder: Int
+        (xCopy, remainder) = xCopy.quotientAndRemainder(dividingBy: 10)
+        reverse *= 10
+        reverse += remainder
+    }
+    return x == reverse
+}
+
+isPalindrome(121)
