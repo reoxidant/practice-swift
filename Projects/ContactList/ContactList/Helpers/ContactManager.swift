@@ -11,6 +11,10 @@ class ContactManager {
     
     private var persons = [Person]()
     
+    var contactsCount: Int {
+        persons.count
+    }
+    
     func add(person: Person) {
         if !persons.contains(where: { $0 == person }) {
             persons.append(person)

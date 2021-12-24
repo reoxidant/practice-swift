@@ -20,6 +20,9 @@ class ContactListViewController: UIViewController {
         
         let contactManager = ContactManager()
         dataSource.contactManager = contactManager
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showDetail(withNotification:)),
+                                         name: NSNotification.Name(rawValue: "DidSelectRow"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +36,16 @@ class ContactListViewController: UIViewController {
             newContactVC.contactManager = dataSource.contactManager
             present(newContactVC, animated: true)
         }
+    }
+    
+    @objc func showDetail(withNotification notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let person = userInfo["person"] as? Person,
+              let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+        else { fatalError() }
+        
+        detailVC.person = person
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 

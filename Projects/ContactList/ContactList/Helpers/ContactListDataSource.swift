@@ -13,11 +13,17 @@ class ContactListDataSource: NSObject {
 
 extension ContactListDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        contactManager?.contactsCount ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ContactTableViewCell
+        
+        if let person = contactManager?.getPerson(at: indexPath.row) {
+            cell.configure(with: person)
+        }
+        
+        return cell
     }
 }
 
