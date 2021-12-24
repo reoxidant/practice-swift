@@ -12,11 +12,13 @@ struct Person {
     var surname: String?
     let phone: String
     var imageData: Data?
+    private(set) var date: Date?
     
-    init(name: String, phone: String, imageData: Data?) {
+    init(name: String, phone: String, imageData: Data? = nil) {
         self.name = name
         self.phone = phone
         self.imageData = imageData
+        date = Date()
     }
     
     init(name: String, surname: String, phone: String, imageData: Data? = nil) {
@@ -24,6 +26,7 @@ struct Person {
         self.surname = surname
         self.phone = phone
         self.imageData = imageData
+        date = Date()
     }
 }
 
