@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		44A5934224DE8AD800C3E149 /* How Old Am I.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How Old Am I.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44A5934224DE8AD800C3E149 /* HowOldAmI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowOldAmI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A5934524DE8AD800C3E149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44A5934724DE8AD800C3E149 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		44A5934C24DE8AD800C3E149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		44A5933924DE8AD700C3E149 = {
 			isa = PBXGroup;
 			children = (
-				44A5934424DE8AD800C3E149 /* How Old Am I */,
+				44A5934424DE8AD800C3E149 /* HowOldAmI */,
 				44A5934324DE8AD800C3E149 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,12 +51,12 @@
 		44A5934324DE8AD800C3E149 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				44A5934224DE8AD800C3E149 /* How Old Am I.app */,
+				44A5934224DE8AD800C3E149 /* HowOldAmI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		44A5934424DE8AD800C3E149 /* How Old Am I */ = {
+		44A5934424DE8AD800C3E149 /* HowOldAmI */ = {
 			isa = PBXGroup;
 			children = (
 				44A5934524DE8AD800C3E149 /* AppDelegate.swift */,
@@ -68,15 +68,15 @@
 				44A5935324DE8ADA00C3E149 /* Info.plist */,
 				44A5935F24DEF7E900C3E149 /* CircleProgressBar.swift */,
 			);
-			path = "How Old Am I";
+			path = HowOldAmI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		44A5934124DE8AD800C3E149 /* How Old Am I */ = {
+		44A5934124DE8AD800C3E149 /* HowOldAmI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 44A5935624DE8ADA00C3E149 /* Build configuration list for PBXNativeTarget "How Old Am I" */;
+			buildConfigurationList = 44A5935624DE8ADA00C3E149 /* Build configuration list for PBXNativeTarget "HowOldAmI" */;
 			buildPhases = (
 				44A5933E24DE8AD800C3E149 /* Sources */,
 				44A5933F24DE8AD800C3E149 /* Frameworks */,
@@ -86,9 +86,9 @@
 			);
 			dependencies = (
 			);
-			name = "How Old Am I";
+			name = HowOldAmI;
 			productName = "How Old Am I";
-			productReference = 44A5934224DE8AD800C3E149 /* How Old Am I.app */;
+			productReference = 44A5934224DE8AD800C3E149 /* HowOldAmI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 44A5933D24DE8AD700C3E149 /* Build configuration list for PBXProject "How Old Am I" */;
+			buildConfigurationList = 44A5933D24DE8AD700C3E149 /* Build configuration list for PBXProject "HowOldAmI" */;
 			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				44A5934124DE8AD800C3E149 /* How Old Am I */,
+				44A5934124DE8AD800C3E149 /* HowOldAmI */,
 			);
 		};
 /* End PBXProject section */
@@ -328,7 +328,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		44A5933D24DE8AD700C3E149 /* Build configuration list for PBXProject "How Old Am I" */ = {
+		44A5933D24DE8AD700C3E149 /* Build configuration list for PBXProject "HowOldAmI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				44A5935424DE8ADA00C3E149 /* Debug */,
@@ -337,7 +337,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		44A5935624DE8ADA00C3E149 /* Build configuration list for PBXNativeTarget "How Old Am I" */ = {
+		44A5935624DE8ADA00C3E149 /* Build configuration list for PBXNativeTarget "HowOldAmI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				44A5935724DE8ADA00C3E149 /* Debug */,
