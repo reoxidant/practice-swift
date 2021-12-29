@@ -378,14 +378,25 @@ restoreString("codeleet", [4,5,6,7,0,2,1,3])
 
 //Return the original array arr. It can be proved that the answer exists and is unique.
 
+// Есть скрытый целочисленный массив arr, состоящий из n неотрицательных целых чисел.
+// Он был закодирован в другой массив целых чисел, закодированный длиной n - 1, таким образом, что encoded [i] = arr [i] XOR arr [i + 1]. Например, если arr = [1,0,2,1], то кодируется = [1,2,3].
+// Вам передан закодированный массив. Вам также сначала дается целое число, то есть первый элемент arr, то есть arr [0].
+// Возвращаем исходный массив arr. Можно доказать, что ответ существует и единственен.
+
 func decode(_ encoded: [Int], _ first: Int) -> [Int] {
-    return [0]
+    var res = [first]
+    
+    for encode in encoded {
+        res.append(res.last! ^ encode)
+    }
+    
+    return res
 }
 
+decode([1,2,3], 1)
+
 //Given an integer x, return true if x is palindrome integer.
-
 //An integer is a palindrome when it reads the same backward as forward.
-
 //For example, 121 is a palindrome while 123 is not.
 
 func isPalindrome(_ x: Int) -> Bool {
@@ -418,3 +429,24 @@ func subtractProductAndSum(_ n: Int) -> Int {
 }
 
 subtractProductAndSum(690)
+
+
+//A sentence is a list of words that are separated by a single space with no leading or trailing spaces.
+//You are given an array of strings sentences, where each sentences[i] represents a single sentence.
+//Return the maximum number of words that appear in a single sentence.
+
+func mostWordsFound(_ sentences: [String]) -> Int {
+    var maxCount = 0
+    
+    for sentence in sentences {
+        let words = sentence.split(separator: " ")
+        
+        if maxCount < words.count {
+            maxCount = words.count
+        }
+    }
+    
+    return maxCount
+}
+
+mostWordsFound(["alice and bob love leetcode", "i think so too", "this is great thanks very much"])
