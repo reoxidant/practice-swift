@@ -7,7 +7,13 @@
 
 import Foundation
 
-class ContactManager {
+protocol ContactManagerProtocol {
+    var contactsCount: Int { get }
+    func getPerson(at index: Int) -> Person
+    func add(person: Person)
+}
+
+class ContactManager: ContactManagerProtocol {
     
     private(set) var persons = [Person]()
     
