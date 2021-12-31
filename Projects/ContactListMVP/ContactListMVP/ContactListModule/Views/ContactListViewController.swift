@@ -28,9 +28,7 @@ class ContactListViewController: UIViewController {
     }
     
     @objc func addNewContact() {
-        let newContactVC = ModuleBuilder.createNewContactModule()
-        newContactVC.modalPresentationStyle = .fullScreen
-        present(newContactVC, animated: true)
+        presenter.tappedToAddNewContactButton()
     }
 }
 
@@ -56,8 +54,6 @@ extension ContactListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         guard let person = presenter?.getPerson(at: indexPath.row) else { return }
-
-        let detailVC = ModuleBuilder.createDetailModule(person: person)
-        navigationController?.pushViewController(detailVC, animated: true)
+        presenter?.tappedToCell(person: person)
     }
 }
