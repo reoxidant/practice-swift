@@ -34,7 +34,7 @@ class DetailProductViewController: UIViewController {
 extension DetailProductViewController {
     
     func setupViews() {
-        setStatusForFavoriteButton()
+        setFavoriteButton(status: viewModel.isFavorite.value)
         titleLabel.text = viewModel.title
         productDescription.text = viewModel.description
         productCategory.text = viewModel.category
@@ -45,12 +45,12 @@ extension DetailProductViewController {
             productImage.image = UIImage(systemName: "person.fill")
         }
         
-        viewModel.viewModelDidChange = { [weak self] viewModel in
-            self?.setStatusForFavoriteButton()
+        viewModel.isFavorite.bind { [weak self] isFavorite in
+            self?.setFavoriteButton(status: isFavorite)
         }
     }
     
-    func setStatusForFavoriteButton() {
-        favoriteButton.tintColor = viewModel.isFavorite ? .red : .gray
+    func setFavoriteButton(status: Bool) {
+        favoriteButton.tintColor = status ? .red : .gray
     }
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Timeline
+   version = "3.0">
+   <TimelineItems>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/vitalijsapovalov/Developer/swift-practice/Playgrounds/Concurrency/OperationQueue.playground#CharacterRangeLen=20&amp;CharacterRangeLoc=3660&amp;EndingColumnNumber=0&amp;EndingLineNumber=120&amp;StartingColumnNumber=1&amp;StartingLineNumber=119&amp;Timestamp=662121012.015425"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/vitalijsapovalov/Developer/swift-practice/Playgrounds/Concurrency/OperationQueue.playground#CharacterRangeLen=19&amp;CharacterRangeLoc=3640&amp;EndingColumnNumber=0&amp;EndingLineNumber=119&amp;StartingColumnNumber=1&amp;StartingLineNumber=118&amp;Timestamp=662121012.015491"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+   </TimelineItems>
+</Timeline>
