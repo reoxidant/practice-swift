@@ -13,27 +13,17 @@ protocol DetailProductViewModelProtocol: AnyObject {
     var description: String { get }
     var category: String { get }
     var price: String { get }
-    var isFavorite: Bool { get }
-    var viewModelDidChange: ((DetailProductViewModelProtocol) -> Void)? { get set }
+    var isFavorite: Box<Bool> { get }
     init(product: Product)
     func didTapFavoriteButton()
 }
 
 class DetailProductViewModel: DetailProductViewModelProtocol {
-    var isFavorite: Bool {
-        get {
-            DataManager.shared.getFavoriteStatus(productTitle: product.title)
-        }
-        set {
-            DataManager.shared.setFavoriteStatus(productTitle: product.title, status: newValue)
-            viewModelDidChange?(self)
-        }
-    }
-    
-    var viewModelDidChange: ((DetailProductViewModelProtocol) -> Void)?
+    var isFavorite: Box<Bool>
     
     func didTapFavoriteButton() {
-        isFavorite.toggle()
+        isFavorite.value.toggle()
+        DataManager.shared.setFavoriteStatus(productTitle: product.title, status: isFavorite.value)
     }
     
     private let product: Product
@@ -60,5 +50,6 @@ class DetailProductViewModel: DetailProductViewModelProtocol {
     
     required init(product: Product) {
         self.product = product
+        isFavorite = Box(value: DataManager.shared.getFavoriteStatus(productTitle: product.title))
     }
 }

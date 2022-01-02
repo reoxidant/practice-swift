@@ -30,7 +30,6 @@ class NetworkManager: NetworkManagerProtocol {
             defer {
                 DispatchQueue.main.async {
                     completion(result)
-                    print("hello")
                 }
             }
             
