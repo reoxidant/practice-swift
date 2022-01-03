@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewContactViewController" customModule="ContactListMVP" customModuleProvider="target">
+            <connections>
+                <outlet property="nameTextField" destination="NFj-k4-Igl" id="jdh-by-lOV"/>
+                <outlet property="phoneTextField" destination="6Ep-gX-JXO" id="uLP-Y5-KOj"/>
+                <outlet property="surnameTextField" destination="fWL-Gn-HWN" id="QwT-R8-yYR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="5BS-Am-rbt">
+                    <rect key="frame" x="40" y="94" width="334" height="202"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFj-k4-Igl">
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWL-Gn-HWN">
+                            <rect key="frame" x="0.0" y="84" width="334" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ep-gX-JXO">
+                            <rect key="frame" x="0.0" y="168" width="334" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="6Ep-gX-JXO" firstAttribute="leading" secondItem="5BS-Am-rbt" secondAttribute="leading" id="TgH-9c-LX2"/>
+                        <constraint firstItem="NFj-k4-Igl" firstAttribute="leading" secondItem="5BS-Am-rbt" secondAttribute="leading" id="cay-LQ-IxB"/>
+                        <constraint firstItem="fWL-Gn-HWN" firstAttribute="leading" secondItem="5BS-Am-rbt" secondAttribute="leading" id="ciL-pa-nze"/>
+                        <constraint firstAttribute="trailing" secondItem="6Ep-gX-JXO" secondAttribute="trailing" id="f6T-im-zna"/>
+                        <constraint firstAttribute="trailing" secondItem="NFj-k4-Igl" secondAttribute="trailing" id="hDo-PW-b4S"/>
+                        <constraint firstAttribute="trailing" secondItem="fWL-Gn-HWN" secondAttribute="trailing" id="xW9-eD-uND"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="5EV-Xb-3Xi">
+                    <rect key="frame" x="167.5" y="396" width="79.5" height="121"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOb-9j-KI4">
+                            <rect key="frame" x="8" y="0.0" width="63" height="35.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Save">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="saveButtonPressed" destination="-1" eventType="touchUpInside" id="3Bj-Fr-HwT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjt-wA-qOB">
+                            <rect key="frame" x="0.0" y="85.5" width="79.5" height="35.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="cancelButtonPressed" destination="-1" eventType="touchUpInside" id="pzn-t4-CWI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5EV-Xb-3Xi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FfM-69-zhd"/>
+                <constraint firstItem="5EV-Xb-3Xi" firstAttribute="top" secondItem="5BS-Am-rbt" secondAttribute="bottom" constant="100" id="SiQ-qx-T9v"/>
+                <constraint firstItem="5BS-Am-rbt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="Tvs-wQ-rd3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5BS-Am-rbt" secondAttribute="trailing" constant="40" id="efg-JO-GXF"/>
+                <constraint firstItem="5BS-Am-rbt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="n7H-Qm-cTu"/>
+            </constraints>
+            <point key="canvasLocation" x="207" y="15"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
