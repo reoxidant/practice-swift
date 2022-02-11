@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="CollectionViewInsideTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="146" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="146" height="140"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ewi-jX-fIF">
+                        <rect key="frame" x="0.0" y="0.0" width="146" height="102.5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKP-5Y-txb">
+                        <rect key="frame" x="0.0" y="110.5" width="146" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Ewi-jX-fIF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Dtb-GE-S4o"/>
+                <constraint firstAttribute="trailing" secondItem="lKP-5Y-txb" secondAttribute="trailing" id="OeN-Nw-zEb"/>
+                <constraint firstAttribute="bottom" secondItem="lKP-5Y-txb" secondAttribute="bottom" constant="8" id="TzX-gv-BKv"/>
+                <constraint firstItem="Ewi-jX-fIF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Vd2-ym-UnG"/>
+                <constraint firstItem="lKP-5Y-txb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cjl-VY-vJS"/>
+                <constraint firstAttribute="trailing" secondItem="Ewi-jX-fIF" secondAttribute="trailing" id="erd-wk-Hz4"/>
+                <constraint firstItem="lKP-5Y-txb" firstAttribute="top" secondItem="Ewi-jX-fIF" secondAttribute="bottom" constant="8" id="oMd-NK-fg5"/>
+            </constraints>
+            <size key="customSize" width="146" height="140"/>
+            <connections>
+                <outlet property="colorView" destination="Ewi-jX-fIF" id="x86-VE-OQl"/>
+                <outlet property="nameLabel" destination="lKP-5Y-txb" id="YJG-EC-4nC"/>
+            </connections>
+            <point key="canvasLocation" x="200.00000000000003" y="109.15178571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
