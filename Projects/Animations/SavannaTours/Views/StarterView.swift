@@ -10,15 +10,22 @@ import SwiftUI
 
 struct StarterView: View {
     @State var currentOffset = 0
+    @State var color = Color.green
     
     var body: some View {
         ZStack {
             Circle()
                 .scaleEffect(0.5)
-                .foregroundColor(Color.green)
+                .foregroundColor(colors[currentOffset])
+                .animation(.default)
+                .offset(x: offsets[currentOffset].x, y: offsets[currentOffset].y)
         }
         .onAppear {
-            
+            for index in 1 ..< offsets.count {
+                delay(seconds: Double(index)) {
+                    currentOffset = index
+                }
+            }
         }
     }
 }
