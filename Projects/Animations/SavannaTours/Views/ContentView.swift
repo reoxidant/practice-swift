@@ -26,21 +26,24 @@ struct ContentView : View {
                     Spacer()
                 }
                 
-                Image("thumb")
-                    .clipShape(RoundedRectangle(cornerRadius: self.zoomed ? 40 : 500))
-                    .overlay(
-                        Circle()
-                            .fill(self.zoomed ? Color.clear : Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.4))
-                            .scaleEffect(0.8)
-                    )
-                    .saturation(self.zoomed ? 1 : 0)
-                    .position(x: self.zoomed ? 220 : 600, y: 50)
-                    .scaleEffect(self.zoomed ? 1.33 : 0.33)
-                    .shadow(radius: 10)
-                    .animation(.spring())
-                    .onTapGesture {
-                        self.zoomed.toggle()
-                    }
+                GeometryReader { geo in
+                    Image("thumb")
+                        .clipShape(RoundedRectangle(cornerRadius: self.zoomed ? 40 : 500))
+                        .overlay(
+                            Circle()
+                                .fill(self.zoomed ? Color.clear : Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.4))
+                                .scaleEffect(0.8)
+                        )
+                        .saturation(self.zoomed ? 1 : 0)
+                        .rotationEffect(self.zoomed ? .degrees(0) : .degrees(90))
+                        .position(x: self.zoomed ? geo.frame(in: .local).midX : 600, y: 60)
+                        .scaleEffect(self.zoomed ? 1.33 : 0.33)
+                        .shadow(radius: 10)
+                        .animation(.spring())
+                        .onTapGesture {
+                            self.zoomed.toggle()
+                        }
+                }
             }
             .background(Color(red: 0.1, green: 0.1, blue: 0.1))
             
