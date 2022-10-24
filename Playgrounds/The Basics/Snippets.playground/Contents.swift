@@ -48,15 +48,17 @@ if pet is Dog {
     print("The animal is Bird")
 }
 
-//animal is Animal
-//animal is Dog
-//animal is Cat
-//animal is Bird
-//
-//dog is Animal
-//dog is Dog
-//dog is Cat
-//dog is Bird
+/*
+ animal is Animal
+ animal is Dog
+ animal is Cat
+ animal is Bird
+
+ dog is Animal
+ dog is Dog
+ dog is Cat
+ dog is Bird
+ */
 
 func getPets() -> [Animal] {
     var pets: [Animal] = []
@@ -99,15 +101,16 @@ pets.forEach({
     }
 })
 
-//for pet in pets {
-//    if pet is Dog {
-//        dogCount += 1
-//    } else if pet is Cat {
-//        catCount += 1
-//    } else if pet is Bird {
-//        birdCount += 1
-//    }
-//}
+
+for pet in pets {
+    if pet is Dog {
+        dogCount += 1
+    } else if pet is Cat {
+        catCount += 1
+    } else if pet is Bird {
+        birdCount += 1
+    }
+}
 
 print("There are \(dogCount) dogs, \(catCount) cats, \(birdCount) birds")
 

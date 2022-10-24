@@ -1,15 +1,6 @@
 import UIKit
 
-
-//15 мин понять почему нельзя делать print(firstString, " ", secondString)
-
-// Операции и пробелы надо разделять для читаемости кода
-
-// 33 мин Как выводить корень правильно pow sqrtRoot
-
-// 43 мин Зачем нужен тип Character
-
-// Арифметические операторы
+// Arithmetical operators
 
 var number1 = 9
 var number2 = 4
@@ -19,19 +10,15 @@ number1 - number2
 number1 * number2
 number1 / number2
 
-// приоритеты как в математике
-
 let num = 6 * 7 / 10
 
-// остаток от деления
+// Remainder of division
 
 number1 % number2
--number1 % number2 // -9 остаток -1
-number1 % -number2 // 9 от -4 остаток 1
+-number1 % number2 // -9 remainder -1
+number1 % -number2 // 9 от -4 remainder 1
 
-// 52 мин не понял про нужно ли округлять остаток от деления %
-
-// операторы присваивания
+// Assigment operators
 
 number1 = 10
 
@@ -40,7 +27,7 @@ number1 -= 23
 number1 *= 23
 number1 /= 23
 
-// операторы сравнения
+// Comparison operators
 
 let a = 5
 let b = 5
@@ -52,7 +39,7 @@ a < b // false
 a >= b // true
 a <= b // true
 
-// операторы диапазона
+// Range operators
 
 3...6 ~= 3
 3...6 ~= 6
@@ -60,7 +47,7 @@ a <= b // true
 3..<6 ~= 6
 ...6 ~= -70000
 
-// Префиксный оператор НЕ
+// Prefix operator !
 
 let accessDeniedMessage = "ACCESS DENIED"
 let welcomeMessage = "Welcome!"
@@ -75,9 +62,8 @@ if a == 0 {
     print(welcomeMessage)
 }
 
-// Оператор логического И:
+// Logical operator &&
 
-// человек ввел правильный код
 let entereDoorCode = true
 let passedRetineScan = true
 let isIOSDeveloper = false
@@ -86,13 +72,11 @@ if entereDoorCode && passedRetineScan && !isIOSDeveloper {
     print(welcomeMessage)
 }
 
-// Посмотреть еще раз, чтот прослушал про оператор ИЛИ
-
-// Оператор логического ИЛИ:
+// Logical operator ||
 
 let hasDoorKey = false
 
-// Спецпароль
+// Special password
 let knowsOverridePassword = false
 
 if hasDoorKey || knowsOverridePassword {
@@ -111,7 +95,7 @@ if  entereDoorCode && (passedRetineScan && isIOSDeveloper || hasDoorKey) || know
 }
 
 
-// строки и символы
+// Strings and symbols
 
 let name: String
 let name2 = String()
@@ -121,11 +105,11 @@ hello
 world
 """
 
-// конкатенация строк:
+// Concatenation of strings
 
 let text = "IOS" + " " + "Developer " + String(28)
 print(text)
 
-// интерполяция
+// Interpolation
 
 "IOS Deleveper \(28)"

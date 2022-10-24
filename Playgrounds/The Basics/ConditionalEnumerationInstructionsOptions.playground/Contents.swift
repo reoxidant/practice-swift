@@ -1,12 +1,12 @@
 import Foundation
 
-// Оператор присваивания
+// Assignment operator
 
 var const = 78
 
-let result: () = const = 9 //Void return type
+let result: () = const = 9 // Void return type
 
-// оператор торжественности
+// Solemnity operator
 
 class T {
     
@@ -18,21 +18,18 @@ let obj2 = T()
 
 let obj3 = obj2
 
-print(obj2 === obj3) // имеют общую ссылку
+print(obj2 === obj3) // has a common reference
 print(obj2 === obj1)
 
-// массивы
+// Arrays
 
-
-// диапазон элемента от 2 и до последнего индекса
+// Element range from 2 to the last index
 
 let arr = [6, 47, 87]
 
 arr[1...]
 
-// 44 мин ссылки классов не понял что автор хочет сказать, ну ответ же что да, мы может сравнивать переменые ссылающийся на один обьект в памяти торжеством
-
-// условные инструкции
+// Condition instruction
 
 var someNumber = 10
 
@@ -44,10 +41,6 @@ if someNumber < 4 ||  2 >= someNumber {
         print(someNumber)
     }
 }
-
-//print(text) // not see
-
-// else if
 
 someNumber = 10
 
@@ -62,25 +55,23 @@ if someNumber < 4 { //false
 let haveBigSalary = false
 let haveCredits = true
 
-// 1
 if haveBigSalary {
-    print("Куплю авто")
+    print("Will buy an auto")
 } else if !haveCredits {
-    print("возьму кредит")
+    print("Will take a loan")
 } else {
-    print("Не судьба купить")
+    print("Is not destiny")
 }
 
-// 2
 if haveBigSalary {
-    print("Куплю авто")
+    print("Will buy an auto")
 }
 
 if !haveCredits {
-    print("возьму кредит")
+    print("Will take a loan")
 }
 
-// логическое И
+// Logical &&
 
 let num1 = 5
 let num2 = 7
@@ -88,10 +79,10 @@ let num2 = 7
 let isCondition1 = num1 < 21 && num2 > 3
 
 if isCondition1 && haveBigSalary && num2 < 8 && num1 > 47 {
-    print("Куплю авто")
+    print("Will buy an auto")
 }
 
-// логическое или
+// Logical ||
 
 let a = 1
 let b = 10
@@ -107,7 +98,7 @@ if a < 4 || b < 4 {
 }
 
 
-// тернарный оператор
+// Ternary operator
 
 // condition ? some code : some code
 
@@ -115,56 +106,55 @@ let age = 39
 
 let permissionMessage: String
 if age < 65 {
-    permissionMessage = "Разрешено"
+    permissionMessage = "Allow"
 } else {
-    permissionMessage = "Запрешено"
+    permissionMessage = "Deny"
 }
 
 print(permissionMessage)
 
-let permissionMessage2 = age < 65 ? "Разрешено" : "Запрешено"
-let permissionMessage3 = age < 65 ? age < 35 ? "Разрешено" : "Запрешено" : "Запрещено" // так лучше не писать
-//let permissionMessage2 = age < 65 ? "Разрешено" : 1133 // error
+let permissionMessage2 = age < 65 ? "Allow" : "Deny"
+let permissionMessage3 = age < 65 ? age < 35 ? "Allow" : "Deny" : "Deny" // так лучше не писать
+//let permissionMessage2 = age < 65 ? "Accepted" : 1133 // error
 
-print("Человеку выходить: \(permissionMessage2)")
+print("Person to go out: \(permissionMessage2)")
 
-// оператор Switch
+// Switch operator
 
 // up, down, left, right
 //let command = "up"
 let command = "1"
 
 if command == "up" {
-    print("Идти вверх")
+    print("Go up")
 } else if command == "down" {
-    print("Идти вниз")
+    print("Go down")
 } else {
-    print("Ошибка")
+    print("Error")
 }
-
 
 switch command {
 case "up", "UP":
-    print("Идти вверх")
+    print("Go up")
     fallthrough
 case "down":
-    print("Идти вниз")
+    print("Go down")
 default:
-    print("Ошибка")
+    print("Error")
 }
 
 let commandNumber = 7
 
 switch commandNumber {
 case 5...7 where command == "up":
-    print("Идти вверх")
+    print("Go up")
 case 8..<10:
-    print("Идти вниз")
+    print("Go down")
 default:
-    print("Ошибка")
+    print("Error")
 }
 
-// enum - перечисление
+// enum - enumeration
 
 enum Weekday {
     case monday
@@ -186,7 +176,7 @@ enum Directions {
 let currentDay = Weekday.friday
 let currentDay2: Weekday = .monday
 
-// исходные значение enum
+// reference value enum
 
 enum Countries: String {
     case usa = "USA"
@@ -219,7 +209,7 @@ print(value2)
 let value3 = country3.rawValue
 print(value3)
 
-// emum использование инструкции Switch
+// usage instruction Switch
 
 enum Command {
     case up
@@ -264,10 +254,10 @@ case .right:
 case .leftUp:
     print("Go left up")
 default:
-    print("Не используй default с enum")
+    print("Don't use default with enum")
 }
 
-// инициализация enum
+// initialization enum
 
 let country4 = Countries.usa
 let country5 = Countries(rawValue: "USA")! // будет ошибка нет нет такого значения строки в enum
@@ -275,9 +265,9 @@ let country5 = Countries(rawValue: "USA")! // будет ошибка нет н�
 print(country5)
 
 
-// связанные значения (ассоциированные параметры)
+// connected values (associated parameters)
 
-// тип индефикатора человека
+// human identification type
 enum IdType {
     case passport(number: String)
     case driverLicense(number: String, expirationDate: Date)
@@ -294,10 +284,10 @@ case .driverLicense(let number, let expirationDate):
     print(number)
     print(expirationDate)
 case .noId:
-    print("Нет данных")
+    print("Do")
 }
 
-// опциональные типы
+// optional types
 
 let someString: String = "hello"
 var someOptString: String?
@@ -318,7 +308,7 @@ var str = "25hello"
 
 let someNum = Int(str)
 
-// извлечение опционала
+// optional extraction
 
 if someNum == nil {
     print("error converting int")
