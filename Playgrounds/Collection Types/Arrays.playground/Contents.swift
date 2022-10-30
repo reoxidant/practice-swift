@@ -60,7 +60,6 @@ arrIntTwo = arrIntOne + arrayIntThree
 
 print("array2 containts \(arrIntTwo) values and have a \(arrIntTwo.count) elements")
 
-
 //init array with literal value
 
 var studentNames:[String] = ["Sasha", "Masha", "Peter", "Nadya"]

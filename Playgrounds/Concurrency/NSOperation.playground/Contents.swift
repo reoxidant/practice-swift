@@ -10,9 +10,9 @@ let secondOpQueue = OperationQueue()
 secondOpQueue.name = "secondOpQueue"
 secondOpQueue.maxConcurrentOperationCount = 5
 
-// очередь можно остановить или запустить
+// Queuing may be stopped or executed
 
-opQueue.isSuspended = false // false
+opQueue.isSuspended = false
 
 enum MyErrors: Error, LocalizedError {
     case someError
