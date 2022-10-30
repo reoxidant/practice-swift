@@ -1,7 +1,5 @@
 import Foundation
 
-// 1ч 12 мин
-
 //Memory management in iOS.
 //The ARC is weak, strong, belonging to no one. Strong reference cycle.
 
@@ -13,21 +11,18 @@ class DecimalNumber {
     }
     
     deinit {
-        print("Обьект с value \(value) удаляется")
+        print("Object with value \(value) removed")
     }
 }
 
-var firstNum = DecimalNumber(value: 10) // колл ссылок firstNum 1
-var secondNum = DecimalNumber(value: 5) // колл ссылок secondNum 1
+var firstNum = DecimalNumber(value: 10) // number of references firstNum 1
+var secondNum = DecimalNumber(value: 5) // number of references secondNum 1
 
-var num3 = secondNum // колл ссылок secondNum 2
-var num4 = secondNum // колл ссылок secondNum 3
+var num3 = secondNum // number of references secondNum 2
+var num4 = secondNum // number of references secondNum 3
 
-// колл ссылок firstNum 0, колл ссылок secondNum 4
+// number of references firstNum 0, number of references secondNum 4
 firstNum = num4
-
-
-// 1ч 15 мин
 
 // ARC
 
@@ -38,11 +33,11 @@ class Person {
     
     init(name: String) {
         self.name = name
-        print("\(name) инициализируется")
+        print("\(name) is initialized")
     }
     
     deinit {
-        print("\(name) деинициализируется")
+        print("\(name) is deinitialized")
     }
 }
 
@@ -50,62 +45,54 @@ var reference1: Person? = nil
 var reference2: Person?
 var reference3: Person?
 
-reference1 = Person(name: "John Appleseed") // 1
-reference2 = reference1 // 2
-reference3 = reference1 // 3
+reference1 = Person(name: "John Appleseed")
+reference2 = reference1
+reference3 = reference1
 
+reference1 = nil
+reference2 = nil
+reference3 = nil
 
-reference1 = nil // 2
-
-reference2 = nil // 1
-
-reference3 = nil // 0
 // ARC delete object
 
 print("next")
 
-// 1ч 23 мин
+// Strong link cycle
 
-// Цикл сильных ссылок
-
-/// Квартира
+/// Apartment
 class Apartment {
     let unit: String
     weak var tenant: Person?
     
     init(unit: String) {
         self.unit = unit
-        print("\(unit) инициализируется")
+        print("\(unit) is initialized")
     }
     
     deinit {
-        print("Апартаменты \(unit) освобождаются")
+        print("Apartment \(unit) is exempt")
     }
 }
 
-// 1ч 32 мин
+// How to get aroung a chain of strong links
 
-// Как обойти цикл сильных ссылок
+// Create an apartment and renter
 
-// Создадим квартиру и жильца
+var john: Person? = Person(name: "Mary Sokolova") // number of references john 1
 
-var john: Person? = Person(name: "Mary Sokolova") // колл ссылок john 1
+var unit4A: Apartment? = Apartment(unit: "313") // number of references unit4A 1
 
-var unit4A: Apartment? = Apartment(unit: "313") // колл ссылок unit4A 1
+// Let's get the tenant in the flat
 
-// Поселим жильца в квартиру
+john?.apartment = unit4A // number of references unit4A 2
+unit4A?.tenant = john // weak = number of references john 1
 
-john?.apartment = unit4A // колл ссылок unit4A 2
-unit4A?.tenant = john // weak = колл ссылок john 1
+// The number of links john 0 and immediately unit4A decreased to 1 as the object john and the link inside was removed, but still there is Apartment(unit: "313") the most initial link
 
-// колл ссылок john 0 и тут же unit4A уменьшилась на 1 тк удалился обьект john и ссылка внутри, но все еще есть Apartment(unit: "313") самая начальная ссылка
 john = nil
+unit4A = nil // number of references unit4A 0, here has left
 
-unit4A = nil // колл ссылок unit4A 0, только тут удалилась
-
-// 1ч 49 мин
-
-// Циклы сильных ссылок в замыканиях
+// Strong link cycles in closures
 
 class HTMLElement {
     let name: String
@@ -125,7 +112,7 @@ class HTMLElement {
     }
     
     deinit {
-        print("\(name) деинициализируется")
+        print("\(name) is deinitialized")
     }
 }
 
