@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Timeline
+   version = "3.0">
+   <TimelineItems>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/vshapovalov/Developer/practice-swift/Playgrounds/Combine/Subscription.playground/Pages/creating%20Subscription.xcplaygroundpage#CharacterRangeLen=639&amp;CharacterRangeLoc=256&amp;EndingColumnNumber=0&amp;EndingLineNumber=34&amp;StartingColumnNumber=0&amp;StartingLineNumber=12&amp;Timestamp=672991435.099986"
+         lockedSize = "{175, 50}"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/vshapovalov/Developer/practice-swift/Playgrounds/Combine/Subscription.playground/Pages/creating%20Subscription.xcplaygroundpage#CharacterRangeLen=639&amp;CharacterRangeLoc=256&amp;EndingColumnNumber=0&amp;EndingLineNumber=34&amp;StartingColumnNumber=0&amp;StartingLineNumber=12&amp;Timestamp=672991435.10007"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/vshapovalov/Developer/practice-swift/Playgrounds/Combine/Subscription.playground/Pages/creating%20Subscription.xcplaygroundpage#CharacterRangeLen=9&amp;CharacterRangeLoc=484&amp;EndingColumnNumber=0&amp;EndingLineNumber=18&amp;StartingColumnNumber=16&amp;StartingLineNumber=17&amp;Timestamp=672991435.100118"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/vshapovalov/Developer/practice-swift/Playgrounds/Combine/Subscription.playground/Pages/creating%20Subscription.xcplaygroundpage#CharacterRangeLen=9&amp;CharacterRangeLoc=565&amp;EndingColumnNumber=0&amp;EndingLineNumber=22&amp;StartingColumnNumber=16&amp;StartingLineNumber=21&amp;Timestamp=672991435.10017"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+   </TimelineItems>
+</Timeline>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true'>
+    <pages>
+        <page name='Intro'/>
+        <page name='creating Subscription'/>
+        <page name='limited Subscriptions'/>
+        <page name='assign'/>
+        <page name='assign example UIKIt'/>
+        <page name='assign Example'/>
+        <page name='assign to'/>
+        <page name='receive on'/>
+        <page name='subscribe on'/>
+        <page name='subscribe on urlsession'/>
+        <page name='subscription pattern'/>
+        <page name='print'/>
+        <page name='handleEvents'/>
+        <page name='breakpoint'/>
+    </pages>
+</playground>
