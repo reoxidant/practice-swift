@@ -3,5 +3,6 @@
     <pages>
         <page name='OperationQueue'/>
         <page name='Operation'/>
+        <page name='OperationClass'/>
     </pages>
 </playground>
